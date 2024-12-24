@@ -7,12 +7,37 @@ export default function EventRegistrationForm() {
     name: '',
     email: '',
     event: '',
+    subject: '', // Add this line
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log('Form submitted:', formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/submit-registration', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', event: '', subject: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      setSubmitStatus('error')
+    }
+
+    setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -65,9 +90,31 @@ export default function EventRegistrationForm() {
           <option value="other">その他</option>
         </select>
       </div>
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-        申し込む
+      <div className="mb-4">
+        <label htmlFor="subject" className="block mb-2">件名</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          required
+          className="w-full px-3 py-2 border rounded"
+        />
+      </div>
+      <button 
+        type="submit" 
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? '送信中...' : '申し込む'}
       </button>
+      {submitStatus === 'success' && (
+        <p className="mt-4 text-green-600">申し込みが完了しました。</p>
+      )}
+      {submitStatus === 'error' && (
+        <p className="mt-4 text-red-600">エラーが発生しました。もう一度お試しください。</p>
+      )}
     </form>
   )
 }
