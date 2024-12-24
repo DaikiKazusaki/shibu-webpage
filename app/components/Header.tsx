@@ -1,8 +1,10 @@
-import Link from 'next/link'
-import { useState } from 'react'
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-gray-800 text-white p-4">
@@ -31,16 +33,43 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <ul className={`md:flex md:space-x-4 ${isMenuOpen ? 'block' : 'hidden'} mt-4 md:mt-0`}>
-          <li><Link href="/" className="block py-2 md:py-0">ホーム</Link></li>
-          <li><Link href="/about" className="block py-2 md:py-0">支部について</Link></li>
-          <li><Link href="/members" className="block py-2 md:py-0">メンバー</Link></li>
-          <li><Link href="/activities" className="block py-2 md:py-0">活動</Link></li>
-          <li><Link href="/sns" className="block py-2 md:py-0">SNS</Link></li>
-          <li><Link href="/apply" className="block py-2 md:py-0">申し込み</Link></li>
+        <ul
+          className={`md:flex md:space-x-4 ${
+            isMenuOpen ? 'block' : 'hidden'
+          } mt-4 md:mt-0`}
+        >
+          <li>
+            <Link href="/" className="block py-2 md:py-0">
+              ホーム
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="block py-2 md:py-0">
+              支部について
+            </Link>
+          </li>
+          <li>
+            <Link href="/members" className="block py-2 md:py-0">
+              メンバー
+            </Link>
+          </li>
+          <li>
+            <Link href="/activities" className="block py-2 md:py-0">
+              活動
+            </Link>
+          </li>
+          <li>
+            <Link href="/sns" className="block py-2 md:py-0">
+              SNS
+            </Link>
+          </li>
+          <li>
+            <Link href="/apply" className="block py-2 md:py-0">
+              申し込み
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }
-
