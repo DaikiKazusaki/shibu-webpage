@@ -55,23 +55,23 @@ const PastMembersList: React.FC = () => {
 export default function Members() {
   const currentMembers: Member[] = [
     { 
-      name: '山田太郎', 
+      name: '松本龍蔵', 
       role: '代表', 
-      university: '全国大学生大学', 
+      university: '大阪公立大学', 
       achievements: '全国大会優勝', 
       introduction: '将棋が大好きです。日々精進しています。' 
     },
     { 
-      name: '田中花子', 
+      name: '數﨑大樹', 
       role: '副代表', 
-      university: '△△大学', 
+      university: '大阪大学', 
       achievements: '女流棋士リーグ準優勝', 
       introduction: '将棋を通じて多くの人と交流したいです。' 
     },
     { 
-      name: '佐藤次郎', 
+      name: '田中優汰', 
       role: '会計', 
-      university: '□□大学', 
+      university: '神戸大学', 
       achievements: '学生王座戦ベスト8', 
       introduction: '将棋の普及活動に力を入れています。' 
     },
