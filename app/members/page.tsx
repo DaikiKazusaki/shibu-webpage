@@ -76,6 +76,12 @@ export default function Members() {
       achievements: '関西大会3位',
       introduction: '将棋の楽しさを広めるために活動しています。'
     },
+    {
+      name: '大西透',
+      university: '京都大学',
+      achievements: '全国大会出場',
+      introduction: '将棋の魅力を多くの人に伝えたいです。'
+    }
     // Add more members as needed
   ]
 
