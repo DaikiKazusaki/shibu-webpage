@@ -73,8 +73,14 @@ export default function Members() {
     {
       name: '沖津斗夢',
       role: '京都大会運営',
+      university: '龍谷大学 経営学部',
+      introduction: '座右の銘「現状維持は即衰退」'
+    },
+    {
+      name: '平井幸大',
+      role: 'SNS運用',
       university: '龍谷大学 経済学部',
-      introduction: '現状維持は即衰退'
+      introduction: '色んな喋るのが好きです！'
     }
     // Add more members as needed
   ]
