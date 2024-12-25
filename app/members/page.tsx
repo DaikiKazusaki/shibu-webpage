@@ -4,17 +4,15 @@ import { useState } from 'react'
 
 interface Member {
   name: string
-  role: string
   university: string
   achievements: string
   introduction: string
 }
 
-const MemberCard: React.FC<Member> = ({ name, role, university, achievements, introduction }) => {
+const MemberCard: React.FC<Member> = ({ name, university, achievements, introduction }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6">
       <h2 className="text-xl font-semibold mb-2">{name}</h2>
-      <p className="text-gray-600 mb-1">{role}</p>
       <p className="text-gray-600 mb-1">{university}</p>
       <p className="text-gray-700 mb-2">{achievements}</p>
       <p className="text-gray-800">{introduction}</p>
@@ -56,24 +54,27 @@ export default function Members() {
   const currentMembers: Member[] = [
     { 
       name: '松本龍蔵', 
-      role: '代表', 
       university: '大阪公立大学', 
       achievements: '全国大会優勝', 
       introduction: '将棋が大好きです。日々精進しています。' 
     },
     { 
       name: '數﨑大樹', 
-      role: '副代表', 
       university: '大阪大学', 
       achievements: '女流棋士リーグ準優勝', 
       introduction: '将棋を通じて多くの人と交流したいです。' 
     },
     { 
       name: '田中優汰', 
-      role: '会計', 
       university: '神戸大学', 
       achievements: '学生王座戦ベスト8', 
       introduction: '将棋の普及活動に力を入れています。' 
+    },
+    {
+      name: '古藤祐樹',
+      university: '京都大学',
+      achievements: '関西大会3位',
+      introduction: '将棋の楽しさを広めるために活動しています。'
     },
     // Add more members as needed
   ]

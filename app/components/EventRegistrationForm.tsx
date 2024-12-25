@@ -7,7 +7,6 @@ export default function EventRegistrationForm() {
     name: '',
     email: '',
     event: '',
-    subject: '', // Add this line
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -28,7 +27,7 @@ export default function EventRegistrationForm() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', event: '', subject: '' })
+        setFormData({ name: '', email: '', event: '' })
       } else {
         setSubmitStatus('error')
       }
@@ -51,7 +50,7 @@ export default function EventRegistrationForm() {
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <h2 className="text-2xl font-semibold mb-4">イベント申し込み</h2>
       <div className="mb-4">
-        <label htmlFor="name" className="block mb-2">お名前</label>
+        <label htmlFor="name" className="block mb-2">参加者名</label>
         <input
           type="text"
           id="name"
@@ -89,18 +88,6 @@ export default function EventRegistrationForm() {
           <option value="class">教室</option>
           <option value="other">その他</option>
         </select>
-      </div>
-      <div className="mb-4">
-        <label htmlFor="subject" className="block mb-2">件名</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          required
-          className="w-full px-3 py-2 border rounded"
-        />
       </div>
       <button 
         type="submit" 
