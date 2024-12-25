@@ -1,5 +1,4 @@
 import Link from 'next/link'
-// import EventRegistrationForm from './components/EventRegistrationForm'
 
 export default function Home() {
   return (
