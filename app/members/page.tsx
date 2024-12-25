@@ -23,7 +23,7 @@ const MemberCard: React.FC<Member> = ({ name, role, university, introduction }) 
 const PastMembersList: React.FC = () => {
   const [showPastMembers, setShowPastMembers] = useState(false)
   const pastMembers = [
-    {}
+    {name: '', year: '', achievements: ''},
     // { name: '佐藤花子', year: 2022, achievements: '関西大会準優勝' },
     // { name: '鈴木一郎', year: 2021, achievements: '全国大会出場' },
     // Add more past members as needed
