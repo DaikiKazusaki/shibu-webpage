@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="h-full">
+      <head>
+        <link rel="icon" href="/app/favicon_shogi.ico" sizes="any" />
+      </head>
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <Header />
         <main className="flex-grow">{children}</main>

@@ -53,23 +53,29 @@ const PastMembersList: React.FC = () => {
 export default function Members() {
   const currentMembers: Member[] = [
     { 
-      name: '山田太郎', 
-      role: '代表', 
-      university: '〇〇大学', 
-      introduction: '将棋が大好きです。日々精進しています。' 
+      name: '松本龍蔵', 
+      role: '支部長', 
+      university: '大阪公立大学 経済学部', 
+      introduction: '1日中楽しめるアットホームなイベント作りを目指してみんなでがんばります！全国の将棋好きのみなさまと交流を深めたいです！ともに支部を運営してくれる大学生も募集中です！よろしくお願いします！' 
     },
     { 
-      name: '田中花子', 
-      role: '副代表', 
-      university: '△△大学', 
-      introduction: '将棋を通じて多くの人と交流したいです。' 
+      name: '古江祐也', 
+      role: '中国地方大会運営', 
+      university: '尾道市立大学 芸術文化学部', 
+      introduction: '圧倒的猫派' 
     },
     { 
-      name: '佐藤次郎', 
-      role: '会計', 
-      university: '□□大学',  
-      introduction: '将棋の普及活動に力を入れています。' 
+      name: '數﨑大樹', 
+      role: 'サイト作成', 
+      university: '大阪大学 基礎工学部',  
+      introduction: 'ウェブデザイン勉強中...' 
     },
+    {
+      name: '沖津斗夢',
+      role: '京都大会運営',
+      university: '龍谷大学 経済学部',
+      introduction: '現状維持は即衰退'
+    }
     // Add more members as needed
   ]
 
