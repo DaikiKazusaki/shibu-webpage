@@ -26,7 +26,7 @@ export default function Members() {
       name: '松本龍蔵', 
       role: '支部長', 
       university: '大阪公立大学 経済学部', 
-      introduction: '1日中楽しめるアットホームなイベント作りを目指してみんなでがんばります！全国の将棋好きのみなさまと交流を深めたいです！ともに支部を運営してくれる大学生も募集中です！よろしくお願いします！' 
+      introduction: '1日中楽しめるアットホームなイベント作りを目指します！' 
     },
     { 
       name: '古江祐也', 
@@ -50,7 +50,7 @@ export default function Members() {
       name: '平井幸大',
       role: 'SNS運用',
       university: '龍谷大学 経済学部',
-      introduction: '色んな喋るのが好きです！'
+      introduction: '色んな人と喋るのが好きです！'
     }
     // Add more members as needed
   ]
