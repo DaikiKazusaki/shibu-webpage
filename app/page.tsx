@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import EventRegistrationForm from './components/EventRegistrationForm'
+// import EventRegistrationForm from './components/EventRegistrationForm'
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-3xl font-bold mb-6">全国大学生支部へようこそ</h1>
-      <EventRegistrationForm />
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">全国大学生支部とは</h2>
         <p>全国大学生支部の概要説明...</p>

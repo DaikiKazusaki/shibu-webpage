@@ -23,7 +23,7 @@ export default function SNS() {
           <a href="#" className="text-blue-600 hover:underline">電子書籍</a>
         </li>
         <li>
-          <a href="#" className="text-blue-600 hover:underline">関西将棋会館ホームページ</a>
+          <a href="https://www.kansai-shogi.info/" className="text-blue-600 hover:underline">関西将棋会館ホームページ</a>
         </li>
       </ul>
       <div className="mt-8">

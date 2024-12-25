@@ -65,7 +65,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/apply" className="block py-2 md:py-0">
-              申し込み
+              お問い合わせ
             </Link>
           </li>
         </ul>
