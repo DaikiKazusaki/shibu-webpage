@@ -69,6 +69,12 @@ export default function Members() {
       role: 'ブレーン',
       university: '神戸大学 国際人間科学部',
       introduction: '将棋を通じて輪を広げましょう！'
+    },
+    {
+      name: '金田夏輝',
+      role: '関東大会合宿運営',
+      university: '東京大学 文科三類',
+      introduction: '趣味は読書と登山です。楽しく将棋を続けたいです！'
     }
     // Add more members as needed
   ]
