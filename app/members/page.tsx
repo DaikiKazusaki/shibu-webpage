@@ -51,6 +51,24 @@ export default function Members() {
       role: 'SNS運用',
       university: '龍谷大学 経済学部',
       introduction: '色んな人と喋るのが好きです！'
+    },
+    {
+      name: '岡本大地',
+      role: '関東大会合宿運営',
+      university: '星薬科大学 薬学部',
+      introduction: '関東合宿の運営を頑張りたいです'
+    },
+    {
+      name: '大西透',
+      role: '京都大会運営',
+      university: '京都大学 工学部',
+      introduction: '趣味は競艇です'
+    },
+    {
+      name: '田中優汰',
+      role: 'ブレーン',
+      university: '神戸大学 国際人間科学部',
+      introduction: '将棋を通じて輪を広げましょう！'
     }
     // Add more members as needed
   ]
