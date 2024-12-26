@@ -75,6 +75,12 @@ export default function Members() {
       role: '関東大会合宿運営',
       university: '東京大学 文科三類',
       introduction: '趣味は読書と登山です。楽しく将棋を続けたいです！'
+    },
+    {
+      name: '市丸玲乃',
+      role: '関西合宿運営',
+      university: '関西大学 法学部',
+      introduction: '趣味は音楽鑑賞で，Mr.Childrenが好きです！'
     }
     // Add more members as needed
   ]
