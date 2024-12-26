@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Apply() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">各種お申し込み</h1>
       <ul className="space-y-4">
         <li>
