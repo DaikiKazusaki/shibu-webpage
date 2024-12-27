@@ -81,6 +81,12 @@ export default function Members() {
       role: '関西合宿運営',
       university: '関西大学 法学部',
       introduction: '趣味は音楽鑑賞で，Mr.Childrenが好きです！'
+    },
+    {
+      name: '岸本昂大',
+      role: '関西大会運営',
+      university: '大阪公立大学 工学部',
+      introduction: '将棋を通して様々な地域、年代の方と交流していきたいです'
     }
     // Add more members as needed
   ]
