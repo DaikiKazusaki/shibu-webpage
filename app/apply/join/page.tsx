@@ -29,21 +29,28 @@ export default function JoinForm() {
     setSubmitStatus('idle')
 
     try {
-      // Here you would typically send the form data to your backend
-      // For this example, we'll simulate a successful submission after a delay
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        university: '',
-        grade: '',
-        experience: '',
-        motivation: '',
+      const response = await fetch('/api/submit-join-application', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-      // Redirect to a thank you page or show a success message
-      router.push('/apply/join/thank-you')
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          university: '',
+          grade: '',
+          experience: '',
+          motivation: '',
+        })
+        router.push('/apply/join/thank-you')
+      } else {
+        setSubmitStatus('error')
+      }
     } catch (error) {
       console.error('Submission error:', error)
       setSubmitStatus('error')
@@ -54,6 +61,7 @@ export default function JoinForm() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <div className="mb-8"></div>
       <h1 className="text-3xl font-bold mb-6">全国大学生支部への参加申し込み</h1>
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
         <div className="mb-4">

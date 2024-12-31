@@ -26,7 +26,7 @@ export default function Members() {
       name: '松本龍蔵', 
       role: '支部長', 
       university: '大阪公立大学 経済学部', 
-      introduction: '1日中楽しめるアットホームなイベント作りを目指します！' 
+      introduction: '最高のイベントにします！' 
     },
     { 
       name: '古江祐也', 

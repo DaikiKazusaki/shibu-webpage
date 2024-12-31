@@ -15,10 +15,10 @@ export async function POST(req: Request) {
 
   const mailOptions = {
     from: process.env.SMTP_USER,
-    to: 'daikikazu020723@gmail.com',
-    subject: `新しいイベント申し込み: ${subject}`,
+    to: 'zenkoku.daigakusei.shibu@gmail.com',
+    subject: `全国大学生支部 支部入会申し込み: ${subject}`,
     text: `
-      新しいイベント申し込みがありました。
+      全国大学生支部に支部入会の申し込みがありました。
 
       件名: ${subject}
       名前: ${name}
