@@ -43,7 +43,8 @@ const ActivityTimeline: React.FC = () => {
     {
       date: '2023年7月2日',
       title: '向日葵将棋大会開催',
-      description: '地域の方々を招いて冬季将棋大会を開催しました。参加者は100名を超え、大盛況でした。'
+      figure: '/2023-07-02-himawari/himawari-1.jpg',
+      description: ''
     }
   ]
 
