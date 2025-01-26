@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Sidebar from "./components/Sidebar"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="flex-grow p-4">{children}</main>
           <Analytics />
+          <SpeedInsights />
         </div>
         <Footer />
       </body>
