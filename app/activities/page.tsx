@@ -13,7 +13,7 @@ interface Activity {
 
 const ActivityItem: React.FC<Activity> = ({ date, title, description, images, blogLink }) => {
   return (
-    <div className="mb-8">
+    <div id={date} className="mb-8">
       <div className="flex items-center mb-2">
         <div className="bg-blue-500 rounded-full w-4 h-4 mr-4"></div>
         <span className="text-gray-600 text-sm">{date}</span>
@@ -48,7 +48,7 @@ const ActivityTimeline: React.FC = () => {
   const [visibleActivities, setVisibleActivities] = useState(5)
   const activities: Activity[] = [
     {
-      date: "2023年7月2日",
+      date: "2023-07-02",
       title: "向日葵将棋大会開催",
       images: [
         "/2023-07-02-himawari/himawari-1.jpg",
@@ -56,7 +56,7 @@ const ActivityTimeline: React.FC = () => {
         "/2023-07-02-himawari/himawari-3.jpg",
       ],
       description: "向日葵将棋大会を開催しました。多くの参加者が集まり、熱戦が繰り広げられました。",
-    },
+    }
   ]
 
   const loadMore = () => {
