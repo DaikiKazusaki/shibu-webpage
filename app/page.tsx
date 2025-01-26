@@ -13,7 +13,7 @@ export default function Home() {
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">理念・存在意義</h2>
-        <p>どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋普及に貢献すべく、講師の派遣も行っております</p>
+        <p>どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋の普及にも力をいれています！</p>
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">活動内容</h2>
