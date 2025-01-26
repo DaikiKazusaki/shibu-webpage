@@ -29,7 +29,7 @@ export default function Header() {
         <nav className="relative">
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center text-gray-400"
+            className="md:hidden flex items-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -59,15 +59,16 @@ export default function Header() {
 
           {/* Navigation Links */}
           <ul
-            className={`absolute left-0 right-0 top-full bg-gray-900 p-4 space-y-2 transition-all duration-300 ease-in-out transform ${
+            className={`absolute left-0 right-0 top-full bg-gray-900 p-4 space-y-2 transition-transform duration-300 ease-in-out transform shadow-lg rounded-lg md:static md:flex md:space-x-6 md:space-y-0 md:translate-y-0 md:bg-transparent md:p-0 md:items-center md:shadow-none md:rounded-none ${
               isMenuOpen ? "translate-y-0" : "-translate-y-full"
-            } md:static md:flex md:space-x-6 md:space-y-0 md:translate-y-0 md:bg-transparent md:p-0 md:items-center`}
+            }`}
           >
             {navItems.map((item) => (
-              <li key={item.href}>
+              <li key={item.href} className="border-b border-gray-700 last:border-none md:border-none">
                 <Link
                   href={item.href}
-                  className="hover:text-gray-300 text-base block py-2 md:py-0"
+                  className="hover:text-gray-300 text-base block py-2 md:py-0 text-center"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>

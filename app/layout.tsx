@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: "/favicon_shogi.ico",
+      url: "/favicon.ico",
     },
   ],
 }
