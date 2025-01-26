@@ -31,6 +31,7 @@ export default function Header() {
           <button
             className="md:hidden flex items-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="ハンバーガーメニューを開く"
           >
             <svg
               className="w-6 h-6"
@@ -64,11 +65,14 @@ export default function Header() {
             }`}
           >
             {navItems.map((item) => (
-              <li key={item.href} className="border-b border-gray-700 last:border-none md:border-none">
+              <li
+                key={item.href}
+                className="border-b border-gray-700 last:border-none md:border-none"
+              >
                 <Link
                   href={item.href}
                   className="hover:text-gray-300 text-base block py-2 md:py-0 text-center"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)} // メニューを閉じる動作
                 >
                   {item.label}
                 </Link>
