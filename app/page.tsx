@@ -6,18 +6,18 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6">全国大学生支部へようこそ</h1>
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">全国大学生支部とは</h2>
-        <p>全国大学生支部の概要説明...</p>
+        <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
         <Link href="/about" className="text-blue-600 hover:underline">
           詳細を見る
         </Link>
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">理念・存在意義</h2>
-        <p>全国大学生支部の理念と存在意義の説明...</p>
+        <p>どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋普及に貢献すべく、講師の派遣も行っております</p>
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">活動内容</h2>
-        <p>主な活動内容の概要...</p>
+        <p>将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！</p>
         <Link href="/activities" className="text-blue-600 hover:underline">
           詳細を見る
         </Link>
