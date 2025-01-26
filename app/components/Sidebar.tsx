@@ -14,20 +14,7 @@ const Sidebar = () => {
   useEffect(() => {
     // In a real application, you would fetch this data from an API
     const fetchedActivities: Activity[] = [
-      { date: '2023-01-05', title: '新年将棋大会' },
-      { date: '2023-02-11', title: '将棋フェスティバル参加' },
-      { date: '2023-04-15', title: '新入生歓迎会' },
-      { date: '2023-06-30', title: 'オンライン将棋大会' },
       { date: '2023-07-02', title: '向日葵将棋大会' },
-      { date: '2023-08-20', title: '夏季合宿' },
-      { date: '2023-10-05', title: '小学校での将棋教室' },
-      { date: '2023-12-15', title: '冬季将棋大会' },
-      { date: '2024-01-10', title: '新年将棋大会2024' },
-      { date: '2024-04-20', title: '春季将棋大会' },
-      { date: '2024-07-15', title: '夏の将棋教室' },
-      { date: '2024-10-01', title: '秋季将棋大会' },
-      { date: '2024-12-20', title: '年末将棋フェスティバル' },
-      { date: '2025-01-05', title: '新年将棋大会2025' },
     ]
     setActivities(fetchedActivities)
   }, [])
