@@ -51,12 +51,60 @@ const ActivityTimeline: React.FC = () => {
       date: "2023-07-02",
       title: "向日葵将棋大会開催",
       images: [
-        "/2023-07-02-himawari/himawari-1.jpg",
-        "/2023-07-02-himawari/himawari-2.jpg",
-        "/2023-07-02-himawari/himawari-3.jpg",
+        "/2023-07-02-himawari/himawari1.jpg",
+        "/2023-07-02-himawari/himawari2.jpg",
+        "/2023-07-02-himawari/himawari3.jpg",
       ],
-      description: "向日葵将棋大会を開催しました。多くの参加者が集まり、熱戦が繰り広げられました。",
-    }
+      description: "",
+    },
+    {
+      date: "2023-09-03",
+      title: "金木犀将棋大会開催",
+      images: [
+        "/2023-09-03-kinmokusei/kinmokusei1.jpg",
+        "/2023-09-03-kinmokusei/kinmokusei2.jpg",
+      ],
+      description: "",
+    },
+    {
+      date: "2023-11-04",
+      title: "秋桜将棋大会開催",
+      images: [
+        "/2023-11-04-kosumosu/kosumosu1.jpg",
+        "/2023-11-04-kosumosu/kosumosu2.jpg",
+        "/2023-11-04-kosumosu/kosumosu3.jpg",
+      ],
+      description: "",
+    },
+    {
+      date: "2024-01-07",
+      title: "水仙将棋大会開催",
+      images: [
+        "/2024-01-07-suisen/suisen1.jpg",
+        "/2024-01-07-suisen/suisen2.jpg",
+        "/2024-01-07-suisen/suisen1.jpg",
+      ],
+      description: "",
+    },
+    {
+      date: "2024-03-24",
+      title: "桜将棋大会開催",
+      images: [
+        "/2024-03-24-sakura/sakura1.jpg",
+        "/2024-03-24-sakura/sakura2.jpg",
+      ],
+      description: "",
+    },
+    {
+      date: "2024-05-05",
+      title: "水仙将棋大会開催",
+      images: [
+        "/2024-05-05-suzuran/suzuran1.jpg",
+        "/2024-05-05-suzuran/suzuran2.jpg",
+        "/2024-05-05-suzuran/suzuran3.jpg",
+      ],
+      description: "",
+    },
   ]
 
   const loadMore = () => {
