@@ -11,7 +11,7 @@ export default function Header() {
       <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left mb-4 md:mb-0">
           <Link href="/" className="text-xl md:text-2xl font-bold">
-            全国大学生支部
+            江坂学生支部
           </Link>
           <p className="text-sm mt-1">全国の大学生による将棋団体</p>
         </div>
