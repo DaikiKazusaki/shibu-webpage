@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import LeftSidebar from "./components/LeftSidebar"
-// import { Sidebar } from "./components/RightSidebar"
+import RightSidebar from "./components/RightSidebar"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -35,7 +35,7 @@ export default function RootLayout({
           <main className="flex-grow p-4">{children}</main>
           <Analytics />
           <SpeedInsights />
-          {/* <RightSideBar> */}
+          <RightSidebar />
         </div>
         <Footer />
       </body>
