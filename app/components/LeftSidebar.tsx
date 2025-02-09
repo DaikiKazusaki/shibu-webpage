@@ -1,3 +1,5 @@
+// newsを表示する
+
 'use client'
 
 import Link from 'next/link'

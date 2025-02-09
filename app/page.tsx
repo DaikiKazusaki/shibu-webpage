@@ -3,9 +3,9 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">全国大学生支部へようこそ</h1>
+      <h1 className="text-3xl font-bold mb-6">江坂学生支部へようこそ</h1>
       <section className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">全国大学生支部とは</h2>
+        <h2 className="text-2xl font-semibold mb-4">江坂学生支部とは</h2>
         <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
         <Link href="/about" className="text-blue-600 hover:underline">
           詳細を見る

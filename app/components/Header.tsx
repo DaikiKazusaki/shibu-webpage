@@ -20,7 +20,7 @@ export default function Header() {
         {/* Title Section */}
         <div className="py-0">
           <Link href="/" className="block">
-            <h1 className="text-2xl md:text-3xl font-bold">全国大学生支部</h1>
+            <h1 className="text-2xl md:text-3xl font-bold">江坂学生支部</h1>
             <p className="text-gray-400 mt-1">全国の大学生による将棋団体</p>
           </Link>
         </div>

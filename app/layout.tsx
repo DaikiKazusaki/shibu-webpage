@@ -2,7 +2,8 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Sidebar from "./components/Sidebar"
+import LeftSidebar from "./components/LeftSidebar"
+// import { Sidebar } from "./components/RightSidebar"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -10,8 +11,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "全国大学生支部",
-  description: "全国大学生支部の公式ウェブサイト",
+  title: "江坂学生支部",
+  description: "江坂学生支部の公式ウェブサイト",
   icons: [
     {
       rel: "icon",
@@ -30,10 +31,11 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <Header />
         <div className="flex-grow flex flex-col md:flex-row">
-          <Sidebar />
+          <LeftSidebar />
           <main className="flex-grow p-4">{children}</main>
           <Analytics />
           <SpeedInsights />
+          {/* <RightSideBar> */}
         </div>
         <Footer />
       </body>
