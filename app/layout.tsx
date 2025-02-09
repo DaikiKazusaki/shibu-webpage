@@ -9,7 +9,7 @@ import LeftSidebar from "./components/LeftSidebar"
 import RightSidebar from "./components/RightSidebar"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import type React from "react" // Added import for React
+import type React from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,16 +19,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const showLeftSidebar = pathname === "/activity"
+  const isActivitiesPage = pathname === "/activities"
 
   return (
     <html lang="ja" className="h-full">
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <Header />
         <div className="flex-grow flex flex-col md:flex-row overflow-hidden">
-          {showLeftSidebar && <LeftSidebar />}
+          <div className="w-64 flex-shrink-0">{isActivitiesPage && <LeftSidebar />}</div>
           <main className="flex-grow p-4">{children}</main>
-          <div className="hidden md:block">
+          <div className="hidden md:block w-64 flex-shrink-0">
             <RightSidebar />
           </div>
         </div>
