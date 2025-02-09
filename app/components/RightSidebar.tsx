@@ -1,7 +1,9 @@
-import React from 'react'
-import { ScrollArea } from "../ui/scroll-area"
-import { Separator } from "../ui/separator"
-import Link from 'next/link'
+// import React from 'react'
+// import { ScrollArea } from "../ui/scroll-area"
+// import { Separator } from "../ui/separator"
+// import Link from 'next/link'
+
+{/*
 
 type UpdateItem = {
   id: string
@@ -61,3 +63,5 @@ function UpdateItem({ update }: { update: UpdateItem }) {
     </Link>
   )
 }
+
+*/}
