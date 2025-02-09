@@ -1,86 +1,65 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
+"use client"; // useStateを使うために必要
+
+import Link from "next/link"
+import { useState } from "react"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navItems = [
-    { href: "/", label: "ホーム" },
-    { href: "/about", label: "支部について" },
-    { href: "/members", label: "メンバー" },
-    { href: "/activities", label: "活動" },
-    { href: "/sns", label: "SNS" },
-    { href: "/apply", label: "申し込み" },
-  ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        {/* Title Section */}
-        <div className="py-0">
-          <Link href="/" className="block">
-            <h1 className="text-2xl md:text-3xl font-bold">江坂学生支部</h1>
-            <p className="text-gray-400 mt-1">全国の大学生による将棋団体</p>
+    <header className="bg-gray-800 text-white p-4">
+      <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center md:text-left mb-4 md:mb-0">
+          <Link href="/" className="text-xl md:text-2xl font-bold">
+            全国大学生支部
           </Link>
+          <p className="text-sm mt-1">全国の大学生による将棋団体</p>
         </div>
-
-        {/* Navigation Section */}
-        <nav className="relative">
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden flex items-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="ハンバーガーメニューを開く"
+        <ul className={`md:flex md:space-x-4 ${isMenuOpen ? "block" : "hidden"} mt-4 md:mt-0`}>
+          <li>
+            <Link href="/" className="block py-2 md:py-0">
+              ホーム
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="block py-2 md:py-0">
+              支部について
+            </Link>
+          </li>
+          <li>
+            <Link href="/members" className="block py-2 md:py-0">
+              メンバー
+            </Link>
+          </li>
+          <li>
+            <Link href="/activities" className="block py-2 md:py-0">
+              活動
+            </Link>
+          </li>
+          <li>
+            <Link href="/sns" className="block py-2 md:py-0">
+              SNS
+            </Link>
+          </li>
+          <li>
+            <Link href="/apply" className="block py-2 md:py-0">
+              申し込み
+            </Link>
+          </li>
+        </ul>
+        <button className="md:hidden absolute top-4 right-4" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              className="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </svg>
-          </button>
-
-          {/* Navigation Links */}
-          <ul
-            className={`absolute left-0 right-0 top-full bg-gray-900 p-4 space-y-2 transition-transform duration-300 ease-in-out transform shadow-lg rounded-lg md:static md:flex md:space-x-6 md:space-y-0 md:translate-y-0 md:bg-transparent md:p-0 md:items-center md:shadow-none md:rounded-none ${
-              isMenuOpen ? "translate-y-0" : "-translate-y-full"
-            }`}
-          >
-            {navItems.map((item) => (
-              <li
-                key={item.href}
-                className="border-b border-gray-700 last:border-none md:border-none"
-              >
-                <Link
-                  href={item.href}
-                  className="hover:text-gray-300 text-base block py-2 md:py-0 text-center"
-                  onClick={() => setIsMenuOpen(false)} // メニューを閉じる動作
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
     </header>
-  );
+  )
 }
+
