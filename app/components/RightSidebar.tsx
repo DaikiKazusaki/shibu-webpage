@@ -1,4 +1,6 @@
-import type React from "react"
+"use client"
+
+import { useMemo } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
@@ -10,14 +12,19 @@ type Update = {
 
 // 更新内容のサンプルデータ
 const updates: Update[] = [
-  { date: "2025年2月15日", content: "新機能Aをリリースしました。" },
-  { date: "2025年2月10日", content: "パフォーマンスの改善を行いました。" },
-  { date: "2025年2月5日", content: "バグの修正を行いました。" },
-  { date: "2025年1月30日", content: "デザインの微調整を行いました。" },
-  { date: "2025年1月25日", content: "新しいユーザーインターフェースを導入しました。" },
+  { date: "2025年2月9日", content: "サイトのレイアウトを変更しました．" }
 ]
 
-const RightSidebar: React.FC = () => {
+const RightSidebar = () => {
+  const updateItems = useMemo(() => {
+    return updates.map((update, index) => (
+      <div key={index} className="mb-4">
+        <p className="font-semibold text-sm text-gray-600">{update.date}</p>
+        <p className="text-sm">{update.content}</p>
+      </div>
+    ))
+  }, [])
+
   return (
     <Card className="w-64 h-full">
       <CardHeader>
@@ -25,12 +32,7 @@ const RightSidebar: React.FC = () => {
       </CardHeader>
       <CardContent>
         <ScrollArea className="h-[calc(100vh-120px)]">
-          {updates.map((update, index) => (
-            <div key={index} className="mb-4">
-              <p className="font-semibold text-sm text-gray-600">{update.date}</p>
-              <p className="text-sm">{update.content}</p>
-            </div>
-          ))}
+          {updateItems.length > 0 ? updateItems : <p className="text-sm text-gray-500">更新情報はありません。</p>}
         </ScrollArea>
       </CardContent>
     </Card>
