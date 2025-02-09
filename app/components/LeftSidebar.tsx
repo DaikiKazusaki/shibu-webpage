@@ -39,7 +39,7 @@ const Sidebar = () => {
   }, [activities])
 
   return (
-    <Card className="w-64 h-full">
+    <Card className="hidden md:block w-64 h-full">
       <CardHeader>
         <CardTitle>過去の活動</CardTitle>
       </CardHeader>
