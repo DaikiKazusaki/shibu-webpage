@@ -101,7 +101,7 @@ const ActivityTimeline: React.FC = () => {
     },
     {
       date: "2024-05-05",
-      title: "水仙将棋大会開催",
+      title: "鈴蘭将棋大会開催",
       images: [
         "/2024-05-05-suzuran/suzuran1.jpg",
         "/2024-05-05-suzuran/suzuran2.jpg",
