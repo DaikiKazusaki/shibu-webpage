@@ -200,7 +200,7 @@ export default function Activities() {
       <div className="mb-8"></div>
       <h1 className="text-3xl font-bold mb-6">おひさま将棋教室</h1>
       <ShogiBannerImages />
-      <h2 className="text-2xl font-bold mb-6">将棋大会</h2>
+      <h1 className="text-3xl font-bold mb-6">将棋大会</h1>
       <ActivityTimeline />
     </div>
   )
