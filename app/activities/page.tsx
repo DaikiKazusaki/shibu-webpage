@@ -48,6 +48,16 @@ const ActivityTimeline: React.FC = () => {
   const [visibleActivities, setVisibleActivities] = useState(5)
   const activities: Activity[] = [
     {
+      date: "2024-06-15",
+      title: "紫陽花将棋大会開催",
+      images: [
+        "/2024-06-15-ajisai/ajisai1.jpg",
+        "/2024-06-15-ajisai/ajisai2.jpg",
+        "/2024-06-15-ajisai/ajisai3.jpg",
+      ],
+      description: "",
+    },
+    {
       date: "2024-05-05",
       title: "水仙将棋大会開催",
       images: [
