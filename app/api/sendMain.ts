@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import sgMail from '@sendgrid/mail';
+// import { NextApiRequest, NextApiResponse } from "next";
+// import sgMail from '@sendgrid/mail';
 
+{/*
 export default function handler(req: NextApiRequest, res: NextApiResponse) {  
   if(req.method === 'POST') {
     sgMail.setApiKey(process.env.SENDGRID_KEY); //SendGridのAPIキー
@@ -46,3 +47,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     })();
   }
 }
+*/}

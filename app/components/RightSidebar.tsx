@@ -12,6 +12,7 @@ type Update = {
 
 // 更新内容のサンプルデータ
 const updates: Update[] = [
+  { date: "2025年2月16日", content: "活動ページの写真を追加しました．" },
   { date: "2025年2月9日", content: "サイトのレイアウトを変更しました．" }
 ]
 
