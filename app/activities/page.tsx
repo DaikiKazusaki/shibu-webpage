@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import Image from "next/image"
 
@@ -50,9 +52,7 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2024-10-12",
       title: "秋桜将棋大会開催",
-      images: [
-        "/2024-10-12-kosumosu/kosumosu1.jpg",
-      ],
+      images: ["/2024-10-12-kosumosu/kosumosu1.jpg"],
       description: "",
     },
     {
@@ -68,18 +68,13 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2024-08-18",
       title: "京都向日葵将棋大会開催",
-      images: [
-        "/2024-08-18-kyoto_himawari/himawari1.jpg",
-      ],
+      images: ["/2024-08-18-kyoto_himawari/himawari1.jpg"],
       description: "",
     },
     {
       date: "2024-08-16",
       title: "名古屋向日葵将棋大会開催",
-      images: [
-        "/2024-08-16-nagoya_himawari/himawari1.jpg",
-        "/2024-08-16-nagoya_himawari/himawari2.jpg",
-      ],
+      images: ["/2024-08-16-nagoya_himawari/himawari1.jpg", "/2024-08-16-nagoya_himawari/himawari2.jpg"],
       description: "",
     },
     {
@@ -95,20 +90,13 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2024-08-09",
       title: "広島向日葵将棋大会開催",
-      images: [
-        "/2024-08-09-hiroshima_himawari/himawari1.jpg",
-        "/2024-08-09-hiroshima_himawari/himawari2.jpg",
-      ],
+      images: ["/2024-08-09-hiroshima_himawari/himawari1.jpg", "/2024-08-09-hiroshima_himawari/himawari2.jpg"],
       description: "",
     },
     {
       date: "2024-06-15",
       title: "紫陽花将棋大会開催",
-      images: [
-        "/2024-06-15-ajisai/ajisai1.jpg",
-        "/2024-06-15-ajisai/ajisai2.jpg",
-        "/2024-06-15-ajisai/ajisai3.jpg",
-      ],
+      images: ["/2024-06-15-ajisai/ajisai1.jpg", "/2024-06-15-ajisai/ajisai2.jpg", "/2024-06-15-ajisai/ajisai3.jpg"],
       description: "",
     },
     {
@@ -124,20 +112,13 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2024-03-24",
       title: "桜将棋大会開催",
-      images: [
-        "/2024-03-24-sakura/sakura1.jpg",
-        "/2024-03-24-sakura/sakura2.jpg",
-      ],
+      images: ["/2024-03-24-sakura/sakura1.jpg", "/2024-03-24-sakura/sakura2.jpg"],
       description: "",
     },
     {
       date: "2024-01-07",
       title: "水仙将棋大会開催",
-      images: [
-        "/2024-01-07-suisen/suisen1.jpg",
-        "/2024-01-07-suisen/suisen2.jpg",
-        "/2024-01-07-suisen/suisen1.jpg",
-      ],
+      images: ["/2024-01-07-suisen/suisen1.jpg", "/2024-01-07-suisen/suisen2.jpg", "/2024-01-07-suisen/suisen1.jpg"],
       description: "",
     },
     {
@@ -153,10 +134,7 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2023-09-03",
       title: "金木犀将棋大会開催",
-      images: [
-        "/2023-09-03-kinmokusei/kinmokusei1.jpg",
-        "/2023-09-03-kinmokusei/kinmokusei2.jpg",
-      ],
+      images: ["/2023-09-03-kinmokusei/kinmokusei1.jpg", "/2023-09-03-kinmokusei/kinmokusei2.jpg"],
       description: "",
     },
     {
@@ -189,11 +167,40 @@ const ActivityTimeline: React.FC = () => {
   )
 }
 
+const ShogiBannerImages: React.FC = () => {
+  const images = [
+    "/ohisama/ohisama1.jpg",
+    "/ohisama/ohisama2.jpg",
+    "/ohisama/ohisama3.jpg",
+    "/ohisama/ohisama4.jpg",
+    "/ohisama/ohisama5.jpg",
+    "/ohisama/ohisama6.jpg",
+  ]
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      {images.map((image, index) => (
+        <div key={index} className="w-full h-48 md:h-64 relative">
+          <Image
+            src={image || "/placeholder.svg"}
+            alt={`おひさま将棋教室 - 画像 ${index + 1}`}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function Activities() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8"></div>
-      <h1 className="text-3xl font-bold mb-6">これまでの活動</h1>
+      <h1 className="text-3xl font-bold mb-6">おひさま将棋教室</h1>
+      <ShogiBannerImages />
+      <h2 className="text-2xl font-bold mb-6">将棋大会</h2>
       <ActivityTimeline />
     </div>
   )
