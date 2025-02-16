@@ -1,4 +1,5 @@
 "use client"
+
 import { useState, useEffect, useMemo } from "react"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -84,6 +85,7 @@ const Sidebar = () => {
                       </li>
                     ))}
                   </ul>
+                  <h2 className="text-lg font-bold mt-4 mb-2">将棋大会</h2>
                 </div>
               )}
               {Object.entries(groupedActivities)
@@ -91,16 +93,16 @@ const Sidebar = () => {
                 .sort(([a], [b]) => Number(b) - Number(a))
                 .map(([year, months]) => (
                   <div key={year}>
-                    <h2 className="text-lg font-bold mt-4 mb-2">{year}年</h2>
+                    <h3 className="text-base font-bold mt-4 mb-2">{year}年</h3>
                     {Object.entries(months)
                       .sort(([a], [b]) => Number(b) - Number(a))
                       .map(([month, monthActivities]) => (
                         <div key={`${year}-${month}`} className="mb-4">
-                          <h3 className="text-md font-semibold mb-2">
+                          <h4 className="text-sm font-semibold mb-2">
                             {new Date(Number(year), Number(month)).toLocaleString("ja-JP", {
                               month: "long",
                             })}
-                          </h3>
+                          </h4>
                           <ul className="space-y-1">
                             {monthActivities.map((activity: Activity, index: number) => (
                               <li key={index}>
