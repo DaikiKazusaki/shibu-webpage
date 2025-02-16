@@ -9,6 +9,13 @@ interface Activity {
   title: string
 }
 
+type GroupedActivities = {
+  ongoing?: Activity[]
+  [key: number]: {
+    [key: number]: Activity[]
+  }
+}
+
 const Sidebar = () => {
   const [activities, setActivities] = useState<Activity[]>([])
 
@@ -40,25 +47,20 @@ const Sidebar = () => {
       return new Date(b.date).getTime() - new Date(a.date).getTime()
     })
 
-    const grouped = sortedActivities.reduce(
-      (acc, activity) => {
-        if (!activity.date) {
-          if (!acc["ongoing"]) acc["ongoing"] = []
-          acc["ongoing"].push(activity)
-        } else {
-          const date = new Date(activity.date)
-          const year = date.getFullYear()
-          const month = date.getMonth()
-          if (!acc[year]) acc[year] = {}
-          if (!acc[year][month]) acc[year][month] = []
-          acc[year][month].push(activity)
-        }
-        return acc
-      },
-      {} as Record<string | number, Record<number, Activity[]> | Activity[]>,
-    )
-
-    return grouped
+    return sortedActivities.reduce((acc: GroupedActivities, activity) => {
+      if (!activity.date) {
+        if (!acc.ongoing) acc.ongoing = []
+        acc.ongoing.push(activity)
+      } else {
+        const date = new Date(activity.date)
+        const year = date.getFullYear()
+        const month = date.getMonth()
+        if (!acc[year]) acc[year] = {}
+        if (!acc[year][month]) acc[year][month] = []
+        acc[year][month].push(activity)
+      }
+      return acc
+    }, {})
   }, [activities])
 
   return (
@@ -68,13 +70,13 @@ const Sidebar = () => {
       </CardHeader>
       <CardContent>
         <ScrollArea className="h-[calc(100vh-120px)]">
-          {Object.entries(groupedActivities).length > 0 ? (
+          {Object.keys(groupedActivities).length > 0 ? (
             <>
-              {groupedActivities["ongoing"] && (
+              {groupedActivities.ongoing && (
                 <div key="ongoing">
                   <h2 className="text-lg font-bold mt-4 mb-2">将棋教室</h2>
                   <ul className="space-y-1">
-                    {(groupedActivities["ongoing"] as Activity[]).map((activity, index) => (
+                    {groupedActivities.ongoing.map((activity: Activity, index: number) => (
                       <li key={index}>
                         <Link href={`/activities#${activity.title}`} className="text-blue-600 hover:underline">
                           {activity.title}
@@ -86,21 +88,21 @@ const Sidebar = () => {
               )}
               {Object.entries(groupedActivities)
                 .filter(([key]) => key !== "ongoing")
-                .sort(([a], [b]) => Number.parseInt(b) - Number.parseInt(a))
+                .sort(([a], [b]) => Number(b) - Number(a))
                 .map(([year, months]) => (
                   <div key={year}>
                     <h2 className="text-lg font-bold mt-4 mb-2">{year}年</h2>
-                    {Object.entries(months as Record<number, Activity[]>)
-                      .sort(([a], [b]) => Number.parseInt(b) - Number.parseInt(a))
+                    {Object.entries(months)
+                      .sort(([a], [b]) => Number(b) - Number(a))
                       .map(([month, monthActivities]) => (
                         <div key={`${year}-${month}`} className="mb-4">
                           <h3 className="text-md font-semibold mb-2">
-                            {new Date(Number.parseInt(year as string), Number.parseInt(month)).toLocaleString("ja-JP", {
+                            {new Date(Number(year), Number(month)).toLocaleString("ja-JP", {
                               month: "long",
                             })}
                           </h3>
                           <ul className="space-y-1">
-                            {monthActivities.map((activity, index) => (
+                            {monthActivities.map((activity: Activity, index: number) => (
                               <li key={index}>
                                 <Link href={`/activities#${activity.date}`} className="text-blue-600 hover:underline">
                                   {activity.title}
