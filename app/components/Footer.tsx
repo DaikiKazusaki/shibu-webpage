@@ -6,6 +6,11 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
+            <h3 className="text-lg font-semibold mb-4">江坂学生支部</h3>
+            <p>&copy; 2025 江坂学生支部. All rights reserved.</p>
+            <p>This website is created by a group of students.</p>
+          </div>
+          <div>
             <h3 className="text-lg font-semibold mb-4">SNS・メディア</h3>
             <ul className="space-y-2">
               <li>
@@ -49,11 +54,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">江坂学生支部</h3>
-            <p>&copy; 2025 江坂学生支部. All rights reserved.</p>
-            <p>This website is created by a group of students.</p>
           </div>
         </div>
       </div>
