@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "現在準備中",
+  title: "スポンサー",
   description: "このページは現在準備中です。",
 }
 
