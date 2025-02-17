@@ -14,7 +14,7 @@ export default function SNS() {
           <a href="https://note.com/shogi_gakusei" className="text-blue-600 hover:underline">ブログ</a>
         </li>
         <li>
-          <a href="https://x.com/0karashogi" className="text-blue-600 hover:underline">X (Twitter)</a>
+          <a href="https://x.com/0karashogi" className="text-blue-600 hover:underline">X (旧Twitter)</a>
         </li>
         <li>
           <a href="https://www.youtube.com/@0karashogi" className="text-blue-600 hover:underline">YouTube</a>
