@@ -3,6 +3,9 @@
 import type React from "react"
 import { useState } from "react"
 
+// スプレッドシートのURL -> 53行目
+// 大会一覧 -> 90行目 
+
 const EventRegistrationForm = () => {
   const [formData, setFormData] = useState({
     dates: [] as string[],
@@ -47,7 +50,7 @@ const EventRegistrationForm = () => {
     try {
       // 以下のfetch関数内のURLは，Googleスプレッドシートのエンドポイントに置き換える
       // 詳細はこちらを確認 -> https://chatgpt.com/c/67b2bd50-0508-8003-beda-d71ab7503f99
-      const response = await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycby_QXJ1q4S6nsMHvCX5ho8FywA5qHllDzn2ILLaOPiZ0CKp8fT3lMJP7OwzVsSwOcMY/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
