@@ -7,7 +7,12 @@ export default function Apply() {
       <ul className="space-y-4">
         <li>
           <Link href="/apply/event" className="text-blue-600 hover:underline">
-            大会・教室のお申し込み
+            大会のお申し込み
+          </Link>
+        </li>
+        <li>
+          <Link href="/apply/school" className="text-blue-600 hover:underline">
+            教室のお申し込み
           </Link>
         </li>
         <li>
