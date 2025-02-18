@@ -14,7 +14,7 @@ export default function About() {
         </section>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">支部の活動にご興味を持った方</h2>
-          <p>全国大学生支部の活動に興味を持っていただきありがとうございます。私たちと一緒に活動してみませんか？</p>
+          <p>江坂学生支部の活動に興味を持っていただきありがとうございます。私たちと一緒に活動してみませんか？</p>
           <Link href="/apply/join" className="inline-block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             参加申し込みフォームへ
           </Link>
