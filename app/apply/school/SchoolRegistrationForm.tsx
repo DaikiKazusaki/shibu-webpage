@@ -50,7 +50,7 @@ const EventRegistrationForm = () => {
     try {
       // 以下のfetch関数内のURLは，Googleスプレッドシートのエンドポイントに置き換える
       // 詳細はこちらを確認 -> https://chatgpt.com/c/67b2bd50-0508-8003-beda-d71ab7503f99
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzIwxdoVw1-XFQa_FPA5qgfAJArzOltbd7UH0qj6lzvbcrrVZOOAbEQH9rK2lPpUahJ/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbw4luaN-c5VcN2pfKbU9dfhvUy0HvsrvM8XoabUAYea2sl27I6cLXd-lyK26jMHT06d/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
