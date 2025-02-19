@@ -6,11 +6,13 @@ export default function About() {
         <h1 className="text-3xl font-bold mb-6">江坂学生支部とは</h1>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">大学生による支部</h2>
-          <p>江坂学生支部は大学生によって運営されている支部です...</p>
+          <p>江坂学生支部は大学生によって運営されている支部です。</p>
+          <p>支部メンバーは<Link href='/activities' className="text-blue-500 hover:underline">こちら</Link>からご覧になれます！</p>
         </section>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">大会・教室の運営</h2>
-          <p>私たちは定期的に大会や教室を開催しています...</p>
+          <p>私たちは定期的に大会や教室を開催しています。</p>
+          <p>詳細は<Link href='/activities' className="text-blue-500 hover:underline">こちら</Link>をご覧ください。</p>
         </section>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">支部の活動にご興味を持った方</h2>
