@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import Link from "next/link"
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "スポンサー",
@@ -12,6 +14,10 @@ export default function ComingSoon() {
       <p className="text-xl text-zinc-600 dark:text-zinc-400">
         お待たせして申し訳ありません。もうしばらくお待ちください。
       </p>
+      <Image src="/public/sponser/nichibei-coffee.jpg" alt="Sample Image" width={500} height={500} objectFit="contain" />
+      <Link href="http://www.nichibeicoffee.co.jp/" className="inline-block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        スポンサーページへ
+      </Link>
     </main>
   )
 }
