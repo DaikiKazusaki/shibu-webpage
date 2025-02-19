@@ -1,4 +1,10 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'ホーム',
+  description: '江坂学生支部のホームページです．',
+}
 
 export default function Home() {
   return (
