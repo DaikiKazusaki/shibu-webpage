@@ -14,6 +14,7 @@ export default function About() {
           <p>私たちは定期的に大会や教室を開催しています。</p>
           <p>詳細は<Link href='/activities' className="text-blue-500 hover:underline">こちら</Link>をご覧ください。</p>
         </section>
+        {/*
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">支部の活動にご興味を持った方</h2>
           <p>江坂学生支部の活動に興味を持っていただきありがとうございます。私たちと一緒に活動してみませんか？</p>
@@ -21,6 +22,7 @@ export default function About() {
             参加申し込みフォームへ
           </Link>
         </section>
+          */}
       </div>
     )
   }
