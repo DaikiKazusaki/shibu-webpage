@@ -11,22 +11,30 @@ export const metadata: Metadata = {
 type Event = {
   id: string
   title: string
-  date: string
+  date: string // "YYYY年MM月DD日" 形式
   category: "school" | "tournament" | "other"
 }
 
 const events: Event[] = [
-  { id: "1", title: "おひさま将棋教室", date: "2025-06-15", category: "school" },
-  { id: "2", title: "おひさま将棋教室", date: "2025-08-05", category: "school" },
-  { id: "3", title: "夏休み子ども将棋大会", date: "2025-07-30", category: "tournament" },
-  { id: "4", title: "出張こまこい", date: "2023-09-10", category: "other" },
+  { id: "1", title: "おひさま将棋教室", date: "2025年3月16日", category: "school" },
+  { id: "2", title: "おひさま将棋教室", date: "2025年4月20日", category: "school" },
+  { id: "3", title: "鈴蘭将棋大会", date: "2025年5月4日", category: "tournament" },
+  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年9月10日", category: "other" },
 ]
+
+// 日付をソートするための関数
+function sortEventsByDate(a: Event, b: Event) {
+  return (
+    new Date(a.date.replace(/年|月/g, "-").replace("日", "")).getTime() -
+    new Date(b.date.replace(/年|月/g, "-").replace("日", "")).getTime()
+  )
+}
 
 export default function EventsPage() {
   const categorizedEvents = {
-    school: events.filter((event) => event.category === "school"),
-    tournament: events.filter((event) => event.category === "tournament"),
-    other: events.filter((event) => event.category === "other"),
+    school: events.filter((event) => event.category === "school").sort(sortEventsByDate),
+    tournament: events.filter((event) => event.category === "tournament").sort(sortEventsByDate),
+    other: events.filter((event) => event.category === "other").sort(sortEventsByDate),
   }
 
   return (
@@ -38,14 +46,14 @@ export default function EventsPage() {
           title="将棋教室"
           events={categorizedEvents.school}
           icon={<Users className="w-6 h-6" />}
-          applyLink="/app/apply/school"
+          applyLink="/apply/school"
           applyText="教室に申し込む"
         />
         <EventCategory
           title="将棋大会"
           events={categorizedEvents.tournament}
           icon={<Calendar className="w-6 h-6" />}
-          applyLink="/app/apply/event"
+          applyLink="/apply/event"
           applyText="大会に申し込む"
         />
         <EventCategory
