@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Calendar, Users, Sparkles } from "lucide-react"
+import { Calendar, Users, Sparkles, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "今後のイベント",
@@ -19,10 +19,9 @@ const events: Event[] = [
   { id: "1", title: "おひさま将棋教室", date: "2025年3月16日", category: "school" },
   { id: "2", title: "おひさま将棋教室", date: "2025年4月20日", category: "school" },
   { id: "3", title: "鈴蘭将棋大会", date: "2025年5月4日", category: "tournament" },
-  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年9月10日", category: "other" },
+  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年3月23日", category: "other" },
 ]
 
-// 日付をソートするための関数
 function sortEventsByDate(a: Event, b: Event) {
   return (
     new Date(a.date.replace(/年|月/g, "-").replace("日", "")).getTime() -
@@ -48,6 +47,7 @@ export default function EventsPage() {
           icon={<Users className="w-6 h-6" />}
           applyLink="/apply/school"
           applyText="教室に申し込む"
+          pastActivitiesLink="/activities?category=school"
         />
         <EventCategory
           title="将棋大会"
@@ -55,6 +55,7 @@ export default function EventsPage() {
           icon={<Calendar className="w-6 h-6" />}
           applyLink="/apply/event"
           applyText="大会に申し込む"
+          pastActivitiesLink="/activities?category=tournament"
         />
         <EventCategory
           title="その他のイベント"
@@ -72,12 +73,14 @@ function EventCategory({
   icon,
   applyLink,
   applyText,
+  pastActivitiesLink,
 }: {
   title: string
   events: Event[]
   icon: React.ReactNode
   applyLink?: string
   applyText?: string
+  pastActivitiesLink?: string
 }) {
   return (
     <section className="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-md p-6">
@@ -93,14 +96,25 @@ function EventCategory({
           </li>
         ))}
       </ul>
-      {applyLink && (
-        <Link
-          href={applyLink}
-          className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
-        >
-          {applyText}
-        </Link>
-      )}
+      <div className="mt-6 space-y-2">
+        {applyLink && (
+          <Link
+            href={applyLink}
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors w-full text-center"
+          >
+            {applyText}
+          </Link>
+        )}
+        {pastActivitiesLink && (
+          <Link
+            href={pastActivitiesLink}
+            className="inline-block bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-zinc-800 dark:text-zinc-200 font-bold py-2 px-4 rounded transition-colors w-full text-center flex items-center justify-center"
+          >
+            <Clock className="w-4 h-4 mr-2" />
+            過去の活動を見る
+          </Link>
+        )}
+      </div>
     </section>
   )
 }
