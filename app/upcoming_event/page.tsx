@@ -20,6 +20,7 @@ const events: Event[] = [
   { id: "2", title: "おひさま将棋教室", date: "2025年4月20日", category: "school" },
   { id: "3", title: "鈴蘭将棋大会", date: "2025年5月4日", category: "tournament" },
   { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年3月23日", category: "other" },
+  { id: "5", title:  "あにまるしぇお手伝い", date: "2025年5月25日", category: "other" },
 ]
 
 function sortEventsByDate(a: Event, b: Event) {
