@@ -90,7 +90,12 @@ const EventRegistrationForm = () => {
   }
 
   // 以下で参加日時の選択肢を定義
-  const dates = ["2025年2月16日(日)13:00 ~ 17:00", "2025年3月16日(日)13:00 ~ 17:00", "2025年4月20日(日)13:00 ~ 17:00"]
+  const dates = [
+    "2025年3月16日(日)13:00 ~ 17:00", 
+    "2025年3月23日(日)13:10 ~ 14:55 (こまこい第1部)",
+    "2025年3月23日(日)15:05 ~ 16:50 (こまこい第2部)",
+    "2025年4月20日(日)13:00 ~ 17:00"
+  ]
 
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
