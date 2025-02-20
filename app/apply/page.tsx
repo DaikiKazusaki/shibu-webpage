@@ -1,5 +1,12 @@
 import Link from 'next/link'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '申し込み',
+  description: '教室・大会などの申し込みを行うページです．',
+}
+
 export default function Apply() {
   return (
     <div className="container mx-auto px-4 py-8">

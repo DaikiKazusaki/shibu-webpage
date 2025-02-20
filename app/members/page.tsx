@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "メンバー",
-  description: "江坂学生支部のメンバーを紹介します。",
+  title: 'メンバー',
+  description: '江坂学生支部のメンバーついての情報です．',
 }
 
 interface Member {
