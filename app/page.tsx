@@ -24,10 +24,10 @@ export default function Home() {
           <li>YouTubeとかで将棋を普及したい</li>
           <li>将棋好きの交流の場にしたい</li>
           <li>学生とそれ以外の架け橋になりたい</li>
-          <li>塾講師的な感じで、学生が将棋で稼げるようにしたい</li>
+          {/* <li>塾講師的な感じで、学生が将棋で稼げるようにしたい</li> */}
           <li>代替わりしても活動を続けられるようにしたい</li>
           <li>将棋界の労働環境？をホワイトにしたい(老後の趣味などのボランティアや連盟の普及事業と価格競争せず、運営メンバーに正当な報酬を支払う)</li>
-          <li>史上初とか、みんなが望んでいるけど実現していないこととかを実現したい(クラス分け大会の棋力差の問題とか？)</li>
+          {/* <li>史上初とか、みんなが望んでいるけど実現していないこととかを実現したい(クラス分け大会の棋力差の問題とか？)</li> */}
           <li>自分たちが参加したくなるようなイベントを開く</li>
         </p>
       </section>
@@ -44,8 +44,8 @@ export default function Home() {
           将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！
         </p>
         <p>
-          お問い合わせは
-            <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">こちらまで</a>
+          これらのお問い合わせは
+          <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">こちらまで</a>
           お願いします！(リンクを押すと自動的にメールアプリが起動します)
         </p>
       </section>
