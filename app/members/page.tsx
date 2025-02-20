@@ -86,11 +86,29 @@ export default function Members() {
       introduction: '趣味は音楽鑑賞で，Mr.Childrenが好きです！'
     },
     {
-      name: '岸本昂大',
+      name: '古藤祐樹',
+      role: '支部運営',
+      university: '京都大学',
+      introduction: ''
+    },
+    {
+      name: '宮下雄成',
+      role: 'SNS運営',
+      university: '龍谷大学 文学部',
+      introduction: ''
+    },
+    {
+      name: '大原尚',
+      role: '中四国大会運営',
+      university: '近畿大学 工学部',
+      introduction: ''
+    },
+    {
+      name: '土井亮太',
       role: '関西大会運営',
-      university: '大阪公立大学 理学部',
-      introduction: '将棋を通して様々な地域、年代の方と交流していきたいです'
-    }
+      university: '大阪公立大学',
+      introduction: ''
+    },
     // Add more members as needed
   ]
 
