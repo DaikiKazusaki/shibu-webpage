@@ -14,8 +14,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">SNS・メディア</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/events" className="hover:text-blue-300">
-                  イベント告知
+                <Link href="/upcoming_event" className="hover:text-blue-300">
+                  今後のイベント
                 </Link>
               </li>
               <li>
