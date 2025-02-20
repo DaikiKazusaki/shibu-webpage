@@ -69,7 +69,7 @@ export default function Members() {
     },
     {
       name: '田中優汰',
-      role: 'ブレーン',
+      role: '営業部',
       university: '神戸大学 国際人間科学部',
       introduction: '将棋を通じて輪を広げましょう！'
     },
