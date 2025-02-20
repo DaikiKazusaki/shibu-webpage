@@ -34,7 +34,7 @@ export default function Home() {
           <CarouselContent>
             {carouselImages.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative aspect-[2/1] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-[2/1] w-full overflow-hidden">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
