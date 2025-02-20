@@ -28,7 +28,7 @@ export default function About() {
             参加申し込みフォームへ
           </Link>
         </section>
-          */}
+        */}
       </div>
     )
   }
