@@ -185,6 +185,7 @@ const EventRegistrationForm = () => {
           value={formData.notes}
           onChange={handleInputChange}
           rows={4}
+          placeholder="その他運営にお伝えしたいご質問・ご要望があればこちらにお願いします"
           className="w-full px-3 py-2 border rounded"
         ></textarea>
       </div>
