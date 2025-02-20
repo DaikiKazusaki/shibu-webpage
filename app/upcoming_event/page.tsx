@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Calendar, Users, Sparkles, Clock, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -106,6 +107,12 @@ export default function EventsPage() {
           events={categorizedEvents.other}
           icon={<Sparkles className="w-6 h-6" />}
         />
+      </div>
+      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
+      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
+      <div className="mt-12 flex justify-center">
+        {/* 広告の写真は以下に追加 */}
+        <Image src="/advertisements/school.jpg" alt="お日様将棋教室 広告" width={500} height={500} objectFit="contain" />
       </div>
     </main>
   )
