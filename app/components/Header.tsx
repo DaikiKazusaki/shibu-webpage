@@ -41,6 +41,11 @@ export default function Header() {
               申し込み
             </Link>
           </li>
+          <li>
+            <Link href="/upcoming_event" className="block py-2 md:py-0">
+              今後のイベント
+            </Link>
+          </li>
         </ul>
         <button className="md:hidden absolute top-4 right-4" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <svg
