@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'ホーム',
-  description: '江坂学生支部のホームページです．',
+  description: '江坂学生支部のホームページです。',
 }
 
 export default function Home() {
@@ -27,6 +27,13 @@ export default function Home() {
         <Link href="/activities" className="text-blue-600 hover:underline">
           詳細を見る
         </Link>
+      </section>
+      <section className="my-8">
+        <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
+        <p>
+          将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！お問い合わせは
+          <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">こちらまで</a>
+        </p>
       </section>
     </div>
   )
