@@ -13,13 +13,13 @@ export default function Apply() {
       <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
       <ul className="space-y-4">
         <li>
-          <Link href="/apply/event" className="text-blue-600 hover:underline">
-            大会のお申し込み
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform" className="text-blue-600 hover:underline">
+            教室のお申し込み
           </Link>
         </li>
         <li>
-          <Link href="/apply/school" className="text-blue-600 hover:underline">
-            教室のお申し込み
+          <Link href="/apply/event" className="text-blue-600 hover:underline">
+            大会のお申し込み
           </Link>
         </li>
         <li>
