@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* カルーセルセクション */}
-      <div className="w-2/3 max-w-6xl px-4 mb-8">
+      <div className="w-3/4 max-w-6xl px-4 mb-8">
         <Carousel className="w-full">
           <CarouselContent>
             {carouselImages.map((image, index) => (
