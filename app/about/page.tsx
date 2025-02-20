@@ -13,7 +13,7 @@ export default function About() {
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">大学生による支部</h2>
           <p>江坂学生支部は大学生によって運営されている支部です。</p>
-          <p>支部メンバーは<Link href='/activities' className="text-blue-500 hover:underline">こちら</Link>からご覧になれます！</p>
+          <p>支部メンバーは<Link href='/members' className="text-blue-500 hover:underline">こちら</Link>からご覧になれます！</p>
         </section>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">大会・教室の運営</h2>
