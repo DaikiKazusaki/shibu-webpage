@@ -14,8 +14,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">SNS・メディア</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/apply" className="hover:text-blue-300">
-                  イベント申し込み
+                <Link href="/upcoming_event" className="hover:text-blue-300">
+                  今後のイベント
                 </Link>
               </li>
               <li>
@@ -49,7 +49,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-300">
+                <Link href="mailto:shogi.esakagakusei@gmail.com" className="hover:text-blue-300">
                   お仕事依頼
                 </Link>
               </li>

@@ -1,6 +1,9 @@
-'use client'
+import { Metadata } from 'next'
 
-// import { useState } from 'react'
+export const metadata: Metadata = {
+  title: 'メンバー',
+  description: '江坂学生支部のメンバーついての情報です．',
+}
 
 interface Member {
   name: string
@@ -66,7 +69,7 @@ export default function Members() {
     },
     {
       name: '田中優汰',
-      role: 'ブレーン',
+      role: '営業部',
       university: '神戸大学 国際人間科学部',
       introduction: '将棋を通じて輪を広げましょう！'
     },

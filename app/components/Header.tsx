@@ -37,8 +37,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/apply" className="block py-2 md:py-0">
-              申し込み
+            <Link href="/upcoming_event" className="block py-2 md:py-0">
+              今後のイベント
             </Link>
           </li>
         </ul>
