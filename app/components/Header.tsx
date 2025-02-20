@@ -37,13 +37,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/sponser" className="block py-2 md:py-0">
-              スポンサー
+            <Link href="/upcoming_event" className="block py-2 md:py-0">
+              今後のイベント
             </Link>
           </li>
           <li>
-            <Link href="/apply" className="block py-2 md:py-0">
-              申し込み
+            <Link href="/sponser" className="block py-2 md:py-0">
+              スポンサー
             </Link>
           </li>
         </ul>

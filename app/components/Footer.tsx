@@ -14,8 +14,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">SNS・メディア</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/events" className="hover:text-blue-300">
-                  イベント告知
+                <Link href="/upcoming_event" className="hover:text-blue-300">
+                  今後のイベント
                 </Link>
               </li>
               <li>
@@ -39,7 +39,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">リンク</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-300">
+                <a href="/books" className="hover:text-blue-300">
                   電子書籍
                 </a>
               </li>
@@ -49,7 +49,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-300">
+                <Link href="mailto:shogi.esakagakusei@gmail.com" className="hover:text-blue-300">
                   お仕事依頼
                 </Link>
               </li>
