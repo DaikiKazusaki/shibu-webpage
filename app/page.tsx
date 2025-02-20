@@ -31,8 +31,12 @@ export default function Home() {
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
         <p>
-          将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！お問い合わせは
-          <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">こちらまで</a>
+          将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！
+        </p>
+        <p>
+          お問い合わせは
+            <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">こちらまで</a>
+          お願いします！(リンクを押すと自動的にメールアプリが起動します)
         </p>
       </section>
     </div>
