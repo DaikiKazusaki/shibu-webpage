@@ -49,7 +49,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-300">
+                <Link href="mailto:shogi.esakagakusei@gmail.com" className="hover:text-blue-300">
                   お仕事依頼
                 </Link>
               </li>
