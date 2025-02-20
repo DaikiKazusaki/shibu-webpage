@@ -29,12 +29,12 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* カルーセルセクション */}
-      <div className="w-3/4 max-w-6xl px-4 mb-8">
+      <div className="w-full max-w-6xl px-4 mb-8">
         <Carousel className="w-full">
           <CarouselContent>
             {carouselImages.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-[2/1] w-full overflow-hidden rounded-lg">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
