@@ -89,7 +89,7 @@ export default function EventsPage() {
           title="将棋教室"
           events={categorizedEvents.school}
           icon={<Users className="w-6 h-6" />}
-          applyLink="https://docs.google.com/forms/d/13uXUzLFbFLr38LxfHfAC6HolzVG3Zb8KVCnAqGpXx8s/viewform"
+          applyLink="/apply/school"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
