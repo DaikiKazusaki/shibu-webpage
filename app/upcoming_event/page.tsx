@@ -18,9 +18,10 @@ type Event = {
 const events: Event[] = [
   { id: "1", title: "おひさま将棋教室", date: "2025年3月16日", category: "school" },
   { id: "2", title: "おひさま将棋教室", date: "2025年4月20日", category: "school" },
-  { id: "3", title: "鈴蘭将棋大会", date: "2025年5月4日", category: "tournament" },
-  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年3月23日", category: "other" },
-  { id: "5", title:  "あにまるしぇお手伝い", date: "2025年5月25日", category: "other" },
+  { id: "3", title: "鈴蘭将棋大会(仮)", date: "2025年5月4日", category: "tournament" },
+  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年3月23日", category: "school" },
+  { id: "5", title: "あにまるしぇお手伝い", date: "2025年5月25日", category: "other" },
+  { id: "6", title: "将棋YouTuberそらさん出版記念大会(6/1 or 6/7)", date: "2025年6月1日", category: "tournament" },
 ]
 
 function sortEventsByDate(a: Event, b: Event) {
@@ -46,7 +47,7 @@ export default function EventsPage() {
           title="将棋教室"
           events={categorizedEvents.school}
           icon={<Users className="w-6 h-6" />}
-          applyLink="/apply/school"
+          applyLink="https://docs.google.com/forms/d/13uXUzLFbFLr38LxfHfAC6HolzVG3Zb8KVCnAqGpXx8s/viewform"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
