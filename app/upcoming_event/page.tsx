@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Calendar, Users, Sparkles, Clock } from "lucide-react"
+import { Calendar, Users, Sparkles, Clock, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "今後のイベント",
@@ -11,24 +11,66 @@ export const metadata: Metadata = {
 type Event = {
   id: string
   title: string
-  date: string // "YYYY年MM月DD日" 形式
+  dates: string[] // "YYYY年MM月DD日" 形式の配列に変更
   category: "school" | "tournament" | "other"
+  location?: string
 }
 
 const events: Event[] = [
-  { id: "1", title: "おひさま将棋教室", date: "2025年3月16日", category: "school" },
-  { id: "2", title: "おひさま将棋教室", date: "2025年4月20日", category: "school" },
-  { id: "3", title: "鈴蘭将棋大会(仮)", date: "2025年5月4日", category: "tournament" },
-  { id: "4", title: "出張おひさま将棋教室 in こまこい", date: "2025年3月23日", category: "school" },
-  { id: "5", title: "あにまるしぇお手伝い", date: "2025年5月25日", category: "other" },
-  { id: "6", title: "将棋YouTuberそらさん出版記念大会(6/1 or 6/7)", date: "2025年6月1日", category: "tournament" },
+  {
+    id: "1",
+    title: "おひさま将棋教室",
+    dates: ["2025年3月16日"],
+    category: "school",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    id: "2",
+    title: "おひさま将棋教室",
+    dates: ["2025年4月20日"],
+    category: "school",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    id: "3",
+    title: "鈴蘭将棋大会(仮)",
+    dates: ["2025年5月4日"],
+    category: "tournament",
+    location: "未定",
+  },
+  {
+    id: "4",
+    title: "出張おひさま将棋教室 in こまこい",
+    dates: ["2025年3月23日"],
+    category: "school",
+    location: "兵庫県神戸市灘区文化センター5階会議室",
+  },
+  {
+    id: "5",
+    title: "あにまるしぇお手伝い",
+    dates: ["2025年5月25日"],
+    category: "other",
+    location: "大阪府高槻市安満遺跡公園",
+  },
+  {
+    id: "6",
+    title: "将棋YouTuberそらさん出版記念大会",
+    dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
+    category: "tournament",
+    location: "未定",
+  },
 ]
 
+function getEarliestDate(dates: string[]): Date {
+  return new Date(Math.min(...dates.map((date) => new Date(date.replace(/年|月/g, "-").replace("日", "")).getTime())))
+}
+
 function sortEventsByDate(a: Event, b: Event) {
-  return (
-    new Date(a.date.replace(/年|月/g, "-").replace("日", "")).getTime() -
-    new Date(b.date.replace(/年|月/g, "-").replace("日", "")).getTime()
-  )
+  return getEarliestDate(a.dates).getTime() - getEarliestDate(b.dates).getTime()
+}
+
+function formatDates(dates: string[]): string {
+  return dates.length > 1 ? dates.join(" or ") : dates[0]
 }
 
 export default function EventsPage() {
@@ -94,7 +136,16 @@ function EventCategory({
         {events.map((event) => (
           <li key={event.id} className="border-b border-zinc-200 dark:border-zinc-700 pb-2">
             <h3 className="text-lg font-medium text-zinc-700 dark:text-zinc-300">{event.title}</h3>
-            <p className="text-zinc-600 dark:text-zinc-400">{event.date}</p>
+            <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              {formatDates(event.dates)}
+            </p>
+            {event.location && (
+              <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2 mt-1">
+                <MapPin className="w-4 h-4" />
+                {event.location}
+              </p>
+            )}
           </li>
         ))}
       </ul>
