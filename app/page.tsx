@@ -50,6 +50,7 @@ export default function Home() {
           <CarouselNext className="hidden md:flex" />
         </Carousel>
       </div>
+      {/* カルーセルセクションここまで */}
 
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">江坂学生支部へようこそ</h1>
