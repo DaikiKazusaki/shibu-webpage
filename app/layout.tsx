@@ -26,9 +26,11 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <Header />
         <div className="flex-grow flex flex-col sm:flex-row overflow-hidden">
-          <div className="hidden lg:block w-64 flex-shrink-0">{isActivitiesPage && <LeftSidebar />}</div>
+          <div className="hidden xl:block w-64 flex-shrink-0">
+            {isActivitiesPage && <LeftSidebar />}
+          </div>
           <main className="flex-grow p-4">{children}</main>
-          <div className="hidden lg:block w-64 flex-shrink-0">
+          <div className="hidden xl:block w-64 flex-shrink-0">
             <RightSidebar />
           </div>
         </div>
