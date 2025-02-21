@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -50,7 +51,13 @@ export default function Header() {
         </button>
         {/* モバイルメニュー */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-gray-800 z-40">
+          <motion.div 
+            className="fixed inset-0 bg-gray-800 z-40"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.3 }}
+          >
             <div className="flex flex-col items-center justify-center h-full">
               <ul className="flex flex-col items-center space-y-8 text-white text-xl">
                 <li>
@@ -80,10 +87,9 @@ export default function Header() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         )}
       </nav>
     </header>
   )
 }
-
