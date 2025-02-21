@@ -71,7 +71,14 @@ export default function Home() {
             <section className="border rounded-lg p-6 bg-background shadow-sm">
               <h2 className="text-2xl font-semibold mb-4">理念</h2>
               <p>
-                どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋の普及にも力をいれています！
+                どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！イベントを実施し、将棋の普及にも力をいれています！
+              </p>
+              <p>
+                イベントの詳細については、
+                <Link href="/upcoming_event" className="text-blue-600 hover:underline">
+                  こちら
+                </Link>
+                をご覧ください。
               </p>
             </section>
           </div>
