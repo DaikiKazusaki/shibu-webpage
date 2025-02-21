@@ -9,9 +9,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-800 text-white p-4">
+    <header className="bg-gray-800 text-white py-3 px-4">
       <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-center md:text-left mb-4 md:mb-0">
+        <div className="text-center md:text-left mb-2 md:mb-0">
           <Link href="/" className="text-xl md:text-2xl font-bold">
             江坂学生支部
           </Link>
@@ -46,7 +46,7 @@ export default function Header() {
           </li>
         </ul>
         {/* モバイルメニューボタン */}
-        <button className="md:hidden absolute top-4 right-4 z-50 p-2 bg-white rounded flex items-center justify-center w-10 h-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="md:hidden absolute top-3 right-4 z-50 p-2 border-2 border-white bg-gray-800 rounded flex items-center justify-center w-10 h-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
         </button>
         {/* モバイルメニュー */}
