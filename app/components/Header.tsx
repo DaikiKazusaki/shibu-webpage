@@ -52,7 +52,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="fixed inset-0 bg-gray-800 z-40">
             <div className="flex flex-col items-center justify-center h-full">
-              <ul className="flex flex-col items-center space-y-8 text-black text-xl">
+              <ul className="flex flex-col items-center space-y-8 text-white text-xl">
                 <li>
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
                     ホーム
