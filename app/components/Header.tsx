@@ -50,7 +50,7 @@ export default function Header() {
         </button>
         {/* モバイルメニュー */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-[#e0ffe7] z-40">
+          <div className="fixed inset-0 bg-gray-800 z-40">
             <div className="flex flex-col items-center justify-center h-full">
               <ul className="flex flex-col items-center space-y-8 text-black text-xl">
                 <li>
