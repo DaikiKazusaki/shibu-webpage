@@ -92,9 +92,9 @@ export default function Home() {
               <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
               <p>地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
                 <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">
-                  こちらまで
+                  こちら
                 </a>
-                お願いします！(リンクを押すと自動的にメールアプリが起動します)
+                までお願いします！(リンクを押すと自動的にメールアプリが起動します)
               </p>
               <p>
                 また、支部メンバーの募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
