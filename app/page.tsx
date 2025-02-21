@@ -59,10 +59,13 @@ export default function Home() {
           <div className="lg:w-1/2 space-y-8">
             <section className="border rounded-lg p-6 bg-background shadow-sm">
               <h2 className="text-2xl font-semibold mb-4">江坂学生支部とは</h2>
-              <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
-              <Link href="/about" className="text-blue-600 hover:underline">
-                詳細を見る
-              </Link>
+              <p>
+                全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
+                <Link href="/about" className="text-blue-600 hover:underline">
+                  こちら
+                </Link>
+                からご覧になれます。
+              </p>
             </section>
 
             <section className="border rounded-lg p-6 bg-background shadow-sm">
