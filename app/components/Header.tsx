@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -50,45 +50,47 @@ export default function Header() {
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
         {/* モバイルメニュー */}
-        {isMenuOpen && (
-          <motion.div 
-            className="fixed inset-0 bg-gray-800 z-40"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="flex flex-col items-center justify-center h-full">
-              <ul className="flex flex-col items-center space-y-8 text-white text-xl">
-                <li>
-                  <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                    ホーム
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                    支部について
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/members" onClick={() => setIsMenuOpen(false)}>
-                    メンバー
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/activities" onClick={() => setIsMenuOpen(false)}>
-                    活動
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/upcoming_event" onClick={() => setIsMenuOpen(false)}>
-                    今後のイベント
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div 
+              className="fixed inset-0 bg-gray-800 z-40"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex flex-col items-center justify-center h-full">
+                <ul className="flex flex-col items-center space-y-8 text-white text-xl">
+                  <li>
+                    <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                      ホーム
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+                      支部について
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/members" onClick={() => setIsMenuOpen(false)}>
+                      メンバー
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/activities" onClick={() => setIsMenuOpen(false)}>
+                      活動
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/upcoming_event" onClick={() => setIsMenuOpen(false)}>
+                      今後のイベント
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   )
