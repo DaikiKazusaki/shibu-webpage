@@ -89,7 +89,7 @@ export default function Home() {
               <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
               <p>将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！</p>
               <p>
-                これらのお問い合わせは
+                お問い合わせは
                 <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">
                   こちらまで
                 </a>
