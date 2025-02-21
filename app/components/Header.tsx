@@ -46,8 +46,8 @@ export default function Header() {
           </li>
         </ul>
         {/* モバイルメニューボタン */}
-        <button className="md:hidden absolute top-4 right-4 z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <button className="md:hidden absolute top-4 right-4 z-50 p-2 bg-white rounded flex items-center justify-center w-10 h-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
         </button>
         {/* モバイルメニュー */}
         <AnimatePresence>
