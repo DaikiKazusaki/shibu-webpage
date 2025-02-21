@@ -108,6 +108,7 @@ export default function EventsPage() {
           icon={<Sparkles className="w-6 h-6" />}
         />
       </div>
+      {/* 以下はスペースを設けるためのh1タグ */}
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
       <div className="mt-12 flex justify-center">
