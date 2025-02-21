@@ -34,7 +34,7 @@ export default function Home() {
           <CarouselContent>
             {carouselImages.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative aspect-[2/1] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-[2/1] w-full overflow-hidden">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
@@ -53,40 +53,52 @@ export default function Home() {
       {/* カルーセルセクションここまで */}
 
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">江坂学生支部へようこそ</h1>
-        <section className="my-8">
-          <h2 className="text-2xl font-semibold mb-4">江坂学生支部とは</h2>
-          <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
-          <Link href="/about" className="text-blue-600 hover:underline">
-            詳細を見る
-          </Link>
-        </section>
-        <section className="my-8">
-          <h2 className="text-2xl font-semibold mb-4">理念・存在意義</h2>
-          <p>
-            どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋の普及にも力をいれています！
-          </p>
-        </section>
-        <section className="my-8">
-          <h2 className="text-2xl font-semibold mb-4">活動内容</h2>
-          <p>
-            将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！
-          </p>
-          <Link href="/activities" className="text-blue-600 hover:underline">
-            詳細を見る
-          </Link>
-        </section>
-        <section className="my-8">
-          <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
-          <p>将棋講師の派遣も行っています。また、支部メンバーの募集も随時行っています！</p>
-          <p>
-            これらのお問い合わせは
-            <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">
-              こちらまで
-            </a>
-            お願いします！(リンクを押すと自動的にメールアプリが起動します)
-          </p>
-        </section>
+        <h1 className="text-3xl font-bold mb-6 text-center">江坂学生支部へようこそ</h1>
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* 左側のコンテンツ */}
+          <div className="lg:w-1/2 space-y-8">
+            <section className="border rounded-lg p-6 bg-background shadow-sm">
+              <h2 className="text-2xl font-semibold mb-4">江坂学生支部とは</h2>
+              <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
+              <Link href="/about" className="text-blue-600 hover:underline">
+                詳細を見る
+              </Link>
+            </section>
+
+            <section className="border rounded-lg p-6 bg-background shadow-sm">
+              <h2 className="text-2xl font-semibold mb-4">理念</h2>
+              <p>
+                どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋の普及にも力をいれています！
+              </p>
+            </section>
+          </div>
+
+          {/* 右側のコンテンツ */}
+          <div className="lg:w-1/2 space-y-8">
+            <section className="border rounded-lg p-6 bg-background shadow-sm">
+              <h2 className="text-2xl font-semibold mb-4">活動内容</h2>
+              <p>
+                将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！
+              </p>
+              <Link href="/activities" className="text-blue-600 hover:underline">
+                詳細を見る
+              </Link>
+            </section>
+
+            <section className="border rounded-lg p-6 bg-background shadow-sm">
+              <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
+              <p>地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
+                <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">
+                  こちらまで
+                </a>
+                お願いします！(リンクを押すと自動的にメールアプリが起動します)
+              </p>
+              <p>
+                また、支部メンバーの募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
+              </p>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import "./globals.css"
-import { Inter } from "next/font/google"
+import { Inter } from 'next/font/google'
 import { usePathname } from "next/navigation"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -25,10 +25,12 @@ export default function RootLayout({
     <html lang="ja" className="h-full">
       <body className={`${inter.className} flex flex-col min-h-full`}>
         <Header />
-        <div className="flex-grow flex flex-col md:flex-row overflow-hidden">
-          <div className="w-64 flex-shrink-0">{isActivitiesPage && <LeftSidebar />}</div>
+        <div className="flex-grow flex flex-col sm:flex-row overflow-hidden">
+          <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
+            {isActivitiesPage && <LeftSidebar />}
+          </div>
           <main className="flex-grow p-4">{children}</main>
-          <div className="hidden md:block w-64 flex-shrink-0">
+          <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
             <RightSidebar />
           </div>
         </div>
