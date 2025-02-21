@@ -65,7 +65,7 @@ const Sidebar = () => {
   }, [activities])
 
   return (
-    <div className="hidden md:block h-full bg-background border-l">
+    <div className="hidden md:block h-full bg-background border-r">
       <div className="p-4 border-b">
         <h2 className="text-lg font-semibold">過去の活動</h2>
       </div>
@@ -79,7 +79,7 @@ const Sidebar = () => {
                   <ul className="mt-2 space-y-1.5">
                     {groupedActivities.ongoing.map((activity: Activity, index: number) => (
                       <li key={index}>
-                        <Link href={`/activities#${activity.title}`} className="text-sm text-blue-600 hover:underline">
+                        <Link href={`/activities#${activity.title}`} className="text-sm text-primary hover:underline">
                           {activity.title}
                         </Link>
                       </li>
@@ -110,7 +110,7 @@ const Sidebar = () => {
                               <li key={index}>
                                 <Link
                                   href={`/activities#${activity.date}`}
-                                  className="text-sm text-blue-600 hover:underline"
+                                  className="text-sm text-primary hover:underline"
                                 >
                                   {activity.title}
                                 </Link>
