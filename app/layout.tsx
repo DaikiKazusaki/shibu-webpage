@@ -30,7 +30,7 @@ export default function RootLayout({
             {isActivitiesPage && <LeftSidebar />}
           </div>
           <main className="flex-grow p-4">{children}</main>
-          <div className="hidden xl:block w-64 flex-shrink-0">
+          <div className="w-72 hidden xl:block w-64 flex-shrink-0">
             <RightSidebar />
           </div>
         </div>

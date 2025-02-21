@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useMemo } from "react"
 import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Separator } from "@/components/ui/separator"
 
 interface Activity {
   date?: string
@@ -65,48 +65,53 @@ const Sidebar = () => {
   }, [activities])
 
   return (
-    <Card className="hidden md:block w-64 h-full">
-      <CardHeader>
-        <CardTitle>過去の活動</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <ScrollArea className="h-[calc(100vh-120px)]">
+    <div className="hidden md:block h-full bg-background border-l">
+      <div className="p-4 border-b">
+        <h2 className="text-lg font-semibold">過去の活動</h2>
+      </div>
+      <ScrollArea className="h-[calc(100vh-4rem)] px-4">
+        <div className="py-4">
           {Object.keys(groupedActivities).length > 0 ? (
             <>
               {groupedActivities.ongoing && (
                 <div key="ongoing">
-                  <h2 className="text-lg font-bold mt-4 mb-2">将棋教室</h2>
-                  <ul className="space-y-1">
+                  <h3 className="text-base font-semibold">将棋教室</h3>
+                  <ul className="mt-2 space-y-1.5">
                     {groupedActivities.ongoing.map((activity: Activity, index: number) => (
                       <li key={index}>
-                        <Link href={`/activities#${activity.title}`} className="text-blue-600 hover:underline">
+                        <Link href={`/activities#${activity.title}`} className="text-sm text-blue-600 hover:underline">
                           {activity.title}
                         </Link>
                       </li>
                     ))}
                   </ul>
-                  <h2 className="text-lg font-bold mt-4 mb-2">将棋大会</h2>
+                  <Separator className="my-4" />
+                  <h3 className="text-base font-semibold">将棋大会</h3>
                 </div>
               )}
               {Object.entries(groupedActivities)
                 .filter(([key]) => key !== "ongoing")
                 .sort(([a], [b]) => Number(b) - Number(a))
                 .map(([year, months]) => (
-                  <div key={year}>
-                    <h3 className="text-base font-bold mt-4 mb-2">{year}年</h3>
+                  <div key={year} className="mt-4">
+                    <h3 className="text-base font-semibold text-primary/80">{year}年</h3>
+                    <Separator className="my-2" />
                     {Object.entries(months)
                       .sort(([a], [b]) => Number(b) - Number(a))
                       .map(([month, monthActivities]) => (
                         <div key={`${year}-${month}`} className="mb-4">
-                          <h4 className="text-sm font-semibold mb-2">
+                          <h4 className="text-sm font-medium mt-3 mb-2">
                             {new Date(Number(year), Number(month)).toLocaleString("ja-JP", {
                               month: "long",
                             })}
                           </h4>
-                          <ul className="space-y-1">
+                          <ul className="space-y-1.5">
                             {monthActivities.map((activity: Activity, index: number) => (
                               <li key={index}>
-                                <Link href={`/activities#${activity.date}`} className="text-blue-600 hover:underline">
+                                <Link
+                                  href={`/activities#${activity.date}`}
+                                  className="text-sm text-blue-600 hover:underline"
+                                >
                                   {activity.title}
                                 </Link>
                               </li>
@@ -118,11 +123,11 @@ const Sidebar = () => {
                 ))}
             </>
           ) : (
-            <p className="text-sm text-gray-500">過去の活動はありません。</p>
+            <p className="text-sm text-muted-foreground">過去の活動はありません。</p>
           )}
-        </ScrollArea>
-      </CardContent>
-    </Card>
+        </div>
+      </ScrollArea>
+    </div>
   )
 }
 
