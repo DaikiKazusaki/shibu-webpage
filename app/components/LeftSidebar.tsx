@@ -79,7 +79,7 @@ const Sidebar = () => {
                   <ul className="mt-2 space-y-1.5">
                     {groupedActivities.ongoing.map((activity: Activity, index: number) => (
                       <li key={index}>
-                        <Link href={`/activities#${activity.title}`} className="text-sm text-primary hover:underline">
+                        <Link href={`/activities#${activity.title}`} className="text-sm text-blue-600 hover:underline">
                           {activity.title}
                         </Link>
                       </li>
@@ -110,7 +110,7 @@ const Sidebar = () => {
                               <li key={index}>
                                 <Link
                                   href={`/activities#${activity.date}`}
-                                  className="text-sm text-primary hover:underline"
+                                  className="text-sm text-blue-600 hover:underline"
                                 >
                                   {activity.title}
                                 </Link>
