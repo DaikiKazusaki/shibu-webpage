@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <div className="flex gap-4 text-sm text-gray-400">
               <p>&copy; 2025 江坂学生支部.</p>
               <p>All rights reserved.</p>
