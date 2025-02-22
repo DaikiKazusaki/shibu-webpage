@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
           {/* copy right */}
           <div className="flex justify-center gap-4 text-sm text-gray-400 mt-4">
-            <p>&copy; 2025 江坂学生支部.</p>
+            <p>&copy; 2025 江坂学生支部</p>
             <p>All rights reserved.</p>
           </div>
         </div>
