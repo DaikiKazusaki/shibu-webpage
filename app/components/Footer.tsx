@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between mb-12">
           {/* Logo Section */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold">
+            <Link href="/" className="text-2xl font-bold mb-4">
               江坂学生支部
             </Link>
           </div>
