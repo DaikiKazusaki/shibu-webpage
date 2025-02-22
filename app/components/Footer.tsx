@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h2 className="text-sm font-medium mb-4"></h2>
+              <h2 className="text-sm font-medium mb-4">メニュー</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="/" className="text-sm text-gray-400 hover:text-white">
@@ -73,11 +73,11 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="text-sm font-medium mb-4">お問い合わせ</h2>
+              <h2 className="text-sm font-medium mb-4">お問い合せ</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="mailto:shogi.esakagakusei@gmail.com" className="text-sm text-gray-400 hover:text-white">
-                    お仕事依頼
+                    お問い合せ
                   </Link>
                 </li>
               </ul>
