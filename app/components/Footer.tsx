@@ -18,16 +18,32 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
+              <h2 className="text-sm font-medium mb-4"></h2>
               <ul className="space-y-2">
+                <li>
+                  <Link href="/" className="text-sm text-gray-400 hover:text-white">
+                    ホーム
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-sm text-gray-400 hover:text-white">
+                    支部について
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/members" className="text-sm text-gray-400 hover:text-white">
+                    メンバー
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/activities" className="text-sm text-gray-400 hover:text-white">
+                    活動
+                  </Link>
+                </li>
                 <li>
                   <Link href="/upcoming_event" className="text-sm text-gray-400 hover:text-white">
                     今後のイベント
                   </Link>
-                </li>
-                <li>
-                  <a href="https://note.com/shogi_gakusei" className="text-sm text-gray-400 hover:text-white">
-                    ブログ
-                  </a>
                 </li>
               </ul>
             </div>
@@ -40,8 +56,18 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="https://w.atwiki.jp/kansai_syogi/" className="text-sm text-gray-400 hover:text-white">
+                    関西学生将棋連盟ホームページ
+                  </Link>
+                </li>
+                <li>
                   <a href="https://www.kansai-shogi.info/" className="text-sm text-gray-400 hover:text-white">
                     関西将棋会館ホームページ
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.shogi.or.jp/" className="text-sm text-gray-400 hover:text-white">
+                    日本将棋連盟ホームページ
                   </a>
                 </li>
               </ul>
