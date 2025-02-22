@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { X, Youtube } from "lucide-react"
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { TbBrandYoutubeFilled } from "react-icons/tb";
+import { FaBlog } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -16,7 +18,6 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-sm font-medium mb-4">SNS・メディア</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/upcoming_event" className="text-sm text-gray-400 hover:text-white">
@@ -31,7 +32,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-medium mb-4">リンク</h3>
+              <h2 className="text-sm font-medium mb-4">リンク</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="/books" className="text-sm text-gray-400 hover:text-white">
@@ -46,7 +47,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-medium mb-4">お問い合わせ</h3>
+              <h2 className="text-sm font-medium mb-4">お問い合わせ</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="mailto:shogi.esakagakusei@gmail.com" className="text-sm text-gray-400 hover:text-white">
@@ -65,7 +66,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <X className="h-5 w-5" />
+              <FaSquareXTwitter />
             </a>
             <a
               href="https://www.youtube.com/@0karashogi"
@@ -73,7 +74,15 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Youtube className="h-5 w-5" />
+              <TbBrandYoutubeFilled />
+            </a>
+            <a
+              href="https://note.com/shogi_gakusei"
+              className="text-gray-400 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaBlog />
             </a>
           </div>
         </div>
