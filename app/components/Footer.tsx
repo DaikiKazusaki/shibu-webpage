@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { TbBrandYoutubeFilled } from "react-icons/tb";
-import { FaBlog } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs"; // X icon
+import { TbBrandYoutubeFilled } from "react-icons/tb";　// Youtube icon
+import { FaBlog } from "react-icons/fa";  // Blog icon
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start mb-12">
           {/* Logo Section */}
-          <div className="mb-8 md:mb-0">
+          <div className="flex justify-center mb-8 md:mb-0">
             <Link href="/" className="text-2xl font-bold">
               江坂学生支部
             </Link>
@@ -73,53 +73,53 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="text-sm font-medium mb-4">お問い合せ</h2>
+              <h2 className="text-sm font-medium mb-4">お問い合わせ</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="mailto:shogi.esakagakusei@gmail.com" className="text-sm text-gray-400 hover:text-white">
-                    お問い合せ
+                    お問い合わせ
                   </Link>
                 </li>
               </ul>
             </div>
-          </div>
-
-          {/* Social Icons */}
-          <div className="flex gap-4 mt-8 md:mt-0">
-            <a
-              href="https://x.com/0karashogi"
-              className="text-gray-400 hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareXTwitter />
-            </a>
-            <a
-              href="https://www.youtube.com/@0karashogi"
-              className="text-gray-400 hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TbBrandYoutubeFilled />
-            </a>
-            <a
-              href="https://note.com/shogi_gakusei"
-              className="text-gray-400 hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaBlog />
-            </a>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex justify-center">
-            <div className="flex gap-4 text-sm text-gray-400">
-              <p>&copy; 2025 江坂学生支部.</p>
-              <p>All rights reserved.</p>
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-8 md:mt-0">
+              <a
+                href="https://x.com/0karashogi"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsTwitterX />
+              </a>
+              <a
+                href="https://www.youtube.com/@0karashogi"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TbBrandYoutubeFilled />
+              </a>
+              <a
+                href="https://note.com/shogi_gakusei"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaBlog />
+              </a>
             </div>
+          </div>
+          {/* copy right */}
+          <div className="flex justify-center gap-4 text-sm text-gray-400 mt-4">
+            <p>&copy; 2025 江坂学生支部.</p>
+            <p>All rights reserved.</p>
           </div>
         </div>
       </div>
