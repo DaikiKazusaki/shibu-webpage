@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mb-12">
           {/* Logo Section */}
-          <div>
+          <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold">
               江坂学生支部
             </Link>
