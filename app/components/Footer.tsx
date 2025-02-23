@@ -7,16 +7,16 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
           {/* Logo Section - 中央配置に修正 */}
-          <div className="w-full md:w-1/4 flex justify-center items-center mb-8 md:mb-0">
+          <div className="w-full md:w-1/4 flex justify-center">
             <Link href="/" className="text-2xl font-bold">
               江坂学生支部
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-8">
             <div>
               <h2 className="text-sm font-medium mb-4">メニュー</h2>
               <ul className="space-y-2">
@@ -89,14 +89,14 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex justify-center">
             {/* Social Icons */}
-            <div className="flex gap-4 mt-8 md:mt-0">
+            <div className="flex gap-4">
               <a
                 href="https://x.com/0karashogi"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsTwitterX />
+                <BsTwitterX className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/@0karashogi"
@@ -104,7 +104,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <TbBrandYoutubeFilled />
+                <TbBrandYoutubeFilled className="w-5 h-5" />
               </a>
               <a
                 href="https://note.com/shogi_gakusei"
@@ -112,11 +112,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaBlog />
+                <FaBlog className="w-5 h-5" />
               </a>
             </div>
           </div>
-          {/* copy right */}
+          {/* copyright */}
           <div className="flex justify-center gap-4 text-sm text-gray-400 mt-4">
             <p>&copy; 2025 江坂学生支部</p>
             <p>All rights reserved.</p>
