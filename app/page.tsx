@@ -60,12 +60,12 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-4">
             <Card className="flex-1">
               <CardHeader className="p-4">
-                <CardTitle>江坂学生支部とは</CardTitle>
+                <CardTitle className="text-2xl font-semibold">江坂学生支部とは</CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <p>
                   全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
-                  <Link href="/about" className="text-primary hover:underline">
+                  <Link href="/about" className="text-blue-500 hover:underline">
                     こちら
                   </Link>
                   からご覧になれます。
@@ -75,12 +75,12 @@ export default function Home() {
 
             <Card className="flex-1">
               <CardHeader className="p-4">
-                <CardTitle>活動内容</CardTitle>
+                <CardTitle className="text-2xl font-semibold">活動内容</CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <p>
                   将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！活動内容の詳細については、
-                  <Link href="/activities" className="text-primary hover:underline">
+                  <Link href="/activities" className="text-blue-500 hover:underline">
                     活動ページ
                   </Link>
                   をご覧ください。
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-4">
             <Card className="flex-1">
               <CardHeader className="p-4">
-                <CardTitle>理念</CardTitle>
+                <CardTitle className="text-2xl font-semibold">理念</CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <div className="space-y-4">
@@ -102,7 +102,7 @@ export default function Home() {
                   </p>
                   <p>
                     イベントの詳細については、
-                    <Link href="/upcoming_event" className="text-primary hover:underline">
+                    <Link href="/upcoming_event" className="text-blue-500 hover:underline">
                       こちら
                     </Link>
                     をご覧ください。
@@ -113,13 +113,13 @@ export default function Home() {
 
             <Card className="flex-1">
               <CardHeader className="p-4">
-                <CardTitle>お問い合わせ</CardTitle>
+                <CardTitle className="text-2xl font-semibold">お問い合わせ</CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <div className="space-y-4">
                   <p>
                     地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
-                    <a href="mailto:shogi.esakagakusei@gmail.com" className="text-primary hover:underline">
+                    <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-500 hover:underline">
                       こちら
                     </a>
                     までお願いします！(リンクを押すと自動的にメールアプリが起動します)
