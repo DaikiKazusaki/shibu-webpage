@@ -1,15 +1,15 @@
 import Link from "next/link"
-import { BsTwitterX } from "react-icons/bs"; // X icon
-import { TbBrandYoutubeFilled } from "react-icons/tb";　// Youtube icon
-import { FaBlog } from "react-icons/fa";  // Blog icon
+import { BsTwitterX } from "react-icons/bs"
+import { TbBrandYoutubeFilled } from "react-icons/tb"
+import { FaBlog } from "react-icons/fa"
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mb-12">
-          {/* Logo Section */}
-          <div className="flex justify-center items-center mb-8 md:mb-0">
+          {/* Logo Section - 中央配置に修正 */}
+          <div className="w-full md:w-1/4 flex justify-center items-center mb-8 md:mb-0">
             <Link href="/" className="text-2xl font-bold">
               江坂学生支部
             </Link>
