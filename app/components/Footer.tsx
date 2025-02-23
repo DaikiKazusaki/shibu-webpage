@@ -117,9 +117,10 @@ export default function Footer() {
             </div>
           </div>
           {/* copyright */}
-          <div className="flex justify-center gap-4 text-sm text-gray-400 mt-4">
-            <p>&copy; 2025 江坂学生支部</p>
-            <p>All rights reserved.</p>
+          <div className="w-full md:w-1/4 flex items-center justify-center h-full">
+            <Link href="/" className="text-2xl font-bold">
+              江坂学生支部
+            </Link>
           </div>
         </div>
       </div>
