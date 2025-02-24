@@ -64,7 +64,7 @@ const Sidebar = () => {
   }, [activities])
 
   return (
-    <div className="hidden md:block bg-background border-r">
+    <div className="hidden md:block bg-background border-r border-b">
       <div className="p-4 border-b">
         <h2 className="text-lg font-semibold">過去の活動</h2>
       </div>
