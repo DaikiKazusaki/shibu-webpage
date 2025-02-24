@@ -20,6 +20,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname()
   const isActivitiesPage = pathname === "/activities"
+  const isHomePage = pathname === "/"
 
   return (
     <html lang="ja" className="h-full">
@@ -33,7 +34,7 @@ export default function RootLayout({
           </div>
           <main className="flex-grow p-4">{children}</main>
           <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-            <RightSidebar />
+            {isHomePage && <RightSidebar />}
           </div>
         </div>
         <Footer />
