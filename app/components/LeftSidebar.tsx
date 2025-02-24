@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo } from "react"
 import Link from "next/link"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 
 interface Activity {
@@ -65,11 +64,11 @@ const Sidebar = () => {
   }, [activities])
 
   return (
-    <div className="hidden md:block h-full bg-background border-r">
+    <div className="hidden md:block bg-background border-r">
       <div className="p-4 border-b">
         <h2 className="text-lg font-semibold">過去の活動</h2>
       </div>
-      <ScrollArea className="h-[calc(100vh-4rem)] px-4">
+      <div className="px-4">
         <div className="py-4">
           {Object.keys(groupedActivities).length > 0 ? (
             <>
@@ -126,7 +125,7 @@ const Sidebar = () => {
             <p className="text-sm text-muted-foreground">過去の活動はありません。</p>
           )}
         </div>
-      </ScrollArea>
+      </div>
     </div>
   )
 }
