@@ -3,7 +3,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "おひさま将棋教室",
+  title: "タイトルを変更してください",
   description: "このページは現在準備中です。",
 }
 
