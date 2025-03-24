@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import LeftSidebar from "./components/LeftSidebar"
-import RightSidebar from "./components/RightSidebar"
+// import RightSidebar from "./components/RightSidebar"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type React from "react"
@@ -20,7 +20,6 @@ export default function RootLayout({
 }) {
   const pathname = usePathname()
   const isActivitiesPage = pathname === "/activities"
-  const isHomePage = pathname === "/"
 
   return (
     <html lang="ja" className="h-full">
@@ -33,9 +32,11 @@ export default function RootLayout({
             {isActivitiesPage && <LeftSidebar />}
           </div>
           <main className="flex-grow p-4">{children}</main>
-          <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-            {isHomePage && <RightSidebar />}
-          </div>
+          {!isActivitiesPage && (
+            <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
+              {/* <RightSidebar /> */}
+            </div>
+          )}
         </div>
         <Footer />
         <Analytics />
