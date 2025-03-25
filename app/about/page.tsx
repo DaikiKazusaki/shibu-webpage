@@ -17,8 +17,8 @@ export default function About() {
         </section>
         <section className="my-8">
           <h2 className="text-2xl font-semibold mb-4">大会・教室の運営</h2>
-          <p>私たちは定期的に大会や教室を開催しています。</p>
-          <p>詳細は<Link href='/activities' className="text-blue-500 hover:underline">こちら</Link>をご覧ください。</p>
+          <p>私たちは定期的に教室や大会を開催しています。</p>
+          <p>過去の教室・大会の雰囲気については<Link href='/activities' className="text-blue-500">こちら</Link>を、詳細は<Link href='/upcoming_event' className="text-blue-500 hover:underline">こちら</Link>をご覧ください。</p>
         </section>
         {/*
         <section className="my-8">
