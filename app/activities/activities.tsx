@@ -196,7 +196,7 @@ const ShogiBannerImages: React.FC = () => {
 export default function Activities() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="mb-8"></div>
+      {/* Removed the div with className="mb-8" that was creating the space */}
       <h1 className="text-3xl font-bold mb-6">おひさま将棋教室</h1>
       <ShogiBannerImages />
       <h1 className="text-3xl font-bold mb-6">将棋大会</h1>
