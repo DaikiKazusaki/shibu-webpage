@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 type Event = {
-  id: string
+  id?: string
   title: string
   dates: string[] // "YYYY年MM月DD日" 形式の配列に変更
   category: "school" | "tournament" | "other"
@@ -19,42 +19,30 @@ type Event = {
 
 const events: Event[] = [
   {
-    id: "1",
-    title: "おひさま将棋教室",
-    dates: ["2025年3月16日"],
-    category: "school",
-    location: "大阪府吹田市豊一市民センター",
-  },
-  {
-    id: "2",
     title: "おひさま将棋教室",
     dates: ["2025年4月20日"],
     category: "school",
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    id: "3",
     title: "鈴蘭将棋大会(仮)",
     dates: ["2025年5月4日"],
     category: "tournament",
     location: "未定",
   },
   {
-    id: "4",
-    title: "出張おひさま将棋教室 in こまこい",
-    dates: ["2025年3月23日"],
+    title: "おひさま将棋教室",
+    dates: ["2025年5月18日"],
     category: "school",
-    location: "兵庫県神戸市灘区文化センター5階会議室",
+    location: "大阪府吹田市豊一市民センター",
   },
   {
-    id: "5",
     title: "あにまるしぇお手伝い",
     dates: ["2025年5月25日"],
     category: "other",
     location: "大阪府高槻市安満遺跡公園",
   },
   {
-    id: "6",
     title: "将棋YouTuberそらさん出版記念大会",
     dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
     category: "tournament",
@@ -113,7 +101,7 @@ export default function EventsPage() {
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
       <div className="mt-12 flex justify-center">
         {/* 広告の写真は以下に追加 */}
-        <Image src="/advertisements/school.jpg" alt="お日様将棋教室 広告" width={500} height={500} objectFit="contain" />
+        <Image src="/advertisements/school.jpg" alt="おひさま将棋教室 広告" width={500} height={500} objectFit="contain" />
       </div>
     </main>
   )
