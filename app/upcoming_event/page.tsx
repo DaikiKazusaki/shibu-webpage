@@ -25,28 +25,28 @@ const events: Event[] = [
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    title: "鈴蘭将棋大会(仮)",
-    dates: ["2025年5月4日"],
-    category: "tournament",
-    location: "未定",
-  },
-  {
     title: "おひさま将棋教室",
     dates: ["2025年5月18日"],
     category: "school",
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    title: "あにまるしぇお手伝い",
-    dates: ["2025年5月25日"],
-    category: "other",
-    location: "大阪府高槻市安満遺跡公園",
+    title: "鈴蘭将棋大会(仮)",
+    dates: ["2025年5月4日"],
+    category: "tournament",
+    location: "未定(大阪)",
   },
   {
     title: "将棋YouTuberそらさん出版記念大会",
     dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
     category: "tournament",
-    location: "未定",
+    location: "未定(京都)",
+  },
+  {
+    title: "あにまるしぇお手伝い",
+    dates: ["2025年5月25日"],
+    category: "other",
+    location: "大阪府高槻市安満遺跡公園",
   },
 ]
 
