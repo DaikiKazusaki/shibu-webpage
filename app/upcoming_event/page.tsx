@@ -34,13 +34,13 @@ const events: Event[] = [
     title: "鈴蘭将棋大会(仮)",
     dates: ["2025年5月4日"],
     category: "tournament",
-    location: "未定(大阪)",
+    location: "大阪(詳細は未定)",
   },
   {
     title: "将棋YouTuberそらさん出版記念大会",
     dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
     category: "tournament",
-    location: "未定(京都)",
+    location: "京都(詳細は未定)",
   },
   {
     title: "あにまるしぇお手伝い",
