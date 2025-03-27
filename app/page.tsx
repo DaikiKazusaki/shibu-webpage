@@ -64,7 +64,11 @@ export default function Home() {
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <p>
-                  全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
+                  江坂学生支部は、
+                  <Link href="https://www.google.com/maps/search/%E6%B1%9F%E5%9D%82/@34.7641004,135.4847462,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
+                    大阪府吹田市江坂
+                  </Link>
+                  を拠点とする、全国の大学生有志で結成した日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
                   <Link href="/about" className="text-blue-500 hover:underline">
                     こちら
                   </Link>
