@@ -26,7 +26,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-sm text-gray-KO400 hover:text-white">
+                  <Link href="/about" className="text-sm text-gray-400 hover:text-white">
                     支部について
                   </Link>
                 </li>
