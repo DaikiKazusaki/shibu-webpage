@@ -94,7 +94,7 @@ export default function Members() {
     {
       name: '古藤祐樹',
       role: '支部運営',
-      university: '京都大学',
+      university: '京都大学 文学部',
       introduction: ''
     },
     {
