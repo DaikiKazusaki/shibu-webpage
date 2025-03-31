@@ -61,7 +61,7 @@ const events: Event[] = [
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    title: "あにまるしぇお手伝い",
+    title: "あにまるしぇ お手伝い",
     dates: ["2025年5月25日"],
     category: "other",
     location: "大阪府高槻市安満遺跡公園",
