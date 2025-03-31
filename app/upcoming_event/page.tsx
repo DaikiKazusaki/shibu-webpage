@@ -25,22 +25,40 @@ const events: Event[] = [
     location: "大阪府吹田市豊一市民センター",
   },
   {
+    title: "おひさま将棋教室特別企画",
+    dates: ["2025年5月11日"],
+    category: "school",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
     title: "おひさま将棋教室",
     dates: ["2025年5月18日"],
     category: "school",
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    title: "鈴蘭将棋大会(仮)",
-    dates: ["2025年5月4日"],
-    category: "tournament",
-    location: "大阪(詳細は未定)",
+    title: "出張おひさま将棋教室 in こまこい",
+    dates: ["2025年5月24日"],
+    category: "school",
+    location: "兵庫県神戸市東灘区文化センター",
   },
   {
-    title: "将棋YouTuberそらさん出版記念大会",
-    dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
+    title: "くったくたになれる将棋大会",
+    dates: ["2025年5月4日"],
     category: "tournament",
-    location: "京都(詳細は未定)",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
+    dates: ["2025年6月7日"],
+    category: "tournament",
+    location: "京都府京都市北区大将軍鷹司町島津アリーナ京都",
+  },
+  {
+    title: "駒師さんのミニ展覧会",
+    dates: ["2025年5月4日"],
+    category: "other",
+    location: "大阪府吹田市豊一市民センター",
   },
   {
     title: "あにまるしぇお手伝い",
@@ -78,7 +96,7 @@ export default function EventsPage() {
           title="将棋教室"
           events={categorizedEvents.school}
           icon={<Users className="w-6 h-6" />}
-          applyLink="https://docs.google.com/forms/d/13uXUzLFbFLr38LxfHfAC6HolzVG3Zb8KVCnAqGpXx8s/viewform"
+          applyLink="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
