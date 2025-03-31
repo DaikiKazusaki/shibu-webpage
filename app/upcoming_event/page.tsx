@@ -55,7 +55,7 @@ const events: Event[] = [
     location: "京都府京都市北区大将軍鷹司町島津アリーナ京都",
   },
   {
-    title: "駒師さんのミニ展覧会",
+    title: "駒師若水さん ミニ展覧会",
     dates: ["2025年5月4日"],
     category: "other",
     location: "大阪府吹田市豊一市民センター",
