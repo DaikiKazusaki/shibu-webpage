@@ -27,9 +27,9 @@ const members: Member[] = [
   },
   {
     nameJa: "大西透",
-    position: "",
+    position: "京都大会運営",
     university: "京都大学工学部",
-    message: "",
+    message: "趣味は競艇です。",
     imagePath: "/members/onishi.jpg",
   },
 ]
@@ -38,7 +38,6 @@ export default function MemberIntroduction() {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mb-8">
-        <p className="text-gray-600 text-sm">会社紹介</p>
         <h1 className="text-3xl font-bold mt-2">メンバー紹介</h1>
       </div>
 
@@ -69,9 +68,17 @@ function MemberCard({ member }: { member: Member }) {
         </div>
       </div>
       <div className="mt-4">
-        <p className="text-gray-700 mb-2">{member.position}</p>
-        <p className="text-gray-700 text-sm whitespace-pre-line">{member.university}</p>
-        <p className="text-gray-700 text-sm whitespace-pre-line mt-1">{member.message}</p>
+        {member.position && (
+          <p className="text-gray-700 mb-2">
+            <span className="font-medium">役職：</span>
+            {member.position}
+          </p>
+        )}
+        <p className="text-gray-700 text-sm whitespace-pre-line">
+          <span className="font-medium">大学：</span>
+          {member.university}
+        </p>
+        {member.message && <p className="text-gray-700 text-sm whitespace-pre-line mt-1">{member.message}</p>}
       </div>
     </div>
   )
