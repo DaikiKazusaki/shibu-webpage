@@ -18,6 +18,55 @@ const members: Member[] = [
     message: "",
     imagePath: "/members/koto.jpg",
   },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita1.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita2.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita3.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita4.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita5.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita6.jpg",
+  },
+  {
+    nameJa: "宮下雄成",
+    position: "SNS運用",
+    university: "龍谷大学文学部",
+    message: "",
+    imagePath: "/members/miyashita7.jpg",
+  },
 ]
 
 export default function MemberIntroduction() {
@@ -43,7 +92,6 @@ function MemberCard({ member }: { member: Member }) {
       <div className="flex flex-col gap-4">
         <div className="flex-1">
           <h2 className="text-4xl font-bold text-black leading-tight">{member.nameJa}</h2>
-          <p className="text-gray-700 mt-2 mb-1">{member.position}</p>
         </div>
         <div className="w-full">
           <Image
@@ -56,6 +104,7 @@ function MemberCard({ member }: { member: Member }) {
         </div>
       </div>
       <div className="mt-4">
+        <p className="text-gray-700 mb-2">{member.position}</p>
         <p className="text-gray-700 text-sm whitespace-pre-line">{member.university}</p>
         <p className="text-gray-700 text-sm whitespace-pre-line mt-1">{member.message}</p>
       </div>
