@@ -119,7 +119,7 @@ export default function EventsPage() {
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
       <div className="mt-12 flex justify-center">
         {/* 広告の写真は以下に追加 */}
-        <Image src="/advertisements/school.jpg" alt="おひさま将棋教室 広告" width={500} height={500} objectFit="contain" />
+        <Image src="/advertisements/school.png" alt="おひさま将棋教室 広告" width={500} height={500} objectFit="contain" />
       </div>
     </main>
   )
