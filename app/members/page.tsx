@@ -12,13 +12,6 @@ type Member = {
 // メンバーデータ
 const members: Member[] = [
   {
-    nameJa: "松本龍蔵",
-    position: "",
-    university: "大阪公立大学経済学部",
-    message: "",
-    imagePath: "/members/koto.jpg",
-  },
-  {
     nameJa: "古藤祐樹",
     position: "",
     university: "京都大学文学部",
