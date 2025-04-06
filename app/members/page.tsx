@@ -15,7 +15,7 @@ const members: Member[] = [
     nameJa: "古藤祐樹",
     position: "",
     university: "京都大学文学部",
-    message: "趣味は放浪です！",
+    message: "",
     imagePath: "/members/koto.jpg",
   },
 ]
@@ -40,17 +40,17 @@ export default function MemberIntroduction() {
 function MemberCard({ member }: { member: Member }) {
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-4">
         <div className="flex-1">
-          <h2 className="text-4xl font-bold text-blue-600 leading-tight">{member.nameJa}</h2>
+          <h2 className="text-4xl font-bold text-black leading-tight">{member.nameJa}</h2>
           <p className="text-gray-700 mt-2 mb-1">{member.position}</p>
         </div>
-        <div className="w-full md:w-32 lg:w-40">
+        <div className="w-full">
           <Image
             src={member.imagePath || "/placeholder.svg"}
             alt={member.nameJa}
-            width={160}
-            height={200}
+            width={320}
+            height={180}
             className="w-full h-auto object-cover rounded-md"
           />
         </div>
