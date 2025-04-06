@@ -12,6 +12,13 @@ type Member = {
 // メンバーデータ
 const members: Member[] = [
   {
+    nameJa: "松本龍蔵",
+    position: "",
+    university: "大阪公立大学経済学部",
+    message: "",
+    imagePath: "/members/koto.jpg",
+  },
+  {
     nameJa: "古藤祐樹",
     position: "",
     university: "京都大学文学部",
@@ -23,49 +30,14 @@ const members: Member[] = [
     position: "SNS運用",
     university: "龍谷大学文学部",
     message: "",
-    imagePath: "/members/miyashita1.jpg",
+    imagePath: "/members/miyashita.jpg",
   },
   {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
+    nameJa: "大西透",
+    position: "",
+    university: "京都大学工学部",
     message: "",
-    imagePath: "/members/miyashita2.jpg",
-  },
-  {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
-    message: "",
-    imagePath: "/members/miyashita3.jpg",
-  },
-  {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
-    message: "",
-    imagePath: "/members/miyashita4.jpg",
-  },
-  {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
-    message: "",
-    imagePath: "/members/miyashita5.jpg",
-  },
-  {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
-    message: "",
-    imagePath: "/members/miyashita6.jpg",
-  },
-  {
-    nameJa: "宮下雄成",
-    position: "SNS運用",
-    university: "龍谷大学文学部",
-    message: "",
-    imagePath: "/members/miyashita7.jpg",
+    imagePath: "/members/onishi.jpg",
   },
 ]
 
