@@ -1,130 +1,63 @@
-import { Metadata } from 'next'
+import Image from "next/image"
 
-export const metadata: Metadata = {
-  title: 'メンバー',
-  description: '江坂学生支部のメンバーついての情報です．',
-}
-
-interface Member {
-  name: string
-  role: string
+// メンバーデータの型定義
+type Member = {
+  nameJa: string
+  position: string
   university: string
-  introduction: string
+  message: string
+  imagePath: string
 }
 
-const MemberCard: React.FC<Member> = ({ name, role, university, introduction }) => {
+// メンバーデータ
+const members: Member[] = [
+  {
+    nameJa: "古藤祐樹",
+    position: "",
+    university: "京都大学文学部",
+    message: "趣味は放浪です！",
+    imagePath: "/members/koto.jpg",
+  },
+]
+
+export default function MemberIntroduction() {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6">
-      <h2 className="text-xl font-semibold mb-2">{name}</h2>
-      <p className="text-gray-600 mb-1">{role}</p>
-      <p className="text-gray-600 mb-1">{university}</p>
-      <p className="text-gray-800">{introduction}</p>
+    <div className="max-w-7xl mx-auto">
+      <div className="mb-8">
+        <p className="text-gray-600 text-sm">会社紹介</p>
+        <h1 className="text-3xl font-bold mt-2">メンバー紹介</h1>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {members.map((member) => (
+          <MemberCard key={member.nameJa} member={member} />
+        ))}
+      </div>
     </div>
   )
 }
 
-export default function Members() {
-  const currentMembers: Member[] = [
-    { 
-      name: '松本龍蔵', 
-      role: '支部長', 
-      university: '大阪公立大学 経済学部', 
-      introduction: '最高のイベントにします！' 
-    },
-    { 
-      name: '古江祐也', 
-      role: '中国地方大会運営', 
-      university: '尾道市立大学 芸術文化学部', 
-      introduction: '圧倒的猫派' 
-    },
-    { 
-      name: '數﨑大樹', 
-      role: 'サイト作成', 
-      university: '大阪大学 基礎工学部',  
-      introduction: 'ウェブデザイン勉強中...' 
-    },
-    {
-      name: '沖津斗夢',
-      role: '京都大会運営',
-      university: '龍谷大学 経営学部',
-      introduction: '座右の銘「現状維持は即衰退」'
-    },
-    {
-      name: '平井幸大',
-      role: 'SNS運用',
-      university: '龍谷大学 経済学部',
-      introduction: '色んな人と喋るのが好きです！'
-    },
-    {
-      name: '岡本大地',
-      role: '関東大会合宿運営',
-      university: '星薬科大学 薬学部',
-      introduction: '関東合宿の運営を頑張りたいです'
-    },
-    {
-      name: '大西透',
-      role: '京都大会運営',
-      university: '京都大学 工学部',
-      introduction: '趣味は競艇です'
-    },
-    {
-      name: '田中優汰',
-      role: '営業部',
-      university: '神戸大学 国際人間科学部',
-      introduction: '将棋を通じて輪を広げましょう！'
-    },
-    {
-      name: '金田夏輝',
-      role: '関東大会合宿運営',
-      university: '東京大学 文科三類',
-      introduction: '趣味は読書と登山です。楽しく将棋を続けたいです！'
-    },
-    {
-      name: '市丸玲乃',
-      role: '関西合宿運営',
-      university: '関西大学 法学部',
-      introduction: '趣味は音楽鑑賞で，Mr.Childrenが好きです！'
-    },
-    {
-      name: '岸本昂大',
-      role: '関西大会運営',
-      university: '大阪公立大学 理学部',
-      introduction: '将棋を通して様々な地域、年代の方と交流していきたいです'
-    },
-    {
-      name: '古藤祐樹',
-      role: '支部運営',
-      university: '京都大学 文学部',
-      introduction: ''
-    },
-    {
-      name: '宮下雄成',
-      role: 'SNS運営',
-      university: '龍谷大学 文学部',
-      introduction: ''
-    },
-    {
-      name: '大原尚',
-      role: '中四国大会運営',
-      university: '近畿大学 工学部',
-      introduction: ''
-    },
-    {
-      name: '土井亮太',
-      role: '関西大会運営',
-      university: '大阪公立大学',
-      introduction: ''
-    },
-    // Add more members as needed
-  ]
-
+function MemberCard({ member }: { member: Member }) {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">メンバー紹介</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {currentMembers.map((member, index) => (
-          <MemberCard key={index} {...member} />
-        ))}
+    <div className="bg-white p-4 rounded-lg shadow-sm flex flex-col h-full">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex-1">
+          <h2 className="text-4xl font-bold text-blue-600 leading-tight">{member.nameJa}</h2>
+          <p className="text-gray-700 mt-2 mb-1">{member.position}</p>
+        </div>
+        <div className="w-full md:w-32 lg:w-40">
+          <Image
+            src={member.imagePath || "/placeholder.svg"}
+            alt={member.nameJa}
+            width={160}
+            height={200}
+            className="w-full h-auto object-cover rounded-md"
+          />
+        </div>
+      </div>
+      <div className="mt-4">
+        <p className="text-gray-700 text-sm whitespace-pre-line">{member.university}</p>
+        <p className="text-gray-700 text-sm whitespace-pre-line mt-1">{member.message}</p>
       </div>
     </div>
   )
