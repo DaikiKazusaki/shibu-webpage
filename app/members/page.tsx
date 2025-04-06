@@ -15,7 +15,7 @@ const members: Member[] = [
     nameJa: "古藤祐樹",
     position: "",
     university: "京都大学文学部",
-    message: "",
+    message: "趣味は放浪です。",
     imagePath: "/members/koto.jpg",
   },
   {
