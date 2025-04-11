@@ -16,7 +16,7 @@ type Member = {
 const members: Member[] = [
   {
     nameJa: "古藤祐樹",
-    position: "",
+    position: "支部運営",
     university: "京都大学文学部",
     message: "趣味は放浪です。",
     imagePath: "/members/koto.jpg",
@@ -35,6 +35,13 @@ const members: Member[] = [
     message: "趣味は競艇です。",
     imagePath: "/members/onishi.jpg",
   },
+  {
+    nameJa: "沖津斗夢",
+    position: "京都大会運営",
+    university: "龍谷大学 経営学部",
+    message: "座右の銘「現状維持は即衰退」",
+    imagePath: "/members/okitsu.jpg",
+  }
 ]
 
 export default function MemberIntroduction() {
