@@ -41,7 +41,14 @@ const members: Member[] = [
     university: "龍谷大学 経営学部",
     message: "座右の銘「現状維持は即衰退」",
     imagePath: "/members/okitsu.jpg",
-  }
+  },
+  {
+    nameJa: "數﨑大樹",
+    position: "webサイト運営",
+    university: "大阪大学 基礎工学部",
+    message: "",
+    imagePath: "/members/kazusaki.jpg",
+  },
 ]
 
 export default function MemberIntroduction() {
