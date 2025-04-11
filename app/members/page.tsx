@@ -46,7 +46,7 @@ const members: Member[] = [
     nameJa: "數﨑大樹",
     position: "webサイト運営",
     university: "大阪大学 基礎工学部",
-    message: "",
+    message: "大会にも運営として顔を出すので、ぜひお声がけください！",
     imagePath: "/members/kazusaki.jpg",
   },
 ]
