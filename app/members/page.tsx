@@ -63,6 +63,13 @@ const members: Member[] = [
     message: "圧倒的に猫派です！あまりよさげな写真がなかったので、猫の写真を載せておきます。",
     imagePath: "/members/furue.jpg",
   },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
 ]
 
 export default function MemberIntroduction() {
