@@ -36,7 +36,7 @@ export default function Home() {
             <div className="bg-gray-200 h-80 rounded-lg overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/2024-01-07-suisen/suisen1.jpg?height=400&width=600"
                   alt="大会・教室の運営"
                   fill
                   className="object-cover"
