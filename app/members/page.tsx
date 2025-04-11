@@ -15,23 +15,30 @@ type Member = {
 // メンバーデータ
 const members: Member[] = [
   {
+    nameJa: "松本龍蔵",
+    position: "支部長",
+    university: "大阪公立大学 経済学部",
+    message: "最高のイベントにします！",
+    imagePath: "/members/matsumoto.jpg",
+  },
+  {
     nameJa: "古藤祐樹",
     position: "支部運営",
-    university: "京都大学文学部",
+    university: "京都大学 文学部",
     message: "趣味は放浪です。",
     imagePath: "/members/koto.jpg",
   },
   {
     nameJa: "宮下雄成",
     position: "SNS運用",
-    university: "龍谷大学文学部",
+    university: "龍谷大学 文学部",
     message: "",
     imagePath: "/members/miyashita.jpg",
   },
   {
     nameJa: "大西透",
     position: "京都大会運営",
-    university: "京都大学工学部",
+    university: "京都大学 工学部",
     message: "趣味は競艇です。",
     imagePath: "/members/onishi.jpg",
   },
