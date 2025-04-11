@@ -79,13 +79,6 @@ export default function Home() {
                   </Link>
                   からご覧になれます！
                 </p>
-                <Link
-                  href="/activities"
-                  className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
-                >
-                  <span>詳しく見る</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
               </div>
             </div>
           </section>
