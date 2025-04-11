@@ -28,18 +28,11 @@ export default function Home() {
                   </Link>
                   からご覧になれます！
                 </p>
-                <Link
-                  href="#"
-                  className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
-                >
-                  <span>詳しく見る</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
               </div>
               <div className="order-1 lg:order-2 h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/2024-08-09-hiroshima_himawari/himawari2.jpg?height=400&width=600"
                     alt="江坂学生支部の活動"
                     fill
                     className="object-cover"
@@ -70,8 +63,21 @@ export default function Home() {
                   大会・教室の運営
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  定期的に将棋大会や教室を開催し、学生たちに実践の場を提供しています。初心者向けの入門教室から、上級者向けの研究会まで、レベルに合わせた
-                  プログラムを用意しています。また、プロ棋士を招いた特別講座なども実施し、より高度な技術や知識を学ぶ機会も設けています。
+                  私たちは定期的に将棋大会や教室を開催しています。過去の教室・大会の雰囲気については
+                  <Link
+                    href="/activities"
+                    className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
+                  >
+                    こちら
+                  </Link>
+                  から、今後開催されるイベントに関しては
+                  <Link
+                    href="/upcoming_events"
+                    className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
+                  >
+                    こちら
+                  </Link>
+                  からご覧になれます！
                 </p>
                 <Link
                   href="/activities"
@@ -95,21 +101,20 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベント、企業研修などに将棋講師を派遣しています。将棋を通じてコミュニケーション能力や思考力を養うプログラムを
-                  提供し、教育現場や企業研修でも好評をいただいています。経験豊富な講師陣が、対象者のレベルや目的に合わせた指導を行います。
+                  学校や地域のイベントなどに将棋講師を派遣しています。
                 </p>
                 <Link
-                  href="#"
+                  href="mailto:shogi.esakagakusei@gmail.com"
                   className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
                 >
-                  <span>詳しく見る</span>
+                  <span>お問い合わせ</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
               <div className="order-1 lg:order-2 h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/about/teacher.jpg?height=400&width=600"
                     alt="将棋講師の派遣"
                     fill
                     className="object-cover"
@@ -118,23 +123,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="bg-gray-800 text-white py-16 mt-20">
-        <div className="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6">お問い合わせ</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            江坂学生支部の活動やイベントについて、詳しく知りたい方はお気軽にお問い合わせください。
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-white text-gray-800 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            <span className="font-medium">お問い合わせはこちら</span>
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
         </div>
       </div>
     </main>
