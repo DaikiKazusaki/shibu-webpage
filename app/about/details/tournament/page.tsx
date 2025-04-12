@@ -3,9 +3,23 @@ import { CalendarDays, Clock, MapPin, Users } from "lucide-react"
 export default function TournamentPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Header */}
-      <header className="bg-[#8C2D19] py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* Header with background image */}
+      <header className="relative py-20 text-white">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "/about/game_shogi_ban.png",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        {/* Content positioned above the background */}
+        <div className="container relative z-10 mx-auto px-4 text-center">
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">将棋大会</h1>
           <p className="mx-auto mb-8 max-w-2xl text-xl">
             初心者から上級者まで、すべての将棋ファンが楽しめる大会です。 戦略を磨き、新たな対局相手と出会いましょう。

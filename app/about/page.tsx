@@ -21,7 +21,7 @@ export default function Home() {
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   江坂学生支部は、大学生によって運営されている支部です。メンバーについては、
                   <Link
-                    href="/member"
+                    href="/members"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
                   >
                     こちら

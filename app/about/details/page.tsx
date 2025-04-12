@@ -27,8 +27,8 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div className="relative h-[300px] w-[300px] overflow-hidden rounded-lg md:h-[400px] md:w-[400px]">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="山田先生"
+                  src="/about/school_view.jpg?height=200&width=200"
+                  alt="おひさま将棋教室の風景"
                   className="h-full w-full object-cover"
                   width={200}
                   height={200}
@@ -75,10 +75,10 @@ export default function Home() {
                 <MapPin className="h-6 w-6 text-[#8C2D19]" />
               </div>
               <h3 className="mb-2 text-xl font-bold">会場案内</h3>
-              <p className="mb-4 text-gray-600">交通アクセス良好な市民センターで開催。駐車場も完備しています。</p>
+              <p className="mb-4 text-gray-600">交通アクセス良好な市民センターで開催。</p>
               <div className="flex items-center text-sm text-gray-500">
                 <MapPin className="mr-2 h-4 w-4" />
-                <span>市民文化センター 3階</span>
+                <span>豊一市民センター</span>
               </div>
             </div>
           </div>
