@@ -70,6 +70,55 @@ const members: Member[] = [
     message: "趣味は散歩です。",
     imagePath: "/members/kaneda.jpg",
   },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
+  {
+    nameJa: "金田夏輝",
+    position: "関東大会運営",
+    university: "東京大学 文科三類",
+    message: "趣味は散歩です。",
+    imagePath: "/members/kaneda.jpg",
+  },
 ]
 
 export default function MemberIntroduction() {
