@@ -196,21 +196,21 @@ export default function ClassroomPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold">講師紹介</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border bg-card p-6 shadow-sm text-center">
+          <div className="flex justify-center">
+            <div className="max-w-sm rounded-lg border bg-card p-6 shadow-sm text-center">
               <div className="mb-4 mx-auto aspect-square overflow-hidden rounded-full w-40 h-40 flex items-center justify-center bg-gray-100">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="𠮷川惠先生"
+                  alt="𠮷川惠"
                   className="h-full w-full object-cover"
                   width={200}
                   height={200}
                 />
               </div>
               <h3 className="mb-2 text-xl font-bold">𠮷川 惠</h3>
-              <p className="mb-2 text-sm text-gray-500">女流アマ名人，関西将棋会館五段</p>
+              <p className="mb-2 text-sm text-gray-500">関西将棋会館五段</p>
               <p className="text-gray-600">
-                20年以上の指導経験を持つベテラン講師。初心者への指導に定評があり、わかりやすい解説が好評です。
+                女流アマ名人戦で優勝経験もある研修会員。おひさま将棋教室での講師歴も長く、初心者から上級者まで幅広い指導経験を持つ。
               </p>
             </div>
           </div>
