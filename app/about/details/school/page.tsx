@@ -18,14 +18,14 @@ export default function ClassroomPage() {
                   <Users className="mr-4 h-6 w-6 text-[#8C2D19]" />
                   <div>
                     <p className="font-medium">対象</p>
-                    <p className="text-gray-600">5歳以上のお子様から大人まで、将棋に興味のある方ならどなたでも</p>
+                    <p className="text-gray-600">5歳以上のお子様から大人まで、将棋に興味のある方</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CalendarDays className="mr-4 h-6 w-6 text-[#8C2D19]" />
                   <div>
                     <p className="font-medium">開催日</p>
-                    <p className="text-gray-600">毎週土曜日・日曜日</p>
+                    <p className="text-gray-600">毎月第3日曜日</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -45,7 +45,7 @@ export default function ClassroomPage() {
                   <MapPin className="mr-4 h-6 w-6 text-[#8C2D19]" />
                   <div>
                     <p className="font-medium">会場</p>
-                    <p className="text-gray-600">市民文化センター 2階 会議室</p>
+                    <p className="text-gray-600">豊一市民センター</p>
                   </div>
                 </div>
               </div>
@@ -197,11 +197,11 @@ export default function ClassroomPage() {
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold">講師紹介</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border bg-card p-6 shadow-sm">
-              <div className="mb-4 mx-auto aspect-square overflow-hidden rounded-full w-40 h-40 flex items-center justify-center">
+            <div className="rounded-lg border bg-card p-6 shadow-sm text-center">
+              <div className="mb-4 mx-auto aspect-square overflow-hidden rounded-full w-40 h-40 flex items-center justify-center bg-gray-100">
                 <Image
                   src="/placeholder.svg?height=200&width=200"
-                  alt="山田先生"
+                  alt="𠮷川惠先生"
                   className="h-full w-full object-cover"
                   width={200}
                   height={200}
