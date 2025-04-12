@@ -17,10 +17,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-[#8C2D19] hover:bg-[#6B2113]">
-                  <Link href="/details/tournament">大会について</Link>
+                  <Link href="/about/details/tournament">大会について</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/details/school">教室について</Link>
+                  <Link href="/about/details/school">教室について</Link>
                 </Button>
               </div>
             </div>

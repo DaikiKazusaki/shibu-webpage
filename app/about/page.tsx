@@ -80,7 +80,7 @@ export default function Home() {
                   からご覧になれます！
                 </p>
                 <Link
-                  href="/details"
+                  href="/about/details"
                   className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
                 >
                   <span>詳しくはこちら</span>
