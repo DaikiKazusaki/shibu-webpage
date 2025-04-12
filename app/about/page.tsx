@@ -19,7 +19,7 @@ export default function Home() {
                   江坂学生支部とは
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  江坂学生支部は、大学生によって運営されている支部です。将棋の技術向上だけでなく、集中力や論理的思考力、礼儀作法なども学ぶことができます。初心者から上級者まで、様々なレベルの学生が集まり、切磋琢磨しながら将棋の腕を磨いています。メンバーについては、
+                  江坂学生支部は、大学生によって運営されている支部です。。メンバーについては、
                   <Link
                     href="/member"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
@@ -79,6 +79,13 @@ export default function Home() {
                   </Link>
                   からご覧になれます！
                 </p>
+                <Link
+                  href="/details"
+                  className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
+                >
+                  <span>詳しくはこちら</span>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </div>
             </div>
           </section>
@@ -94,7 +101,7 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベントなどに将棋講師を派遣しています。
+                  学校や地域のイベントなどに将棋講師の派遣も行っています。
                 </p>
                 <Link
                   href="mailto:shogi.esakagakusei@gmail.com"
