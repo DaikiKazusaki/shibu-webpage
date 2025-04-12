@@ -9,7 +9,7 @@ export default function TournamentPage() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
-            backgroundImage: "/about/game_shogi_ban.png",
+            backgroundImage: "url('/about/game_shogi_ban.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -39,7 +39,7 @@ export default function TournamentPage() {
                   <CalendarDays className="mr-4 h-6 w-6 text-[#8C2D19]" />
                   <div>
                     <p className="font-medium">開催日</p>
-                    <p className="text-gray-600">2023年12月17日（日）</p>
+                    <p className="text-gray-600">2025年5月4日（日）</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -59,7 +59,7 @@ export default function TournamentPage() {
                   <MapPin className="mr-4 h-6 w-6 text-[#8C2D19]" />
                   <div>
                     <p className="font-medium">会場</p>
-                    <p className="text-gray-600">市民文化センター 3階 大会議室</p>
+                    <p className="text-gray-600">豊一市民センター</p>
                   </div>
                 </div>
                 <div className="flex items-start">
