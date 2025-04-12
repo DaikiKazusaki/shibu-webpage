@@ -101,10 +101,10 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベントなどに将棋講師の派遣も行っています。
+                  学校や地域のイベントなどに将棋講師の派遣も行っています。お問い合わせはこちらからお願いします。
                 </p>
                 <Link
-                  href="mailto:shogi.esakagakusei@gmail.com"
+                  href="mailto:shogi.esakagakusei@gmail.com?subject=将棋講師の派遣について"
                   className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
                 >
                   <span>お問い合わせ</span>
