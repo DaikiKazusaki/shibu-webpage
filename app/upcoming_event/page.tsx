@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 type Event = {
-  id: string
+  id?: string
   title: string
   dates: string[] // "YYYY年MM月DD日" 形式の配列に変更
   category: "school" | "tournament" | "other"
@@ -19,46 +19,52 @@ type Event = {
 
 const events: Event[] = [
   {
-    id: "1",
-    title: "おひさま将棋教室",
-    dates: ["2025年3月16日"],
-    category: "school",
-    location: "大阪府吹田市豊一市民センター",
-  },
-  {
-    id: "2",
     title: "おひさま将棋教室",
     dates: ["2025年4月20日"],
     category: "school",
     location: "大阪府吹田市豊一市民センター",
   },
   {
-    id: "3",
-    title: "鈴蘭将棋大会(仮)",
+    title: "おひさま将棋教室特別企画",
+    dates: ["2025年5月11日"],
+    category: "school",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    title: "おひさま将棋教室",
+    dates: ["2025年5月18日"],
+    category: "school",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    title: "出張おひさま将棋教室 in こまこい",
+    dates: ["2025年5月24日"],
+    category: "school",
+    location: "兵庫県神戸市東灘区文化センター",
+  },
+  {
+    title: "くったくたになれる将棋大会",
     dates: ["2025年5月4日"],
     category: "tournament",
-    location: "未定",
+    location: "大阪府吹田市豊一市民センター",
   },
   {
-    id: "4",
-    title: "出張おひさま将棋教室 in こまこい",
-    dates: ["2025年3月23日"],
-    category: "school",
-    location: "兵庫県神戸市灘区文化センター5階会議室",
+    title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
+    dates: ["2025年6月7日"],
+    category: "tournament",
+    location: "京都府京都市北区大将軍鷹司町島津アリーナ京都",
   },
   {
-    id: "5",
-    title: "あにまるしぇお手伝い",
+    title: "駒師若水さん ミニ展覧会",
+    dates: ["2025年5月4日"],
+    category: "other",
+    location: "大阪府吹田市豊一市民センター",
+  },
+  {
+    title: "あにまるしぇ お手伝い",
     dates: ["2025年5月25日"],
     category: "other",
     location: "大阪府高槻市安満遺跡公園",
-  },
-  {
-    id: "6",
-    title: "将棋YouTuberそらさん出版記念大会",
-    dates: ["2025年6月1日", "2025年6月7日"], // 複数の候補日を配列で指定
-    category: "tournament",
-    location: "未定",
   },
 ]
 
@@ -85,12 +91,13 @@ export default function EventsPage() {
     <main className="min-h-screen bg-white dark:bg-zinc-900 p-8">
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">今後のイベント</h1>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Updated grid layout with auto-fit and minmax for better responsiveness */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         <EventCategory
           title="将棋教室"
           events={categorizedEvents.school}
           icon={<Users className="w-6 h-6" />}
-          applyLink="https://docs.google.com/forms/d/13uXUzLFbFLr38LxfHfAC6HolzVG3Zb8KVCnAqGpXx8s/viewform"
+          applyLink="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
@@ -113,7 +120,7 @@ export default function EventsPage() {
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
       <div className="mt-12 flex justify-center">
         {/* 広告の写真は以下に追加 */}
-        <Image src="/advertisements/school.jpg" alt="お日様将棋教室 広告" width={500} height={500} objectFit="contain" />
+        <Image src="/advertisements/school.png" alt="おひさま将棋教室 広告" width={500} height={500} />
       </div>
     </main>
   )
@@ -135,14 +142,14 @@ function EventCategory({
   pastActivitiesLink?: string
 }) {
   return (
-    <section className="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-md p-6">
+    <section className="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-md p-6 w-full">
       <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200 mb-4 flex items-center">
         {icon}
         <span className="ml-2">{title}</span>
       </h2>
       <ul className="space-y-4">
-        {events.map((event) => (
-          <li key={event.id} className="border-b border-zinc-200 dark:border-zinc-700 pb-2">
+        {events.map((event, index) => (
+          <li key={event.id || index} className="border-b border-zinc-200 dark:border-zinc-700 pb-2">
             <h3 className="text-lg font-medium text-zinc-700 dark:text-zinc-300">{event.title}</h3>
             <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -179,4 +186,3 @@ function EventCategory({
     </section>
   )
 }
-

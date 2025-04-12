@@ -1,6 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 
 export const metadata: Metadata = {
@@ -12,18 +13,18 @@ export const metadata: Metadata = {
 const carouselImages = [
   {
     src: "/ohisama/ohisama4.jpg", // 実際の画像パス
-    alt: "将棋教室の様子"
+    alt: "将棋教室の様子",
   },
   {
     src: "/2024-03-24-sakura/sakura1.jpg",
-    alt: "将棋大会の様子"
+    alt: "将棋大会の様子",
   },
   {
     src: "/2024-08-11-tokyo_himawari/himawari3.jpg",
-    alt: "将棋大会の運営"
+    alt: "将棋大会の運営",
   },
   // 必要な数だけ追加
-];
+]
 
 export default function Home() {
   return (
@@ -54,52 +55,89 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6 text-center">江坂学生支部へようこそ</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* 左側のコンテンツ */}
-          <div className="lg:w-1/2 space-y-8">
-            <section className="border rounded-lg p-6 bg-background shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">江坂学生支部とは</h2>
-              <p>全国の大学生有志で結成した、日本将棋連盟の支部です。将棋イベントを運営しています！</p>
-              <Link href="/about" className="text-blue-600 hover:underline">
-                詳細を見る
-              </Link>
-            </section>
+        <div className="flex flex-col gap-4">
+          {/* 1行目 */}
+          <div className="flex flex-col lg:flex-row gap-4">
+            <Card className="flex-1">
+              <CardHeader className="p-4">
+                <CardTitle className="text-2xl font-semibold">江坂学生支部とは</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <p>
+                  江坂学生支部は、
+                  <Link href="https://www.google.com/maps/search/%E6%B1%9F%E5%9D%82/@34.7641004,135.4847462,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
+                    大阪府吹田市江坂
+                  </Link>
+                  を拠点とする、全国の大学生有志で結成した日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
+                  <Link href="/about" className="text-blue-500 hover:underline">
+                    こちら
+                  </Link>
+                  からご覧になれます。
+                </p>
+              </CardContent>
+            </Card>
 
-            <section className="border rounded-lg p-6 bg-background shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">理念</h2>
-              <p>
-                どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！将棋の普及にも力をいれています！
-              </p>
-            </section>
+            <Card className="flex-1">
+              <CardHeader className="p-4">
+                <CardTitle className="text-2xl font-semibold">活動内容</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <p>
+                  将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！活動内容の詳細については、
+                  <Link href="/activities" className="text-blue-500 hover:underline">
+                    活動ページ
+                  </Link>
+                  をご覧ください。
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* 右側のコンテンツ */}
-          <div className="lg:w-1/2 space-y-8">
-            <section className="border rounded-lg p-6 bg-background shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">活動内容</h2>
-              <p>
-                将棋大会、将棋教室、将棋合宿などを主催しています！地域の学校や公民館に、将棋講師の派遣も行っております！
-              </p>
-              <Link href="/activities" className="text-blue-600 hover:underline">
-                詳細を見る
-              </Link>
-            </section>
+          {/* 2行目 */}
+          <div className="flex flex-col lg:flex-row gap-4">
+            <Card className="flex-1">
+              <CardHeader className="p-4">
+                <CardTitle className="text-2xl font-semibold">理念</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <div className="space-y-4">
+                  <p>
+                    どなたでもご参加いただける、日本一アットホームな将棋イベントを目指しています！イベントを実施し、将棋の普及にも力をいれています！
+                  </p>
+                  <p>
+                    イベントの詳細については、
+                    <Link href="/upcoming_event" className="text-blue-500 hover:underline">
+                      こちら
+                    </Link>
+                    をご覧ください。
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
-            <section className="border rounded-lg p-6 bg-background shadow-sm">
-              <h2 className="text-2xl font-semibold mb-4">お問い合わせ</h2>
-              <p>地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
-                <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-600 hover:underline">
-                  こちらまで
-                </a>
-                お願いします！(リンクを押すと自動的にメールアプリが起動します)
-              </p>
-              <p>
-                また、支部メンバーの募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
-              </p>
-            </section>
+            <Card className="flex-1">
+              <CardHeader className="p-4">
+                <CardTitle className="text-2xl font-semibold">お問い合わせ</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <div className="space-y-4">
+                  <p>
+                    地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
+                    <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-500 hover:underline">
+                      こちら
+                    </a>
+                    までお願いします！(リンクを押すと自動的にメールアプリが起動します)
+                  </p>
+                  <p>
+                    また、支部メンバーの募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
     </div>
   )
 }
+

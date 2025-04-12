@@ -94,8 +94,8 @@ export default function Members() {
     {
       name: '古藤祐樹',
       role: '支部運営',
-      university: '京都大学',
-      introduction: ''
+      university: '京都大学 文学部',
+      introduction: '趣味は放浪です！'
     },
     {
       name: '宮下雄成',
