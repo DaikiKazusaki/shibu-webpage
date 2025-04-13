@@ -10,6 +10,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+          
           {/* Logo Section - スマホでは min-height を適用しない */}
           <div className="w-full md:w-1/4 flex items-center justify-center h-full md:min-h-[200px]">
             <Link href="/" className="text-2xl font-bold">
@@ -118,6 +119,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
           {/* copyright */}
           <div className="flex justify-center gap-4 text-sm text-gray-400 mt-4">
             <p>&copy; {currentYear} 江坂学生支部</p>
