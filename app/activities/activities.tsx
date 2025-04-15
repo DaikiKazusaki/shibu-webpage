@@ -68,13 +68,18 @@ const ActivityTimeline: React.FC = () => {
     {
       date: "2024-08-18",
       title: "京都向日葵将棋大会",
-      images: ["/2024-08-18-kyoto_himawari/himawari1.jpg"],
+      images: [
+        "/2024-08-18-kyoto_himawari/himawari1.jpg"
+      ],
       description: "",
     },
     {
       date: "2024-08-16",
       title: "名古屋向日葵将棋大会",
-      images: ["/2024-08-16-nagoya_himawari/himawari1.jpg", "/2024-08-16-nagoya_himawari/himawari2.jpg"],
+      images: [
+        "/2024-08-16-nagoya_himawari/himawari1.jpg", 
+        "/2024-08-16-nagoya_himawari/himawari2.jpg"
+      ],
       description: "",
     },
     {

@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-8">
+          <div className="w-full md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-8">
             <div>
               <h2 className="text-sm font-medium mb-4">メニュー</h2>
               <ul className="space-y-2">
