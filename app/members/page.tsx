@@ -103,7 +103,7 @@ const members: Member[] = [
     position: "関西大会運営",
     university: "大阪公立大学 理学部",
     message: "将棋を通して様々な地域、年代の方と交流していきたいです",
-    imagePath: "/members/non_image.png",
+    imagePath: "/members/kishimoto.png",
   },
   {
     nameJa: "大原尚",
@@ -113,11 +113,11 @@ const members: Member[] = [
     imagePath: "/members/non_image.png",
   },
   {
-    nameJa: "土井亮太",
+    nameJa: "土居亮太",
     position: "関西大会運営",
     university: "大阪公立大学",
     message: "",
-    imagePath: "/members/non_image.png",
+    imagePath: "/members/doi.jpg",
   },
 ]
 
