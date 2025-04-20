@@ -71,6 +71,20 @@ const members: Member[] = [
     imagePath: "/members/kaneda.jpg",
   },
   {
+    nameJa: "土居亮太",
+    position: "関西大会運営",
+    university: "大阪公立大学",
+    message: "",
+    imagePath: "/members/doi.jpg",
+  },
+  {
+    nameJa: "岸本昂大",
+    position: "関西大会運営",
+    university: "大阪公立大学 理学部",
+    message: "将棋を通して様々な地域、年代の方と交流していきたいです",
+    imagePath: "/members/kishimoto.png",
+  },
+  {
     nameJa: "平井幸大",
     position: "SNS運営",
     university: "龍谷大学 経済学部",
@@ -99,25 +113,11 @@ const members: Member[] = [
     imagePath: "/members/non_image.png",
   },
   {
-    nameJa: "岸本昂大",
-    position: "関西大会運営",
-    university: "大阪公立大学 理学部",
-    message: "将棋を通して様々な地域、年代の方と交流していきたいです",
-    imagePath: "/members/kishimoto.png",
-  },
-  {
     nameJa: "大原尚",
     position: "中四国大会運営",
     university: "近畿大学 工学部",
     message: "",
     imagePath: "/members/non_image.png",
-  },
-  {
-    nameJa: "土居亮太",
-    position: "関西大会運営",
-    university: "大阪公立大学",
-    message: "",
-    imagePath: "/members/doi.jpg",
   },
 ]
 
