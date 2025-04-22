@@ -12,9 +12,10 @@ export const metadata: Metadata = {
 type Event = {
   id?: string
   title: string
-  dates: string[] // "YYYY年MM月DD日" 形式の配列に変更
+  dates: string[]
   category: "school" | "tournament" | "other"
   location?: string
+  applyLink?: string
 }
 
 const events: Event[] = [
@@ -47,12 +48,14 @@ const events: Event[] = [
     dates: ["2025年5月4日"],
     category: "tournament",
     location: "大阪府吹田市豊一市民センター",
+    applyLink: "https://docs.google.com/forms/d/1kk5gSmhXm_6pkXbM1VbMawyeAtzfeJk_Zy4Ig9SzXAA/viewform",
   },
   {
     title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
     dates: ["2025年6月7日"],
     category: "tournament",
     location: "京都府京都市北区大将軍鷹司町島津アリーナ京都",
+    applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
   },
   {
     title: "駒師若水さん ミニ展覧会",
@@ -91,7 +94,6 @@ export default function EventsPage() {
     <main className="min-h-screen bg-white dark:bg-zinc-900 p-8">
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">今後のイベント</h1>
 
-      {/* Updated grid layout with auto-fit and minmax for better responsiveness */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         <EventCategory
           title="将棋教室"
@@ -105,7 +107,6 @@ export default function EventsPage() {
           title="将棋大会"
           events={categorizedEvents.tournament}
           icon={<Calendar className="w-6 h-6" />}
-          applyLink="/apply/event"
           applyText="大会に申し込む"
           pastActivitiesLink="/activities?category=tournament"
         />
@@ -115,11 +116,11 @@ export default function EventsPage() {
           icon={<Sparkles className="w-6 h-6" />}
         />
       </div>
-      {/* 以下はスペースを設けるためのh1タグ */}
+
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
+
       <div className="mt-12 flex justify-center">
-        {/* 広告の写真は以下に追加 */}
         <Image src="/advertisements/school.png" alt="おひさま将棋教室 広告" width={500} height={500} />
       </div>
     </main>
@@ -160,6 +161,16 @@ function EventCategory({
                 <MapPin className="w-4 h-4" />
                 {event.location}
               </p>
+            )}
+            {event.applyLink && (
+              <div className="mt-2 flex justify-center">
+                <Link
+                  href={event.applyLink}
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded text-sm transition-colors w-full text-center"
+                >
+                  申し込む
+                </Link>
+              </div>
             )}
           </li>
         ))}
