@@ -166,6 +166,8 @@ function EventCategory({
               <div className="mt-2 flex justify-center">
                 <Link
                   href={event.applyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded text-sm transition-colors w-full text-center"
                 >
                   申し込む
@@ -179,6 +181,8 @@ function EventCategory({
         {applyLink && (
           <Link
             href={applyLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors w-full text-center"
           >
             {applyText}
