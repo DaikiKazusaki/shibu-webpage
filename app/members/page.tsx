@@ -89,7 +89,7 @@ const members: Member[] = [
     position: "関西合宿運営",
     university: "関西大学 法学部",
     message: "趣味は音楽鑑賞で、Mr.Childrenが好きです！",
-    imagePath: "/members/ichimaru.png",
+    imagePath: "/members/ichimaru.jpg",
   },
   {
     nameJa: "平井幸大",
