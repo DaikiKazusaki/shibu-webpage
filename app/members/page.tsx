@@ -85,6 +85,13 @@ const members: Member[] = [
     imagePath: "/members/kishimoto.png",
   },
   {
+    nameJa: "市丸玲乃",
+    position: "関西合宿運営",
+    university: "関西大学 法学部",
+    message: "趣味は音楽鑑賞で、Mr.Childrenが好きです！",
+    imagePath: "/members/ichimaru.png",
+  },
+  {
     nameJa: "平井幸大",
     position: "SNS運営",
     university: "龍谷大学 経済学部",
@@ -103,13 +110,6 @@ const members: Member[] = [
     position: "営業部",
     university: "神戸大学 国際人間科学部",
     message: "将棋を通じて輪を広げましょう！",
-    imagePath: "/members/non_image.png",
-  },
-  {
-    nameJa: "市丸玲乃",
-    position: "関西合宿運営",
-    university: "関西大学 法学部",
-    message: "趣味は音楽鑑賞で、Mr.Childrenが好きです！",
     imagePath: "/members/non_image.png",
   },
   {
