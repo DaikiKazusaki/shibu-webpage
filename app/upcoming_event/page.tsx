@@ -120,8 +120,11 @@ export default function EventsPage() {
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
 
-      <div className="mt-12 flex justify-center">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
         <Image src="/advertisements/school.png" alt="おひさま将棋教室 広告" width={500} height={500} />
+        <Image src="/advertisements/tournament0504.jpg" alt="くったくたになれる将棋大会(5/4) 広告" width={500} height={500} />
+        <Image src="/advertisements/tournament0607.jpg" alt="将棋YouTuberそらさん杯くったくたになれる将棋大会(6/7) 広告" width={500} height={500} />
+        <Image src="/advertisements/others.jpg" alt="その他のイベント 広告" width={500} height={500} />
       </div>
     </main>
   )
