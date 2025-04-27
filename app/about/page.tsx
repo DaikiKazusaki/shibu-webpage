@@ -97,7 +97,7 @@ export default function Home() {
                   学校や地域のイベントなどに将棋講師を派遣しています。
                 </p>
                 <Link
-                  href="mailto:shogi.esakagakusei@gmail.com"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform"
                   className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
                 >
                   <span>お問い合わせ</span>

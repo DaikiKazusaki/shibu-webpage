@@ -79,7 +79,7 @@ export default function Footer() {
               <h2 className="text-sm font-medium mb-4">お問い合わせ</h2>
               <ul className="space-y-2">
                 <li>
-                  <Link href="mailto:shogi.esakagakusei@gmail.com" className="text-sm text-gray-400 hover:text-white">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform" className="text-sm text-gray-400 hover:text-white">
                     お問い合わせ
                   </Link>
                 </li>
