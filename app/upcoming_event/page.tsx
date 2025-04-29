@@ -20,54 +20,48 @@ type Event = {
 
 const events: Event[] = [
   {
-    title: "おひさま将棋教室",
-    dates: ["2025年4月20日"],
-    category: "school",
-    location: "大阪府吹田市豊一市民センター",
-  },
-  {
     title: "おひさま将棋教室特別企画",
     dates: ["2025年5月11日"],
     category: "school",
-    location: "大阪府吹田市豊一市民センター",
+    location: "大阪府吹田市 豊一市民センター",
   },
   {
     title: "おひさま将棋教室",
     dates: ["2025年5月18日"],
     category: "school",
-    location: "大阪府吹田市豊一市民センター",
+    location: "大阪府吹田市 豊一市民センター",
   },
   {
     title: "出張おひさま将棋教室 in こまこい",
     dates: ["2025年5月24日"],
     category: "school",
-    location: "兵庫県神戸市東灘区文化センター",
+    location: "兵庫県神戸市 東灘区文化センター",
   },
   {
     title: "くったくたになれる将棋大会",
     dates: ["2025年5月4日"],
     category: "tournament",
-    location: "大阪府吹田市豊一市民センター",
+    location: "大阪府吹田市 豊一市民センター",
     applyLink: "https://docs.google.com/forms/d/1kk5gSmhXm_6pkXbM1VbMawyeAtzfeJk_Zy4Ig9SzXAA/viewform",
   },
   {
     title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
     dates: ["2025年6月7日"],
     category: "tournament",
-    location: "京都市中京区聚楽廻松下町9-2 京都市生涯学習総合センター",
+    location: "京都府京都市 京都市生涯学習総合センター",
     applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
   },
   {
     title: "駒師若水さん ミニ展覧会",
     dates: ["2025年5月4日"],
     category: "other",
-    location: "大阪府吹田市豊一市民センター",
+    location: "大阪府吹田市 豊一市民センター",
   },
   {
     title: "あにまるしぇ お手伝い",
     dates: ["2025年5月25日"],
     category: "other",
-    location: "大阪府高槻市安満遺跡公園",
+    location: "大阪府高槻市 安満遺跡公園",
   },
 ]
 
