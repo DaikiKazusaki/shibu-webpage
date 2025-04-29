@@ -54,7 +54,7 @@ const events: Event[] = [
     title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
     dates: ["2025年6月7日"],
     category: "tournament",
-    location: "京都府京都市北区大将軍鷹司町島津アリーナ京都",
+    location: "京都市中京区聚楽廻松下町9-2 京都市生涯学習総合センター",
     applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
   },
   {
