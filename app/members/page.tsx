@@ -57,7 +57,7 @@ const members: Member[] = [
     imagePath: "/members/kazusaki.jpg",
   },
   {
-    nameJa: "古江裕也",
+    nameJa: "古江祐也",
     position: "中四国合宿運営",
     university: "尾道市立大学 芸術文化学部",
     message: "圧倒的に猫派です！あまりよさげな写真がなかったので、猫の写真を載せておきます。",
