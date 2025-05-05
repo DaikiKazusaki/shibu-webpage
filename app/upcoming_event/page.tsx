@@ -14,6 +14,7 @@ type Event = {
   title: string
   dates: string[]
   category: "school" | "tournament" | "other"
+  guests?: string[]
   location?: string
   applyLink?: string
 }
@@ -23,6 +24,7 @@ const events: Event[] = [
     title: "おひさま将棋教室特別企画",
     dates: ["2025年5月11日"],
     category: "school",
+    guests: ["将棋YouTuberそらさん"],
     location: "大阪府吹田市 豊一市民センター",
   },
   {
@@ -38,24 +40,12 @@ const events: Event[] = [
     location: "兵庫県神戸市 東灘区文化センター",
   },
   {
-    title: "くったくたになれる将棋大会",
-    dates: ["2025年5月4日"],
-    category: "tournament",
-    location: "大阪府吹田市 豊一市民センター",
-    applyLink: "https://docs.google.com/forms/d/1kk5gSmhXm_6pkXbM1VbMawyeAtzfeJk_Zy4Ig9SzXAA/viewform",
-  },
-  {
     title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
     dates: ["2025年6月7日"],
     category: "tournament",
+    guests: ["将棋YouTuberそらさん"],
     location: "京都府京都市 京都市生涯学習総合センター",
     applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
-  },
-  {
-    title: "駒師若水さん ミニ展覧会",
-    dates: ["2025年5月4日"],
-    category: "other",
-    location: "大阪府吹田市 豊一市民センター",
   },
   {
     title: "あにまるしぇ お手伝い",
@@ -149,16 +139,26 @@ function EventCategory({
         {events.map((event, index) => (
           <li key={event.id || index} className="border-b border-zinc-200 dark:border-zinc-700 pb-2">
             <h3 className="text-lg font-medium text-zinc-700 dark:text-zinc-300">{event.title}</h3>
+
             <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               {formatDates(event.dates)}
             </p>
+
+            {event.guests && event.guests.length > 0 && (
+              <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2 mt-1">
+                <Users className="w-4 h-4" />
+                ゲスト: {event.guests.join("、")}
+              </p>
+            )}
+
             {event.location && (
               <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2 mt-1">
                 <MapPin className="w-4 h-4" />
                 {event.location}
               </p>
             )}
+
             {event.applyLink && (
               <div className="mt-2 flex justify-center">
                 <Link
