@@ -48,6 +48,13 @@ const events: Event[] = [
     applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
   },
   {
+    title: "うたげ将棋団体戦",
+    dates: ["2025年6月28日"],
+    category: "tournament",
+    location: "大阪府大阪市 将棋barうたげ",
+    // applyLink: "https://docs.google.com/forms/d/1QzTDauLMA7fL95zRrRqkJHk4u2u6oHQpmJWpOV49s0g/"
+  },
+  {
     title: "あにまるしぇ お手伝い",
     dates: ["2025年5月25日"],
     category: "other",
@@ -104,11 +111,12 @@ export default function EventsPage() {
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-        <Image src="/advertisements/school.png" alt="おひさま将棋教室 広告" width={500} height={500} />
-        <Image src="/advertisements/tournament0504.jpg" alt="くったくたになれる将棋大会(5/4) 広告" width={500} height={500} />
-        <Image src="/advertisements/tournament0607.jpg" alt="将棋YouTuberそらさん杯くったくたになれる将棋大会(6/7) 広告" width={500} height={500} />
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        <Image src="/advertisements/ohisama.png" alt="おひさま将棋教室 広告" width={500} height={500} />
+        <Image src="/advertisements/tournament0607.png" alt="将棋YouTuberそらさん杯くったくたになれる将棋大会 広告" width={500} height={500} />
+        <Image src="/advertisements/tournament0628.png" alt="うたげ将棋団体戦" width={500} height={500} />
         <Image src="/advertisements/others.jpg" alt="その他のイベント 広告" width={500} height={500} />
+        <Image src="/advertisements/others0621.jpg" alt="摩耶将棋倶楽部一日将棋カフェ 広告" width={500} height={500} />
       </div>
     </main>
   )
