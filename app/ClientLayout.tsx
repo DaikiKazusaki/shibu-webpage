@@ -28,21 +28,24 @@ export default function ClientLayout({
         <div className="top-0 left-0 right-0 z-50">
           <Header />
         </div>
-        <div className="flex-grow flex flex-col sm:flex-row overflow-hidden">
-          {isActivityDetailPage && (
-            <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-              <LeftSidebar />
-            </div>
-          )}
-          <main className="flex-grow p-4">
-            <Suspense>{children}</Suspense>
-          </main>
-          {!pathname.includes("/activities/") && (
-            <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-              {/* サイドバーが必要な場合はここにコンポーネントを追加 */}
-            </div>
-          )}
+
+        {/* メインレイアウト */}
+        <div className="flex-grow flex justify-center">
+          <div className={`w-full ${isActivityDetailPage ? "max-w-7xl" : "max-w-6xl"} mx-auto flex`}>
+            {/* 左サイドバー - アクティビティ詳細ページのみ表示 */}
+            {isActivityDetailPage && (
+              <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
+                <LeftSidebar />
+              </div>
+            )}
+
+            {/* メインコンテンツ */}
+            <main className="flex-grow p-4">
+              <Suspense>{children}</Suspense>
+            </main>
+          </div>
         </div>
+
         <Footer />
         <Analytics />
         <SpeedInsights />
