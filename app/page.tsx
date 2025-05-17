@@ -68,7 +68,7 @@ export default function Home() {
                   <Link href="https://www.google.com/maps/search/%E6%B1%9F%E5%9D%82/@34.7641004,135.4847462,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
                     大阪府吹田市江坂
                   </Link>
-                  を拠点とする、全国の大学生有志で結成した日本将棋連盟の支部です。将棋イベントを運営しています！詳細は
+                  を拠点とする、全国の大学生15人(うち支部会員10人)で結成した日本将棋連盟の支部です。全国各地で将棋イベントを主催しています！詳細は
                   <Link href="/about" className="text-blue-500 hover:underline">
                     こちら
                   </Link>
@@ -122,14 +122,14 @@ export default function Home() {
               <CardContent className="p-4 pt-0">
                 <div className="space-y-4">
                   <p>
-                    地域の小学校や公民館へ将棋講師の派遣も行っています。お問い合わせは
-                    <a href="mailto:shogi.esakagakusei@gmail.com" className="text-blue-500 hover:underline">
+                    将棋講師の派遣や共同でのイベント運営などのお誘い、盤駒時計の貸し出しなどはこちらから受け付けております。お問い合わせは
+                    <a href="https://docs.google.com/forms/d/1d27qX0rCMNJqbLmMlST3oJq3Zy-Z5M1HXP4C-DFXOWg/viewform" className="text-blue-500 hover:underline">
                       こちら
                     </a>
-                    までお願いします！(リンクを押すと自動的にメールアプリが起動します)
+                    までお願いします！
                   </p>
                   <p>
-                    また、支部メンバーの募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
+                    また、支部を運営する仲間やスポンサー様の募集も行っています！興味を持っていただいた方は、上記のリンクからお問い合わせください！
                   </p>
                 </div>
               </CardContent>

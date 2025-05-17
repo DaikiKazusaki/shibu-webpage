@@ -92,6 +92,13 @@ const members: Member[] = [
     imagePath: "/members/ichimaru.jpg",
   },
   {
+    nameJa: "田中優汰",
+    position: "営業部",
+    university: "神戸大学 国際人間科学部",
+    message: "将棋を通じて輪を広げましょう！",
+    imagePath: "/members/tanaka.jpg",
+  },
+  {
     nameJa: "平井幸大",
     position: "SNS運営",
     university: "龍谷大学 経済学部",
@@ -103,13 +110,6 @@ const members: Member[] = [
     position: "関東大会合宿運営",
     university: "星薬科大学 薬学部",
     message: "関東合宿の運営を頑張りたいです",
-    imagePath: "/members/non_image.png",
-  },
-  {
-    nameJa: "田中優汰",
-    position: "営業部",
-    university: "神戸大学 国際人間科学部",
-    message: "将棋を通じて輪を広げましょう！",
     imagePath: "/members/non_image.png",
   },
   {

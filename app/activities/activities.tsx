@@ -51,9 +51,9 @@ const ActivityTimeline: React.FC = () => {
   const activities: Activity[] = [
     {
       date: "2024-10-12",
-      title: "秋桜将棋大会",
+      title: "秋桜将棋大会 & おひさま将棋教室",
       images: ["/2024-10-12-kosumosu/kosumosu1.jpg"],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2024-08-21",
@@ -63,7 +63,7 @@ const ActivityTimeline: React.FC = () => {
         "/2024-08-21-fukuoka_himawari/himawari2.jpg",
         "/2024-08-21-fukuoka_himawari/himawari3.jpg",
       ],
-      description: "",
+      description: "運営：松本，大塚さん",
     },
     {
       date: "2024-08-18",
@@ -71,7 +71,7 @@ const ActivityTimeline: React.FC = () => {
       images: [
         "/2024-08-18-kyoto_himawari/himawari1.jpg"
       ],
-      description: "",
+      description: "運営：松本，大西，沖津",
     },
     {
       date: "2024-08-16",
@@ -80,7 +80,7 @@ const ActivityTimeline: React.FC = () => {
         "/2024-08-16-nagoya_himawari/himawari1.jpg", 
         "/2024-08-16-nagoya_himawari/himawari2.jpg"
       ],
-      description: "",
+      description: "運営：松本，蓮田さん",
     },
     {
       date: "2024-08-11",
@@ -90,19 +90,19 @@ const ActivityTimeline: React.FC = () => {
         "/2024-08-11-tokyo_himawari/himawari2.jpg",
         "/2024-08-11-tokyo_himawari/himawari3.jpg",
       ],
-      description: "",
+      description: "運営：松本，金田，沖津，岡本",
     },
     {
       date: "2024-08-09",
       title: "広島向日葵将棋大会",
       images: ["/2024-08-09-hiroshima_himawari/himawari1.jpg", "/2024-08-09-hiroshima_himawari/himawari2.jpg"],
-      description: "",
+      description: "運営：松本，大原，沖津",
     },
     {
       date: "2024-06-15",
       title: "紫陽花将棋大会",
       images: ["/2024-06-15-ajisai/ajisai1.jpg", "/2024-06-15-ajisai/ajisai2.jpg", "/2024-06-15-ajisai/ajisai3.jpg"],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2024-05-05",
@@ -112,19 +112,19 @@ const ActivityTimeline: React.FC = () => {
         "/2024-05-05-suzuran/suzuran2.jpg",
         "/2024-05-05-suzuran/suzuran3.jpg",
       ],
-      description: "",
+      description: "運営：松本",
     },
     {
       date: "2024-03-24",
       title: "桜将棋大会",
       images: ["/2024-03-24-sakura/sakura1.jpg", "/2024-03-24-sakura/sakura2.jpg"],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2024-01-07",
       title: "水仙将棋大会",
       images: ["/2024-01-07-suisen/suisen1.jpg", "/2024-01-07-suisen/suisen2.jpg", "/2024-01-07-suisen/suisen1.jpg"],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2023-11-04",
@@ -134,13 +134,13 @@ const ActivityTimeline: React.FC = () => {
         "/2023-11-04-kosumosu/kosumosu2.jpg",
         "/2023-11-04-kosumosu/kosumosu3.jpg",
       ],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2023-09-03",
       title: "金木犀将棋大会",
       images: ["/2023-09-03-kinmokusei/kinmokusei1.jpg", "/2023-09-03-kinmokusei/kinmokusei2.jpg"],
-      description: "",
+      description: "運営：松本，土居，岸本",
     },
     {
       date: "2023-07-02",
@@ -150,7 +150,7 @@ const ActivityTimeline: React.FC = () => {
         "/2023-07-02-himawari/himawari2.jpg",
         "/2023-07-02-himawari/himawari3.jpg",
       ],
-      description: "",
+      description: "運営：松本，土居",
     },
   ]
 
