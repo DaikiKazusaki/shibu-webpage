@@ -2,11 +2,8 @@
 
 import "./globals.css"
 import { Inter } from "next/font/google"
-import { usePathname } from "next/navigation"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import LeftSidebar from "./components/LeftSidebar"
-// import RightSidebar from "./components/RightSidebar"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type React from "react"
@@ -18,9 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
-  const isActivitiesPage = pathname === "/activities"
-
   return (
     <html lang="ja" className="h-full">
       <body className={`${inter.className} flex flex-col min-h-full`}>
@@ -29,14 +23,12 @@ export default function RootLayout({
         </div>
         <div className="flex-grow flex flex-col sm:flex-row overflow-hidden">
           <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-            {isActivitiesPage && <LeftSidebar />}
+            {/* <LeftSidebar /> */}
           </div>
           <main className="flex-grow p-4">{children}</main>
-          {!isActivitiesPage && (
-            <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-              {/* <RightSidebar /> */}
-            </div>
-          )}
+          <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
+            {/* <RightSidebar /> */}
+          </div>
         </div>
         <Footer />
         <Analytics />
@@ -45,4 +37,3 @@ export default function RootLayout({
     </html>
   )
 }
-
