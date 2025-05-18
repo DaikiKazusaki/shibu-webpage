@@ -10,8 +10,7 @@ export default function Activities() {
     {
       id: "school",
       title: "将棋教室",
-      description:
-        "江坂学生支部が運営する将棋教室の活動記録です。初心者から上級者まで、様々なレベルの方が参加しています。将棋の基本から実戦的な戦法まで、丁寧に指導しています。",
+      description:　"江坂学生支部が運営するおひさま将棋教室の活動記録です。初心者から上級者まで、老若男女様々なレベルの方が参加しています。",
       image: "/ohisama/ohisama1.jpg",
       color: "bg-amber-100",
       borderColor: "border-amber-400",

@@ -58,37 +58,116 @@ export default function School() {
   // Sample data for shogi classes
   const classes: SchoolClass[] = [
     {
+      date: "2024-06-30",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-07-07",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-07-12",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-07-13",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-07-20",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-07-28",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-09-15",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-09-21",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-09-23",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },    
+    {
       date: "2024-10-12",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-10-14",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2024-10-27",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2025-01-25",
+      title: "旧おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
+    },
+    {
+      date: "2025-02-16",
       title: "おひさま将棋教室",
-      images: ["/ohisama/ohisama1.jpg", "/ohisama/ohisama2.jpg", "/ohisama/ohisama3.jpg"],
-      description:
-        "初心者から上級者まで参加できる将棋教室を開催しました。駒の動かし方から実戦的な戦法まで、レベルに合わせた指導を行いました。参加者は熱心に取り組み、楽しく将棋を学んでいました。",
+      description: "運営：松本",
+      images: [],
     },
     {
-      date: "2024-08-05",
-      title: "夏休み特別将棋教室",
-      images: ["/ohisama/ohisama4.jpg", "/ohisama/ohisama5.jpg", "/ohisama/ohisama6.jpg"],
-      description:
-        "夏休み期間中に特別将棋教室を開催しました。多くの小中学生が参加し、基本的な戦法や詰将棋の解き方などを学びました。最後には参加者同士の対局も行い、学んだことを実践する機会となりました。",
+      date: "2025-03-16",
+      title: "おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
     },
     {
-      date: "2024-06-20",
-      title: "大学生向け将棋講座",
-      images: ["/ohisama/ohisama1.jpg", "/ohisama/ohisama3.jpg", "/ohisama/ohisama5.jpg"],
-      description:
-        "大学生を対象とした将棋講座を開催しました。中級者向けの内容で、実戦で役立つ戦法や終盤の詰みパターンなどを解説しました。参加者からは「実践的な内容で勉強になった」との声をいただきました。",
+      date: "2025-04-20",
+      title: "おひさま将棋教室",
+      description: "運営：松本",
+      images: [],
     },
     {
-      date: "2024-04-15",
-      title: "初心者向け将棋教室",
-      images: ["/ohisama/ohisama2.jpg", "/ohisama/ohisama4.jpg", "/ohisama/ohisama6.jpg"],
-      description:
-        "将棋を始めたばかりの方を対象とした教室を開催しました。駒の動かし方から基本的な戦法まで、丁寧に指導しました。参加者は熱心に質問し、将棋の面白さを感じていただけたようです。",
+      date: "2025-05-18",
+      title: "おひさま将棋教室",
+      description: "運営：松本，今回は写真を取り忘れてしまいました...すいません！！！(松本)",
+      images: [],
     },
   ]
 
+  // Sort classes by date in descending order (newest first)
+  const sortedClasses = [...classes].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
+
   const loadMore = () => {
-    setVisibleClasses((prev) => Math.min(prev + 3, classes.length))
+    setVisibleClasses((prev) => Math.min(prev + 3, sortedClasses.length))
   }
 
   return (
@@ -111,12 +190,12 @@ export default function School() {
       </div>
 
       <div className="space-y-8">
-        {classes.slice(0, visibleClasses).map((classItem, index) => (
+        {sortedClasses.slice(0, visibleClasses).map((classItem, index) => (
           <SchoolClassItem key={index} {...classItem} />
         ))}
       </div>
 
-      {visibleClasses < classes.length && (
+      {visibleClasses < sortedClasses.length && (
         <div className="mt-8 text-center">
           <Button onClick={loadMore} className="bg-amber-600 hover:bg-amber-700 text-white">
             もっと見る
