@@ -52,7 +52,7 @@ const events: Event[] = [
     dates: ["2025年6月28日"],
     category: "tournament",
     location: "大阪府大阪市 将棋barうたげ",
-    // applyLink: "https://docs.google.com/forms/d/1QzTDauLMA7fL95zRrRqkJHk4u2u6oHQpmJWpOV49s0g/"
+    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSdDEgpGTVBpCM5Os-dpytcejN8yq9NlCMkpHtpmNfGca8m0BQ/viewform"
   },
   {
     title: "あにまるしぇ お手伝い",
