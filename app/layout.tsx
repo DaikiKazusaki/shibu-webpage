@@ -26,9 +26,9 @@ export default function RootLayout({
             {/* <LeftSidebar /> */}
           </div>
           <main className="flex-grow p-4">{children}</main>
-            <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
-              {/* <RightSidebar /> */}
-            </div>
+          <div className="hidden xl:block min-w-[120px] max-w-[320px] w-[14%] flex-shrink-0">
+            {/* <RightSidebar /> */}
+          </div>
         </div>
         <Footer />
         <Analytics />
