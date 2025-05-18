@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 // import Camp from "./camp"
 
 export const metadata: Metadata = {
-  title: "タイトルを変更してください",
+  title: "合宿 | 活動",
   description: "このページは現在準備中です。",
 }
 
