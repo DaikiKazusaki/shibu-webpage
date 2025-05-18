@@ -54,6 +54,12 @@ export default function Footer() {
               <h2 className="text-sm font-medium mb-4">リンク</h2>
               <ul className="space-y-2">
                 <li>
+                  <Link href="http://mayashogi.com/" className="text-sm text-gray-400 hover:text-white">
+                    摩耶将棋倶楽部(協賛)
+                  </Link>
+                </li>
+                { /* 
+                <li>
                   <Link href="/books" className="text-sm text-gray-400 hover:text-white">
                     電子書籍
                   </Link>
@@ -73,6 +79,7 @@ export default function Footer() {
                     日本将棋連盟ホームページ
                   </a>
                 </li>
+                */ }
               </ul>
             </div>
             <div>
