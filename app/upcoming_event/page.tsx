@@ -21,19 +21,6 @@ type Event = {
 
 const events: Event[] = [
   {
-    title: "おひさま将棋教室特別企画",
-    dates: ["2025年5月11日"],
-    category: "school",
-    guests: ["将棋YouTuberそらさん"],
-    location: "大阪府吹田市 豊一市民センター",
-  },
-  {
-    title: "おひさま将棋教室",
-    dates: ["2025年5月18日"],
-    category: "school",
-    location: "大阪府吹田市 豊一市民センター",
-  },
-  {
     title: "出張おひさま将棋教室 in こまこい",
     dates: ["2025年5月24日"],
     category: "school",
