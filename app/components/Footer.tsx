@@ -2,6 +2,7 @@ import Link from "next/link"
 import { BsTwitterX } from "react-icons/bs"
 import { TbBrandYoutubeFilled } from "react-icons/tb"
 import { FaBlog } from "react-icons/fa"
+import { FaLine } from "react-icons/fa6";
 
 const currentYear = new Date().getFullYear();
 
@@ -123,6 +124,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaBlog className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLine className="w-5 h-5" />  
               </a>
             </div>
           </div>
