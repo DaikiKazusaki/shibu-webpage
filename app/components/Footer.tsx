@@ -2,6 +2,7 @@ import Link from "next/link"
 import { BsTwitterX } from "react-icons/bs"
 import { TbBrandYoutubeFilled } from "react-icons/tb"
 import { FaBlog } from "react-icons/fa"
+import { FaLine } from "react-icons/fa6";
 
 const currentYear = new Date().getFullYear();
 
@@ -54,6 +55,12 @@ export default function Footer() {
               <h2 className="text-sm font-medium mb-4">リンク</h2>
               <ul className="space-y-2">
                 <li>
+                  <Link href="http://mayashogi.com/" className="text-sm text-gray-400 hover:text-white">
+                    摩耶将棋倶楽部(協賛)
+                  </Link>
+                </li>
+                { /* 
+                <li>
                   <Link href="/books" className="text-sm text-gray-400 hover:text-white">
                     電子書籍
                   </Link>
@@ -73,13 +80,14 @@ export default function Footer() {
                     日本将棋連盟ホームページ
                   </a>
                 </li>
+                */ }
               </ul>
             </div>
             <div>
               <h2 className="text-sm font-medium mb-4">お問い合わせ</h2>
               <ul className="space-y-2">
                 <li>
-                  <Link href="mailto:shogi.esakagakusei@gmail.com" className="text-sm text-gray-400 hover:text-white">
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform" className="text-sm text-gray-400 hover:text-white">
                     お問い合わせ
                   </Link>
                 </li>
@@ -116,6 +124,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaBlog className="w-5 h-5" />
+              </a>
+              <a
+                href="https://lin.ee/9kDPZlU"
+                className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLine className="w-5 h-5" />  
               </a>
             </div>
           </div>

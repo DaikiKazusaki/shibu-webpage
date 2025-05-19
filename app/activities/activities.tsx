@@ -1,212 +1,73 @@
 "use client"
-
-import type React from "react"
-import { useState } from "react"
 import Image from "next/image"
-
-interface Activity {
-  date: string
-  title: string
-  description: string
-  images: string[]
-  blogLink?: string
-}
-
-const ActivityItem: React.FC<Activity> = ({ date, title, description, images, blogLink }) => {
-  // Format the date from YYYY-MM-DD to YYYY年MM月DD日
-  const formatDate = (isoDate: string) => {
-    const [year, month, day] = isoDate.split("-")
-    return `${year}年${month}月${day}日`
-  }
-
-  return (
-    <div id={date} className="mb-8">
-      {/* Combined title and date in the requested format */}
-      <h3 className="text-xl font-semibold mb-4">{`${title}(${formatDate(date)})`}</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        {images.map((image, index) => (
-          <div key={index} className="w-full h-64 relative">
-            <Image
-              src={image || "/placeholder.svg"}
-              alt={`${title} - Image ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
-        ))}
-      </div>
-      <p className="text-gray-700 mb-2">{description}</p>
-      {blogLink && (
-        <a href={blogLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-          ブログを読む
-        </a>
-      )}
-    </div>
-  )
-}
-
-const ActivityTimeline: React.FC = () => {
-  const [visibleActivities, setVisibleActivities] = useState(5)
-  const activities: Activity[] = [
-    {
-      date: "2024-10-12",
-      title: "秋桜将棋大会",
-      images: ["/2024-10-12-kosumosu/kosumosu1.jpg"],
-      description: "",
-    },
-    {
-      date: "2024-08-21",
-      title: "福岡向日葵将棋大会",
-      images: [
-        "/2024-08-21-fukuoka_himawari/himawari1.jpg",
-        "/2024-08-21-fukuoka_himawari/himawari2.jpg",
-        "/2024-08-21-fukuoka_himawari/himawari3.jpg",
-      ],
-      description: "",
-    },
-    {
-      date: "2024-08-18",
-      title: "京都向日葵将棋大会",
-      images: [
-        "/2024-08-18-kyoto_himawari/himawari1.jpg"
-      ],
-      description: "",
-    },
-    {
-      date: "2024-08-16",
-      title: "名古屋向日葵将棋大会",
-      images: [
-        "/2024-08-16-nagoya_himawari/himawari1.jpg", 
-        "/2024-08-16-nagoya_himawari/himawari2.jpg"
-      ],
-      description: "",
-    },
-    {
-      date: "2024-08-11",
-      title: "東京向日葵将棋大会",
-      images: [
-        "/2024-08-11-tokyo_himawari/himawari1.jpg",
-        "/2024-08-11-tokyo_himawari/himawari2.jpg",
-        "/2024-08-11-tokyo_himawari/himawari3.jpg",
-      ],
-      description: "",
-    },
-    {
-      date: "2024-08-09",
-      title: "広島向日葵将棋大会",
-      images: ["/2024-08-09-hiroshima_himawari/himawari1.jpg", "/2024-08-09-hiroshima_himawari/himawari2.jpg"],
-      description: "",
-    },
-    {
-      date: "2024-06-15",
-      title: "紫陽花将棋大会",
-      images: ["/2024-06-15-ajisai/ajisai1.jpg", "/2024-06-15-ajisai/ajisai2.jpg", "/2024-06-15-ajisai/ajisai3.jpg"],
-      description: "",
-    },
-    {
-      date: "2024-05-05",
-      title: "鈴蘭将棋大会",
-      images: [
-        "/2024-05-05-suzuran/suzuran1.jpg",
-        "/2024-05-05-suzuran/suzuran2.jpg",
-        "/2024-05-05-suzuran/suzuran3.jpg",
-      ],
-      description: "",
-    },
-    {
-      date: "2024-03-24",
-      title: "桜将棋大会",
-      images: ["/2024-03-24-sakura/sakura1.jpg", "/2024-03-24-sakura/sakura2.jpg"],
-      description: "",
-    },
-    {
-      date: "2024-01-07",
-      title: "水仙将棋大会",
-      images: ["/2024-01-07-suisen/suisen1.jpg", "/2024-01-07-suisen/suisen2.jpg", "/2024-01-07-suisen/suisen1.jpg"],
-      description: "",
-    },
-    {
-      date: "2023-11-04",
-      title: "秋桜将棋大会",
-      images: [
-        "/2023-11-04-kosumosu/kosumosu1.jpg",
-        "/2023-11-04-kosumosu/kosumosu2.jpg",
-        "/2023-11-04-kosumosu/kosumosu3.jpg",
-      ],
-      description: "",
-    },
-    {
-      date: "2023-09-03",
-      title: "金木犀将棋大会",
-      images: ["/2023-09-03-kinmokusei/kinmokusei1.jpg", "/2023-09-03-kinmokusei/kinmokusei2.jpg"],
-      description: "",
-    },
-    {
-      date: "2023-07-02",
-      title: "向日葵将棋大会",
-      images: [
-        "/2023-07-02-himawari/himawari1.jpg",
-        "/2023-07-02-himawari/himawari2.jpg",
-        "/2023-07-02-himawari/himawari3.jpg",
-      ],
-      description: "",
-    },
-  ]
-
-  const loadMore = () => {
-    setVisibleActivities((prevVisible) => Math.min(prevVisible + 5, activities.length))
-  }
-
-  return (
-    <div>
-      {activities.slice(0, visibleActivities).map((activity, index) => (
-        <ActivityItem key={index} {...activity} />
-      ))}
-      {visibleActivities < activities.length && (
-        <button onClick={loadMore} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">
-          さらに読み込む
-        </button>
-      )}
-    </div>
-  )
-}
-
-const ShogiBannerImages: React.FC = () => {
-  const images = [
-    "/ohisama/ohisama1.jpg",
-    "/ohisama/ohisama2.jpg",
-    "/ohisama/ohisama3.jpg",
-    "/ohisama/ohisama4.jpg",
-    "/ohisama/ohisama5.jpg",
-    "/ohisama/ohisama6.jpg",
-  ]
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-      {images.map((image, index) => (
-        <div key={index} className="w-full h-48 md:h-64 relative">
-          <Image
-            src={image || "/placeholder.svg"}
-            alt={`おひさま将棋教室 - 画像 ${index + 1}`}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-      ))}
-    </div>
-  )
-}
+import Link from "next/link"
+import { ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Activities() {
+  // Define the activity categories
+  const categories = [
+    {
+      id: "school",
+      title: "将棋教室",
+      description:　
+        "大人の方、女性の方でも気軽に参加できる将棋教室「おひさま将棋教室」を開催しています。上達を目指すだけはなく、「多様な将棋との向き合い方をすべて応援する」ことをテーマに、どんなご要望にも寄り添えるよう日々努力しております。「人気YouTuberさんの指導対局」「学生強豪と指し放題」など、特別企画も盛りだくさん。「公式LINEでの質問受付」「書籍の貸し出し(100冊以上)」「講師作の詰将棋の配布」「大会の割引」など、会員様限定のサービスも充実しています。",
+      image: "/school/ohisama1.jpg",
+      color: "bg-amber-100",
+      borderColor: "border-amber-400",
+      textColor: "text-amber-800",
+      buttonColor: "bg-amber-600 hover:bg-amber-700",
+    },
+    {
+      id: "tournament",
+      title: "大会",
+      description:
+        "「1日楽しめるリーグ戦&交流戦&自由対局」「おひとりでもご参加いただける団体戦」「誰もが得意を活かせる、毎局違う持ち時間」「丁寧なクラス分け」「じゃんけん大会で景品をプレゼント」「駒の展覧会や記念対局などの同時企画」といった、既存の将棋大会の課題を解決し、実力や世代に関わらずみなさまに楽しんでいただける新構想を実現し続けています！",
+      image: "/tournament/2024-08-09-hiroshima_himawari/himawari1.jpg",
+      color: "bg-emerald-100",
+      borderColor: "border-emerald-400",
+      textColor: "text-emerald-800",
+      buttonColor: "bg-emerald-600 hover:bg-emerald-700",
+    },
+    {
+      id: "camp",
+      title: "合宿",
+      description:
+        "夏休みと春休みに、2泊3日で全国から学生が集まります。今後は、学生と社会人の架け橋として、多様な人が交流できる場を創ります。過去3回は関西で開催しましたが、2025年夏から東西で開催します。",
+      image: "/tournament/2024-01-07-suisen/suisen1.jpg",
+      color: "bg-sky-100",
+      borderColor: "border-sky-400",
+      textColor: "text-sky-800",
+      buttonColor: "bg-sky-600 hover:bg-sky-700",
+    },
+  ]
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">おひさま将棋教室</h1>
-      <ShogiBannerImages />
-      <h1 className="text-3xl font-bold mb-6">将棋大会</h1>
-      <ActivityTimeline />
+    <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <h1 className="text-4xl font-bold mb-16 text-center">江坂学生支部の活動</h1>
+
+      <div className="space-y-24">
+        {categories.map((category) => (
+          <section key={category.id} className={`rounded-xl overflow-hidden shadow-lg ${category.borderColor} border`}>
+            <div className="relative h-80 w-full">
+              <Image src={category.image || "/placeholder.svg"} alt={category.title} fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+              <div className="absolute bottom-0 left-0 p-8">
+                <h2 className={`text-4xl font-bold text-white mb-2`}>{category.title}</h2>
+              </div>
+            </div>
+            <div className={`p-8 ${category.color}`}>
+              <p className="text-lg mb-8">{category.description}</p>
+              <Link href={`/activities/${category.id}`} passHref>
+                <Button className={`${category.buttonColor} text-white group`}>
+                  詳細を見る
+                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   )
 }
-

@@ -1,6 +1,12 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "支部について",
+  description: "江坂学生支部の詳細についての情報です。",
+}
 
 export default function Home() {
   return (
@@ -13,13 +19,13 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="order-2 lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-gray-100 text-gray-800 mb-4">
-                  私たちについて
+                  活動理念
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-gray-800 pl-4">
-                  江坂学生支部とは
+                  将棋で人を繋ぐ 将棋を未来へ繋ぐ
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  江坂学生支部は、大学生によって運営されている支部です。メンバーについては、
+                 大好きな将棋界の方々の交流の架け橋となれるよう、より大きなイベントを、より高頻度で、よりたくさんの地域で開催することを目指しています。大学生であるわたしたちが「次世代の将棋文化を担う」という覚悟を持って、イベント運営やSNS活動に邁進していきます。運営メンバーは
                   <Link
                     href="/members"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
@@ -32,7 +38,7 @@ export default function Home() {
               <div className="order-1 lg:order-2 h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/2024-08-09-hiroshima_himawari/himawari2.jpg?height=400&width=600"
+                    src="/tournament/2024-08-09-hiroshima_himawari/himawari2.jpg?height=400&width=600"
                     alt="江坂学生支部の活動"
                     fill
                     className="object-cover"
@@ -48,7 +54,7 @@ export default function Home() {
               <div className="h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/2024-01-07-suisen/suisen1.jpg?height=400&width=600"
+                    src="/tournament/2024-01-07-suisen/suisen1.jpg?height=400&width=600"
                     alt="大会・教室の運営"
                     fill
                     className="object-cover"
@@ -60,7 +66,7 @@ export default function Home() {
                   活動内容
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-gray-800 pl-4">
-                  大会・教室の運営
+                  大会・教室の運営、合宿の開催
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   私たちは定期的に将棋大会や教室を開催しています。過去の教室・大会の雰囲気については
@@ -101,10 +107,10 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベントなどに将棋講師の派遣も行っています。お問い合わせはこちらからお願いします。
+                  学校や地域のイベントなどに将棋講師を派遣しています。ご依頼については下記のボタンからお願いします！
                 </p>
                 <Link
-                  href="mailto:shogi.esakagakusei@gmail.com?subject=将棋講師の派遣について"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform"
                   className="inline-flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors w-fit"
                 >
                   <span>お問い合わせ</span>
