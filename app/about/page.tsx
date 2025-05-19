@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "江坂学生支部とは",
+  title: "支部について",
   description: "江坂学生支部の詳細についての情報です。",
 }
 
