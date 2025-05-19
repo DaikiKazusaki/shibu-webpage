@@ -11,7 +11,7 @@ export default function Activities() {
       id: "school",
       title: "将棋教室",
       description:　"江坂学生支部が運営するおひさま将棋教室の活動記録です。初心者から上級者まで、老若男女様々なレベルの方が参加しています。",
-      image: "/ohisama/ohisama1.jpg",
+      image: "/school/ohisama1.jpg",
       color: "bg-amber-100",
       borderColor: "border-amber-400",
       textColor: "text-amber-800",
@@ -22,7 +22,7 @@ export default function Activities() {
       title: "大会",
       description:
         "江坂学生支部が主催・運営する将棋大会の記録です。季節ごとに様々な大会を開催しています。初心者から上級者まで、様々なレベルの方が参加できる大会を運営しています。",
-      image: "/2024-08-09-hiroshima_himawari/himawari1.jpg",
+      image: "/tournament/2024-08-09-hiroshima_himawari/himawari1.jpg",
       color: "bg-emerald-100",
       borderColor: "border-emerald-400",
       textColor: "text-emerald-800",
@@ -33,7 +33,7 @@ export default function Activities() {
       title: "合宿",
       description:
         "江坂学生支部のメンバーによる合宿の記録です。集中的に将棋を学び、交流を深める機会となっています。これまでに開催した合宿の記録をご覧ください。",
-      image: "/2024-01-07-suisen/suisen1.jpg",
+      image: "/tournament/2024-01-07-suisen/suisen1.jpg",
       color: "bg-sky-100",
       borderColor: "border-sky-400",
       textColor: "text-sky-800",

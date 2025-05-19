@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 // 画像データの配列を定義
 const carouselImages = [
   {
-    src: "/ohisama/ohisama4.jpg", // 実際の画像パス
+    src: "/home/home1.jpg", // 実際の画像パス
     alt: "将棋教室の様子",
   },
   {
-    src: "/2024-03-24-sakura/sakura1.jpg",
+    src: "/home/home2.jpg",
     alt: "将棋大会の様子",
   },
   {
-    src: "/2024-08-11-tokyo_himawari/himawari3.jpg",
+    src: "/home/home3.jpg",
     alt: "将棋大会の運営",
   },
   // 必要な数だけ追加
