@@ -126,7 +126,7 @@ export default function Footer() {
                 <FaBlog className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://lin.ee/9kDPZlU"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
