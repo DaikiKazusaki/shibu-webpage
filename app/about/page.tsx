@@ -100,7 +100,7 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベントなどに将棋講師を派遣しています。
+                  学校や地域のイベントなどに将棋講師を派遣しています。ご依頼については下記のボタンからお願いします！
                 </p>
                 <Link
                   href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform"
