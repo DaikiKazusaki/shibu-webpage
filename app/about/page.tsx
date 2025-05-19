@@ -1,6 +1,12 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "江坂学生支部とは",
+  description: "江坂学生支部の詳細についての情報です。",
+}
 
 export default function Home() {
   return (
@@ -32,7 +38,7 @@ export default function Home() {
               <div className="order-1 lg:order-2 h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/2024-08-09-hiroshima_himawari/himawari2.jpg?height=400&width=600"
+                    src="/tournament/2024-08-09-hiroshima_himawari/himawari2.jpg?height=400&width=600"
                     alt="江坂学生支部の活動"
                     fill
                     className="object-cover"
@@ -48,7 +54,7 @@ export default function Home() {
               <div className="h-80 lg:h-auto">
                 <div className="w-full h-full relative">
                   <Image
-                    src="/2024-01-07-suisen/suisen1.jpg?height=400&width=600"
+                    src="/tournament/2024-01-07-suisen/suisen1.jpg?height=400&width=600"
                     alt="大会・教室の運営"
                     fill
                     className="object-cover"
