@@ -64,6 +64,24 @@ export default function School() {
       "images": []
     },
     {
+      "date": "2025-05-11",
+      "title": "おひさま将棋教室特別企画",
+      "description": "講師：そらさん(将棋YouTuber)，運営：松本",
+      "images": []
+    },
+    {
+      "date": "2025-05-04",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
+    },
+    {
+      "date": "2025-04-27",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
+    },
+    {
       "date": "2025-04-20",
       "title": "おひさま将棋教室",
       "description": "講師：吉川さん，運営：松本",
