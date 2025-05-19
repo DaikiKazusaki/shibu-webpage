@@ -1,7 +1,13 @@
 "use client"
 
+import { Metadata } from "next"
 import Image from "next/image"
 import { useState } from "react"
+
+export const metadata: Metadata = {
+  title: "メンバー",
+  description: "江坂学生支部のメンバー紹介ページです。",
+}
 
 // メンバーデータの型定義
 type Member = {
