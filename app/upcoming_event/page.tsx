@@ -47,6 +47,12 @@ const events: Event[] = [
     category: "other",
     location: "大阪府高槻市 安満遺跡公園",
   },
+  {
+    title: "摩耶将棋倶楽部 一日将棋カフェ",
+    dates: ["2025年6月21日"],
+    category: "other",
+    location: "兵庫県神戸市 摩耶将棋倶楽部",
+  }
 ]
 
 function getEarliestDate(dates: string[]): Date {
