@@ -27,13 +27,13 @@ const schoolEvents: Event[] = [
     location: "兵庫県神戸市 東灘区文化センター",
   },
   {
-    title: "おひさま将棋教室",
+    title: "おひさま将棋教室 新特別企画「大学生強豪と指し放題！」",
     dates: ["2025年6月8日"],
     category: "school",
     location: "大阪府吹田市 豊一市民センター",
   },
   {
-    title: "おひさま将棋教室",
+    title: "おひさま将棋教室 新特別企画「大学生強豪と指し放題！」",
     dates: ["2025年6月22日"],
     category: "school",
     location: "大阪府吹田市 豊一市民センター",
