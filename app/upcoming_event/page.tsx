@@ -26,6 +26,7 @@ const schoolEvents: Event[] = [
     category: "school",
     location: "兵庫県神戸市 東灘区文化センター",
   },
+  /*
   {
     title: "おひさま将棋教室",
     dates: ["2025年6月8日"],
@@ -38,6 +39,7 @@ const schoolEvents: Event[] = [
     category: "school",
     location: "大阪府吹田市 豊一市民センター",
   },
+  */
 ]
 
 const tournamentEvents: Event[] = [
