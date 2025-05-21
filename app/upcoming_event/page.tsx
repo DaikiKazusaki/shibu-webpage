@@ -77,7 +77,7 @@ const otherEvents: Event[] = [
 ]
 
 const imageAds: { src: string; alt: string }[] = [
-  { src: "/advertisements/ohisama.png", alt: "おひさま将棋教室 広告" },
+  { src: "/advertisements/ohisama-June.jpg", alt: "おひさま将棋教室 広告" },
   { src: "/advertisements/tournament0607.png", alt: "将棋YouTuberそらさん杯くったくたになれる将棋大会 広告" },
   { src: "/advertisements/tournament0628.png", alt: "うたげ将棋団体戦" },
   { src: "/advertisements/others.jpg", alt: "その他のイベント 広告" },
