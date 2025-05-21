@@ -19,7 +19,7 @@ type Event = {
   applyLink?: string
 }
 
-const events: Event[] = [
+const schoolEvents: Event[] = [
   {
     title: "出張おひさま将棋教室 in こまこい",
     dates: ["2025年5月24日"],
@@ -27,20 +27,40 @@ const events: Event[] = [
     location: "兵庫県神戸市 東灘区文化センター",
   },
   {
+    title: "おひさま将棋教室",
+    dates: ["2025年6月8日"],
+    category: "school",
+    location: "大阪府吹田市 豊一市民センター",
+  },
+  {
+    title: "おひさま将棋教室",
+    dates: ["2025年6月22日"],
+    category: "school",
+    location: "大阪府吹田市 豊一市民センター",
+  },
+]
+
+const tournamentEvents: Event[] = [
+  {
     title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
     dates: ["2025年6月7日"],
     category: "tournament",
-    guests: ["将棋YouTuberそらさん"],
+    guests: ["ゲスト: 将棋YouTuberそらさん"],
     location: "京都府京都市 京都市生涯学習総合センター",
-    applyLink: "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
+    applyLink:
+      "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
   },
   {
     title: "うたげ将棋団体戦",
     dates: ["2025年6月28日"],
     category: "tournament",
     location: "大阪府大阪市 将棋barうたげ",
-    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSdDEgpGTVBpCM5Os-dpytcejN8yq9NlCMkpHtpmNfGca8m0BQ/viewform"
+    applyLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdDEgpGTVBpCM5Os-dpytcejN8yq9NlCMkpHtpmNfGca8m0BQ/viewform",
   },
+]
+
+const otherEvents: Event[] = [
   {
     title: "あにまるしぇ お手伝い",
     dates: ["2025年5月25日"],
@@ -51,12 +71,23 @@ const events: Event[] = [
     title: "摩耶将棋倶楽部 一日将棋カフェ",
     dates: ["2025年6月21日"],
     category: "other",
+    guests: ["主催: 摩耶将棋倶楽部"],
     location: "兵庫県神戸市 摩耶将棋倶楽部",
-  }
+  },
+]
+
+const imageAds: { src: string; alt: string }[] = [
+  { src: "/advertisements/ohisama.png", alt: "おひさま将棋教室 広告" },
+  { src: "/advertisements/tournament0607.png", alt: "将棋YouTuberそらさん杯くったくたになれる将棋大会 広告" },
+  { src: "/advertisements/tournament0628.png", alt: "うたげ将棋団体戦" },
+  { src: "/advertisements/others.jpg", alt: "その他のイベント 広告" },
+  { src: "/advertisements/others0621.jpg", alt: "摩耶将棋倶楽部一日将棋カフェ 広告" },
 ]
 
 function getEarliestDate(dates: string[]): Date {
-  return new Date(Math.min(...dates.map((date) => new Date(date.replace(/年|月/g, "-").replace("日", "")).getTime())))
+  return new Date(
+    Math.min(...dates.map((date) => new Date(date.replace(/年|月/g, "-").replace("日", "")).getTime()))
+  )
 }
 
 function sortEventsByDate(a: Event, b: Event) {
@@ -68,12 +99,6 @@ function formatDates(dates: string[]): string {
 }
 
 export default function EventsPage() {
-  const categorizedEvents = {
-    school: events.filter((event) => event.category === "school").sort(sortEventsByDate),
-    tournament: events.filter((event) => event.category === "tournament").sort(sortEventsByDate),
-    other: events.filter((event) => event.category === "other").sort(sortEventsByDate),
-  }
-
   return (
     <main className="min-h-screen bg-white dark:bg-zinc-900 p-8">
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">今後のイベント</h1>
@@ -81,7 +106,7 @@ export default function EventsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         <EventCategory
           title="将棋教室"
-          events={categorizedEvents.school}
+          events={schoolEvents.sort(sortEventsByDate)}
           icon={<Users className="w-6 h-6" />}
           applyLink="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform"
           applyText="教室に申し込む"
@@ -89,27 +114,26 @@ export default function EventsPage() {
         />
         <EventCategory
           title="将棋大会"
-          events={categorizedEvents.tournament}
+          events={tournamentEvents.sort(sortEventsByDate)}
           icon={<Calendar className="w-6 h-6" />}
           applyText="大会に申し込む"
           pastActivitiesLink="/activities?category=tournament"
         />
         <EventCategory
           title="その他のイベント"
-          events={categorizedEvents.other}
+          events={otherEvents.sort(sortEventsByDate)}
           icon={<Sparkles className="w-6 h-6" />}
         />
       </div>
 
-      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center"></h1>
-      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">詳細</h1>
+      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 my-12 text-center">詳細</h1>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-        <Image src="/advertisements/ohisama.png" alt="おひさま将棋教室 広告" width={500} height={500} />
-        <Image src="/advertisements/tournament0607.png" alt="将棋YouTuberそらさん杯くったくたになれる将棋大会 広告" width={500} height={500} />
-        <Image src="/advertisements/tournament0628.png" alt="うたげ将棋団体戦" width={500} height={500} />
-        <Image src="/advertisements/others.jpg" alt="その他のイベント 広告" width={500} height={500} />
-        <Image src="/advertisements/others0621.jpg" alt="摩耶将棋倶楽部一日将棋カフェ 広告" width={500} height={500} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {imageAds.map((ad, index) => (
+          <div key={index} className="w-full flex justify-center">
+            <Image src={ad.src} alt={ad.alt} width={500} height={500} className="rounded-lg shadow-md" />
+          </div>
+        ))}
       </div>
     </main>
   )
@@ -140,26 +164,22 @@ function EventCategory({
         {events.map((event, index) => (
           <li key={event.id || index} className="border-b border-zinc-200 dark:border-zinc-700 pb-2">
             <h3 className="text-lg font-medium text-zinc-700 dark:text-zinc-300">{event.title}</h3>
-
             <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               {formatDates(event.dates)}
             </p>
-
-            {event.guests && event.guests.length > 0 && (
+            {event.guests && (
               <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2 mt-1">
                 <Users className="w-4 h-4" />
-                ゲスト: {event.guests.join("、")}
+                {event.guests.join("、")}
               </p>
             )}
-
             {event.location && (
               <p className="text-zinc-600 dark:text-zinc-400 flex items-center gap-2 mt-1">
                 <MapPin className="w-4 h-4" />
                 {event.location}
               </p>
             )}
-
             {event.applyLink && (
               <div className="mt-2 flex justify-center">
                 <Link
