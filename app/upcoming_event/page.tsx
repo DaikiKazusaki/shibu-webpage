@@ -21,12 +21,6 @@ type Event = {
 
 const schoolEvents: Event[] = [
   {
-    title: "出張おひさま将棋教室 in こまこい",
-    dates: ["2025年5月24日"],
-    category: "school",
-    location: "兵庫県神戸市 東灘区文化センター",
-  },
-  {
     title: "おひさま将棋教室 新特別企画「大学生強豪と指し放題！」",
     dates: ["2025年6月8日"],
     category: "school",
@@ -62,12 +56,6 @@ const tournamentEvents: Event[] = [
 
 const otherEvents: Event[] = [
   {
-    title: "あにまるしぇ お手伝い",
-    dates: ["2025年5月25日"],
-    category: "other",
-    location: "大阪府高槻市 安満遺跡公園",
-  },
-  {
     title: "摩耶将棋倶楽部 一日将棋カフェ",
     dates: ["2025年6月21日"],
     category: "other",
@@ -98,6 +86,23 @@ function formatDates(dates: string[]): string {
   return dates.length > 1 ? dates.join(" or ") : dates[0]
 }
 
+// 本日以降のイベントのみを残す
+function isUpcoming(dateStr: string): boolean {
+  const eventDate = new Date(dateStr.replace(/年|月/g, "-").replace("日", ""))
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return eventDate >= today
+}
+
+function filterUpcomingEvents(events: Event[]): Event[] {
+  return events
+    .map((event) => ({
+      ...event,
+      dates: event.dates.filter(isUpcoming),
+    }))
+    .filter((event) => event.dates.length > 0)
+}
+
 export default function EventsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-zinc-900 p-8">
@@ -106,7 +111,7 @@ export default function EventsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         <EventCategory
           title="将棋教室"
-          events={schoolEvents.sort(sortEventsByDate)}
+          events={filterUpcomingEvents(schoolEvents).sort(sortEventsByDate)}
           icon={<Users className="w-6 h-6" />}
           applyLink="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform"
           applyText="教室に申し込む"
@@ -114,14 +119,14 @@ export default function EventsPage() {
         />
         <EventCategory
           title="将棋大会"
-          events={tournamentEvents.sort(sortEventsByDate)}
+          events={filterUpcomingEvents(tournamentEvents).sort(sortEventsByDate)}
           icon={<Calendar className="w-6 h-6" />}
           applyText="大会に申し込む"
           pastActivitiesLink="/activities?category=tournament"
         />
         <EventCategory
           title="その他のイベント"
-          events={otherEvents.sort(sortEventsByDate)}
+          events={filterUpcomingEvents(otherEvents).sort(sortEventsByDate)}
           icon={<Sparkles className="w-6 h-6" />}
         />
       </div>
