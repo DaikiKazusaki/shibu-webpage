@@ -97,7 +97,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-4">
             <Card className="flex-1">
               <CardHeader className="p-4">
-                <CardTitle className="text-2xl font-semibold">理念</CardTitle>
+                <CardTitle className="text-2xl font-semibold">活動理念</CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
                 <div className="space-y-4">

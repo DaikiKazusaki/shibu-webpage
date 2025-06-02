@@ -19,13 +19,13 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="order-2 lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-gray-100 text-gray-800 mb-4">
-                  私たちについて
+                  活動理念
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-gray-800 pl-4">
-                  江坂学生支部とは
+                  将棋で人を繋ぐ 将棋を未来へ繋ぐ
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  江坂学生支部は、大学生によって運営されている支部です。将棋の技術向上だけでなく、集中力や論理的思考力、礼儀作法なども学ぶことができます。初心者から上級者まで、様々なレベルの学生が集まり、切磋琢磨しながら将棋の腕を磨いています。メンバーについては、
+                 大好きな将棋界の方々の交流の架け橋となれるよう、より大きなイベントを、より高頻度で、よりたくさんの地域で開催することを目指しています。大学生であるわたしたちが「次世代の将棋文化を担う」という覚悟を持って、イベント運営やSNS活動に邁進していきます。運営メンバーは
                   <Link
                     href="/member"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
@@ -66,7 +66,7 @@ export default function Home() {
                   活動内容
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-gray-800 pl-4">
-                  大会・教室の運営
+                  大会・教室の運営、合宿の開催
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   私たちは定期的に将棋大会や教室を開催しています。過去の教室・大会の雰囲気については
@@ -100,7 +100,7 @@ export default function Home() {
                   将棋講師の派遣
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  学校や地域のイベントなどに将棋講師を派遣しています。
+                  学校や地域のイベントなどに将棋講師を派遣しています。ご依頼については下記のボタンからお願いします！
                 </p>
                 <Link
                   href="https://docs.google.com/forms/d/e/1FAIpQLScX8nJjcw51JtI-icx04fylpPqzK7jfxNWOATS_F88tg7Frdg/viewform"
