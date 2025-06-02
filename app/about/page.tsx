@@ -69,19 +69,19 @@ export default function Home() {
                   大会・教室の運営、合宿の開催
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  私たちは定期的に将棋大会や教室を開催しています。過去の教室・大会の雰囲気については
+                  将棋大会・教室・合宿などのイベントを主催しています！地域の学校や公民館に将棋講師の派遣も行っています！詳細は
                   <Link
                     href="/activities"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
                   >
-                    こちら
+                    活動ページ
                   </Link>
                   から、今後開催されるイベントに関しては
                   <Link
                     href="/upcoming_events"
                     className="inline-flex items-center text-blue-600 font-medium hover:underline mx-1"
                   >
-                    こちら
+                    今後のイベント
                   </Link>
                   からご覧になれます！
                 </p>
