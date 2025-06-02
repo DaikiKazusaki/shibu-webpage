@@ -52,11 +52,11 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="text-sm font-medium mb-4">リンク</h2>
+              <h2 className="text-sm font-medium mb-4">協賛</h2>
               <ul className="space-y-2">
                 <li>
                   <Link href="http://mayashogi.com/" className="text-sm text-gray-400 hover:text-white">
-                    摩耶将棋倶楽部(協賛)
+                    摩耶将棋倶楽部
                   </Link>
                 </li>
                 { /* 
