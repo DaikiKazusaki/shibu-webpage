@@ -86,14 +86,14 @@ export default function Camp() {
       description:  "",
     },
     {
-      date: "2024-09-03～2024-09-05",
+      date: "2024-09-06～2024-09-08",
       title: "2024年秋合宿",
       location: "大阪府高槻市セミナーハウス高岳館",
-      images: [ "/camp/2024-fall/camp1.jpg" ],
+      images: [ "/camp/2024-fall/camp1.jpg", "/camp/2024-fall/camp2.jpg" ],
       description: "",
     },
     {
-      date: "2025-03-05～2024-03-07",
+      date: "2025-03-01～2024-03-03 ",
       title: "2025年秋合宿",
       location: "大阪府高槻市セミナーハウス高岳館",
       images: [ "/camp/2025-spring/camp1.jpg", "/camp/2025-spring/camp2.jpg" ],
