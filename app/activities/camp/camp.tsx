@@ -16,17 +16,34 @@ interface Camp {
 }
 
 const CampItem = ({ date, title, location, description, images, blogLink }: Camp) => {
-  // Format the date from YYYY-MM-DD to YYYY年MM月DD日
-  const formatDate = (isoDate: string) => {
-    const [year, month, day] = isoDate.split("-")
-    return `${year}年${month}月${day}日`
+  // Format the date from YYYY-MM-DD～YYYY-MM-DD to YYYY年MM月DD日～YYYY年MM月DD日
+  const formatDate = (dateRange: string) => {
+    if (!dateRange) return ""
+
+    // Check if it's a date range (contains ～)
+    if (dateRange.includes("～")) {
+      const [startDate, endDate] = dateRange.split("～")
+      const formatSingleDate = (isoDate: string) => {
+        const [year, month, day] = isoDate.split("-")
+        return `${year}年${month}月${day}日`
+      }
+      return `${formatSingleDate(startDate)}～${formatSingleDate(endDate)}`
+    } else {
+      // Single date
+      const [year, month, day] = dateRange.split("-")
+      return `${year}年${month}月${day}日`
+    }
   }
 
   return (
     <div className="mb-12 bg-white rounded-xl p-6 shadow-sm">
       <h3 className="text-2xl font-semibold mb-4 text-sky-800">{`${title}`}</h3>
       <div className="flex flex-wrap gap-4 mb-4">
-        <span className="inline-block px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm">{formatDate(date)}</span>
+        {date && (
+          <span className="inline-block px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm">
+            {formatDate(date)}
+          </span>
+        )}
         <span className="inline-block px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm">{location}</span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -62,44 +79,25 @@ export default function Camp() {
   // Sample data for camps
   const camps: Camp[] = [
     {
-      date: "2024-09-15",
-      title: "秋の将棋合宿",
-      location: "京都府",
-      images: ["/2024-01-07-suisen/suisen1.jpg", "/2024-01-07-suisen/suisen2.jpg", "/2024-03-24-sakura/sakura1.jpg"],
-      description:
-        "京都で3日間の将棋合宿を開催しました。朝から晩まで将棋漬けの日々で、参加者全員が技術を向上させることができました。プロ棋士による指導対局も行われ、貴重な経験となりました。",
+      date: "2024-03-05～2024-03-07",
+      title: "2024年春合宿",
+      location: "大阪府高槻市セミナーハウス高岳館",
+      images: [ "/camp/2024-spring/camp1.jpg", "/camp/2024-spring/camp2.jpg" ],
+      description:  "",
     },
     {
-      date: "2024-03-20",
-      title: "春休み将棋合宿",
-      location: "静岡県",
-      images: [
-        "/2024-03-24-sakura/sakura2.jpg",
-        "/2024-05-05-suzuran/suzuran1.jpg",
-        "/2024-05-05-suzuran/suzuran2.jpg",
-      ],
-      description:
-        "静岡県の温泉地で春休み将棋合宿を実施しました。大学生を中心に20名が参加し、研修会や対局会を行いました。温泉でリラックスしながらも、真剣な対局が繰り広げられました。",
+      date: "2024-09-03～2024-09-05",
+      title: "2024年秋合宿",
+      location: "大阪府高槻市セミナーハウス高岳館",
+      images: [ "/camp/2024-fall/camp1.jpg" ],
+      description: "",
     },
     {
-      date: "2023-12-25",
-      title: "冬季将棋合宿",
-      location: "長野県",
-      images: ["/2024-06-15-ajisai/ajisai1.jpg", "/2024-06-15-ajisai/ajisai2.jpg", "/2024-06-15-ajisai/ajisai3.jpg"],
-      description:
-        "長野県の山間部で冬季将棋合宿を開催しました。雪景色の中での合宿は格別で、集中して将棋に取り組むことができました。夜には研究会も行われ、互いの研究成果を共有する貴重な機会となりました。",
-    },
-    {
-      date: "2023-08-10",
-      title: "夏季将棋合宿",
-      location: "広島県",
-      images: [
-        "/2024-08-09-hiroshima_himawari/himawari1.jpg",
-        "/2024-08-09-hiroshima_himawari/himawari2.jpg",
-        "/2024-08-11-tokyo_himawari/himawari1.jpg",
-      ],
-      description:
-        "広島県の海辺で夏季将棋合宿を実施しました。朝の対局、昼の講義、夜の研究会と充実したスケジュールで、参加者全員が多くを学ぶことができました。海水浴の時間も設けられ、リフレッシュしながら将棋に打ち込むことができました。",
+      date: "2025-03-05～2024-03-07",
+      title: "2025年秋合宿",
+      location: "大阪府高槻市セミナーハウス高岳館",
+      images: [ "/camp/2025-spring/camp1.jpg", "/camp/2025-spring/camp2.jpg" ],
+      description: "",
     },
   ]
 
