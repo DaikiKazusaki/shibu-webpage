@@ -57,107 +57,117 @@ export default function Tournament() {
 
   // Data from the original activities.tsx
   const tournaments: Tournament[] = [
-  {
-    date: "2024-10-12",
-    title: "秋桜将棋大会",
-    images: ["/tournament/2024-10-12-kosumosu/kosumosu1.jpg"],
-    description:
-      "運営：松本，土居，岸本。秋桜をテーマにした将棋大会を開催しました。多くの参加者が集まり、白熱した対局が繰り広げられました。",
-  },
-  {
-    date: "2024-08-21",
-    title: "福岡向日葵将棋大会",
-    images: [
-      "/tournament/2024-08-21-fukuoka_himawari/himawari1.jpg",
-      "/tournament/2024-08-21-fukuoka_himawari/himawari2.jpg",
-      "/tournament/2024-08-21-fukuoka_himawari/himawari3.jpg",
-    ],
-    description:
-      "運営：松本，大塚さん。福岡で開催された向日葵将棋大会では、地元の方々を中心に多くの参加者が集まりました。初心者から上級者まで、様々なレベルの方が楽しめる大会となりました。",
-  },
-  {
-    date: "2024-08-18",
-    title: "京都向日葵将棋大会",
-    images: ["/tournament/2024-08-18-kyoto_himawari/himawari1.jpg"],
-    description:
-      "運営：松本，大西，沖津。京都の歴史ある場所で開催された向日葵将棋大会。伝統と新しい将棋文化が融合した素晴らしい大会となりました。",
-  },
-  {
-    date: "2024-08-16",
-    title: "名古屋向日葵将棋大会",
-    images: [
-      "/tournament/2024-08-16-nagoya_himawari/himawari1.jpg",
-      "/tournament/2024-08-16-nagoya_himawari/himawari2.jpg",
-    ],
-    description:
-      "運営：松本，蓮田さん。名古屋で開催された向日葵将棋大会では、地元の将棋ファンが多く参加し、活気ある大会となりました。",
-  },
-  {
-    date: "2024-08-11",
-    title: "東京向日葵将棋大会",
-    images: [
-      "/tournament/2024-08-11-tokyo_himawari/himawari1.jpg",
-      "/tournament/2024-08-11-tokyo_himawari/himawari2.jpg",
-      "/tournament/2024-08-11-tokyo_himawari/himawari3.jpg",
-    ],
-    description:
-      "運営：松本，金田，沖津，岡本。東京で開催された向日葵将棋大会は大盛況で、多くの参加者が熱戦を繰り広げました。",
-  },
-  {
-    date: "2024-08-09",
-    title: "広島向日葵将棋大会",
-    images: [
-      "/tournament/2024-08-09-hiroshima_himawari/himawari1.jpg",
-      "/tournament/2024-08-09-hiroshima_himawari/himawari2.jpg",
-    ],
-    description:
-      "運営：松本，大原，沖津。広島で開催された向日葵将棋大会では、地元の方々を中心に多くの参加者が集まりました。",
-  },
-  {
-    date: "2024-06-15",
-    title: "紫陽花将棋大会",
-    images: [
-      "/tournament/2024-06-15-ajisai/ajisai1.jpg",
-      "/tournament/2024-06-15-ajisai/ajisai2.jpg",
-      "/tournament/2024-06-15-ajisai/ajisai3.jpg",
-    ],
-    description:
-      "運営：松本，土居，岸本。梅雨の季節に開催された紫陽花将棋大会。雨の中でも多くの方が参加し、熱い対局が繰り広げられました。",
-  },
-  {
-    date: "2024-05-05",
-    title: "鈴蘭将棋大会",
-    images: [
-      "/tournament/2024-05-05-suzuran/suzuran1.jpg",
-      "/tournament/2024-05-05-suzuran/suzuran2.jpg",
-      "/tournament/2024-05-05-suzuran/suzuran3.jpg",
-    ],
-    description:
-      "運営：松本。初夏の訪れを感じる鈴蘭将棋大会。子どもから大人まで幅広い年齢層の方が参加し、楽しい大会となりました。",
-  },
-  {
-    date: "2024-03-24",
-    title: "桜将棋大会",
-    images: [
-      "/tournament/2024-03-24-sakura/sakura1.jpg",
-      "/tournament/2024-03-24-sakura/sakura2.jpg",
-    ],
-    description:
-      "運営：松本，土居，岸本。桜の季節に開催された将棋大会。春の訪れを感じながら、参加者は熱戦を繰り広げました。",
-  },
-  {
-    date: "2024-01-07",
-    title: "水仙将棋大会",
-    images: [
-      "/tournament/2024-01-07-suisen/suisen1.jpg",
-      "/tournament/2024-01-07-suisen/suisen2.jpg",
-      "/tournament/2024-01-07-suisen/suisen1.jpg",
-    ],
-    description:
-      "運営：松本，土居，岸本。新年最初の大会となる水仙将棋大会。新しい年の始まりを祝うように、多くの方が参加しました。",
-  },
-]
-
+    {
+      date: "2025-05-07",
+      title: "くったくたになれる将棋大会",
+      images: [
+        "/tournament/2025-05-07-kuttakuta/kuttakuta1.jpg",
+        "/tournament/2025-05-07-kuttakuta/kuttakuta2.jpg",
+        "/tournament/2025-05-07-kuttakuta/kuttakuta3.jpg",
+      ],
+      description:
+        "運営：松本，土居，岸本。新しい試みとして、参加者がくったくたになるまで将棋を楽しむ大会を開催しました。参加者のレベルが非常に高く、熱戦が繰り広げられました。",
+    },
+    {
+      date: "2024-10-12",
+      title: "秋桜将棋大会",
+      images: ["/tournament/2024-10-12-kosumosu/kosumosu1.jpg"],
+      description:
+        "運営：松本，土居，岸本。",
+    },
+    {
+      date: "2024-08-21",
+      title: "福岡向日葵将棋大会",
+      images: [
+        "/tournament/2024-08-21-fukuoka_himawari/himawari1.jpg",
+        "/tournament/2024-08-21-fukuoka_himawari/himawari2.jpg",
+        "/tournament/2024-08-21-fukuoka_himawari/himawari3.jpg",
+      ],
+      description:
+        "運営：松本，大塚さん。福岡で開催された向日葵将棋大会では、地元の方々を中心に多くの参加者が集まりました。初心者から上級者まで、様々なレベルの方が楽しめる大会となりました。",
+    },
+    {
+      date: "2024-08-18",
+      title: "京都向日葵将棋大会",
+      images: ["/tournament/2024-08-18-kyoto_himawari/himawari1.jpg"],
+      description:
+        "運営：松本，大西，沖津。京都の歴史ある場所で開催された向日葵将棋大会。伝統と新しい将棋文化が融合した素晴らしい大会となりました。",
+    },
+    {
+      date: "2024-08-16",
+      title: "名古屋向日葵将棋大会",
+      images: [
+        "/tournament/2024-08-16-nagoya_himawari/himawari1.jpg",
+        "/tournament/2024-08-16-nagoya_himawari/himawari2.jpg",
+      ],
+      description:
+        "運営：松本，蓮田さん。名古屋で開催された向日葵将棋大会では、地元の将棋ファンが多く参加し、活気ある大会となりました。",
+    },
+    {
+      date: "2024-08-11",
+      title: "東京向日葵将棋大会",
+      images: [
+        "/tournament/2024-08-11-tokyo_himawari/himawari1.jpg",
+        "/tournament/2024-08-11-tokyo_himawari/himawari2.jpg",
+        "/tournament/2024-08-11-tokyo_himawari/himawari3.jpg",
+      ],
+      description:
+        "運営：松本，金田，沖津，岡本。東京で開催された向日葵将棋大会は大盛況で、多くの参加者が熱戦を繰り広げました。",
+    },
+    {
+      date: "2024-08-09",
+      title: "広島向日葵将棋大会",
+      images: [
+        "/tournament/2024-08-09-hiroshima_himawari/himawari1.jpg",
+        "/tournament/2024-08-09-hiroshima_himawari/himawari2.jpg",
+      ],
+      description:
+        "運営：松本，大原，沖津。広島で開催された向日葵将棋大会では、地元の方々を中心に多くの参加者が集まりました。",
+    },
+    {
+      date: "2024-06-15",
+      title: "紫陽花将棋大会",
+      images: [
+        "/tournament/2024-06-15-ajisai/ajisai1.jpg",
+        "/tournament/2024-06-15-ajisai/ajisai2.jpg",
+        "/tournament/2024-06-15-ajisai/ajisai3.jpg",
+      ],
+      description:
+        "運営：松本，土居，岸本。梅雨の季節に開催された紫陽花将棋大会。雨の中でも多くの方が参加し、熱い対局が繰り広げられました。",
+    },
+    {
+      date: "2024-05-05",
+      title: "鈴蘭将棋大会",
+      images: [
+        "/tournament/2024-05-05-suzuran/suzuran1.jpg",
+        "/tournament/2024-05-05-suzuran/suzuran2.jpg",
+        "/tournament/2024-05-05-suzuran/suzuran3.jpg",
+      ],
+      description:
+        "運営：松本。初夏の訪れを感じる鈴蘭将棋大会。子どもから大人まで幅広い年齢層の方が参加し、楽しい大会となりました。",
+    },
+    {
+      date: "2024-03-24",
+      title: "桜将棋大会",
+      images: [
+        "/tournament/2024-03-24-sakura/sakura1.jpg",
+        "/tournament/2024-03-24-sakura/sakura2.jpg",
+      ],
+      description:
+        "運営：松本，土居，岸本。桜の季節に開催された将棋大会。春の訪れを感じながら、参加者は熱戦を繰り広げました。",
+    },
+    {
+      date: "2024-01-07",
+      title: "水仙将棋大会",
+      images: [
+        "/tournament/2024-01-07-suisen/suisen1.jpg",
+        "/tournament/2024-01-07-suisen/suisen2.jpg",
+        "/tournament/2024-01-07-suisen/suisen1.jpg",
+      ],
+      description:
+        "運営：松本，土居，岸本。新年最初の大会となる水仙将棋大会。新しい年の始まりを祝うように、多くの方が参加しました。",
+    },
+  ]
 
   const loadMore = () => {
     setVisibleTournaments((prev) => Math.min(prev + 5, tournaments.length))
