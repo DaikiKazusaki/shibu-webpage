@@ -58,107 +58,143 @@ export default function School() {
   // Sample data for shogi classes
   const classes: SchoolClass[] = [
     {
-      date: "2024-06-30",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-05-18",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本，今回は写真を取り忘れてしまいました...すいません！！！(松本)",
+      "images": []
     },
     {
-      date: "2024-07-07",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-05-11",
+      "title": "おひさま将棋教室特別企画",
+      "description": "講師：そらさん(将棋YouTuber)，運営：松本",
+      "images": []
     },
     {
-      date: "2024-07-12",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-05-04",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-07-13",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-04-27",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-07-20",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-04-20",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-07-28",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-03-23",
+      "title": "出張おひさま将棋教室 in こまこい",
+      "description": "運営：立石さん(こまこい)，講師：松本",
+      "images": []
     },
     {
-      date: "2024-09-15",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-03-16",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-09-21",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-02-16",
+      "title": "おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-09-23",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
-    },    
-    {
-      date: "2024-10-12",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-01-25",
+      "title": "旧おひさま将棋教室",
+      "description": "講師：吉川さん，運営：松本",
+      "images": []
     },
     {
-      date: "2024-10-14",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2025-01-12",
+      "title": "出張おひさま将棋教室 in こまこい",
+      "description": "運営：立石さん(こまこい)，講師：松本",
+      "images": []
     },
     {
-      date: "2024-10-27",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2024-10-27",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
     },
     {
-      date: "2025-01-25",
-      title: "旧おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2024-10-14",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
     },
     {
-      date: "2025-02-16",
-      title: "おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2024-10-20",
+      "title": "出張おひさま将棋教室 in こまこい",
+      "description": "運営：立石さん(こまこい)，講師：松本",
+      "images": []
     },
     {
-      date: "2025-03-16",
-      title: "おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2024-10-12",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
     },
     {
-      date: "2025-04-20",
-      title: "おひさま将棋教室",
-      description: "運営：松本",
-      images: [],
+      "date": "2024-09-23",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
     },
     {
-      date: "2025-05-18",
-      title: "おひさま将棋教室",
-      description: "運営：松本，今回は写真を取り忘れてしまいました...すいません！！！(松本)",
-      images: [],
+      "date": "2024-09-21",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
     },
+    {
+      "date": "2024-09-15",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-07-28",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-07-20",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-07-13",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-07-12",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-07-07",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    },
+    {
+      "date": "2024-06-30",
+      "title": "旧おひさま将棋教室",
+      "description": "運営：松本",
+      "images": []
+    }
   ]
 
   // Sort classes by date in descending order (newest first)
