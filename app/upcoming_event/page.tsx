@@ -36,15 +36,6 @@ const schoolEvents: Event[] = [
 
 const tournamentEvents: Event[] = [
   {
-    title: "将棋YouTuberそらさん杯 くったくたになれる将棋大会",
-    dates: ["2025年6月7日"],
-    category: "tournament",
-    guests: ["ゲスト: 将棋YouTuberそらさん"],
-    location: "京都府京都市 京都市生涯学習総合センター",
-    applyLink:
-      "https://docs.google.com/forms/d/171j8Gi5lvPx24jU8NfKTsw4yQDQWE-KoxVi3FKP8m9g/viewform",
-  },
-  {
     title: "うたげ将棋団体戦",
     dates: ["2025年6月28日"],
     category: "tournament",
