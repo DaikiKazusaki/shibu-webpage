@@ -6,7 +6,7 @@ import { Calendar, Users, Sparkles, Clock, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "今後のイベント",
-  description: "おひさま将棋教室の今後のイベント情報をご覧いただけます。",
+  description: "今後のイベント情報をご覧いただけます。",
 }
 
 type Event = {
@@ -21,8 +21,8 @@ type Event = {
 
 const schoolEvents: Event[] = [
   {
-    title: "おひさま将棋教室 新特別企画「大学生強豪と指し放題！」",
-    dates: ["2025年6月22日"],
+    title: "おひさま将棋教室 8月",
+    dates: ["2025年8月7日"],
     category: "school",
     location: "大阪府吹田市 豊一市民センター",
   },
@@ -30,31 +30,27 @@ const schoolEvents: Event[] = [
 
 const tournamentEvents: Event[] = [
   {
-    title: "うたげ将棋団体戦",
-    dates: ["2025年6月28日"],
+    title: "秋桜将棋団体戦",
+    dates: ["2025年9月23日"],
     category: "tournament",
-    location: "大阪府大阪市 将棋barうたげ",
-    applyLink:
-      "https://docs.google.com/forms/d/e/1FAIpQLSdDEgpGTVBpCM5Os-dpytcejN8yq9NlCMkpHtpmNfGca8m0BQ/viewform",
+    location: "大阪府吹田市 豊一市民センター",
+    applyLink: "https://docs.google.com/forms/d/1DT2mC9xMFgQ0QPDMO7F5uEDIEIlAvabjvLEO5nU3tvo/viewform",
   },
 ]
 
 const otherEvents: Event[] = [
   {
-    title: "摩耶将棋倶楽部 一日将棋カフェ",
-    dates: ["2025年6月21日"],
+    title: "出張おひさま将棋教室 in こまこい",
+    dates: ["2025年10月5日"],
     category: "other",
     guests: ["主催: 摩耶将棋倶楽部"],
-    location: "兵庫県神戸市 摩耶将棋倶楽部",
+    location: "兵庫県神戸市 東灘区文化センター",
+    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSccLWso6ORQR03-i_BydMBh0swZfUjpsxVTKKKKe6zI0n-xDg/viewform",
   },
 ]
 
 const imageAds: { src: string; alt: string }[] = [
-  { src: "/advertisements/ohisama-June.jpg", alt: "おひさま将棋教室 広告" },
-  { src: "/advertisements/tournament0607.png", alt: "将棋YouTuberそらさん杯くったくたになれる将棋大会 広告" },
-  { src: "/advertisements/tournament0628.png", alt: "うたげ将棋団体戦" },
-  { src: "/advertisements/others.jpg", alt: "その他のイベント 広告" },
-  { src: "/advertisements/others0621.jpg", alt: "摩耶将棋倶楽部一日将棋カフェ 広告" },
+  // { src: "/advertisements/ohisama-June.jpg", alt: "おひさま将棋教室 広告" },
 ]
 
 function getEarliestDate(dates: string[]): Date {
@@ -98,7 +94,7 @@ export default function EventsPage() {
           title="将棋教室"
           events={filterUpcomingEvents(schoolEvents).sort(sortEventsByDate)}
           icon={<Users className="w-6 h-6" />}
-          applyLink="https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform"
+          applyLink="https://docs.google.com/forms/d/e/1FAIpQLScfpTCScIXmti4ek-uIDCX1dCOtAoHeChSvyUfJSYI-txmYug/viewform"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
