@@ -62,7 +62,7 @@ const otherEvents: Event[] = [
     dates: ["2025年10月5日"],
     category: "other",
     location: "兵庫県神戸市 東灘区文化センター",
-    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSccLWso6ORQR03-i_BydMBh0swZfUjpsxVTKKKKe6zI0n-xDg/viewform",
+    applyLink: "https://docs.google.com/forms/d/13iN-jprMKlIpDJn1Rx6WesR6azTu8X-jLea6LG4cYqw/viewform",
   },
   {
     title: "オンライン将棋教室",
@@ -75,7 +75,10 @@ const otherEvents: Event[] = [
 ]
 
 const imageAds: { src: string; alt: string }[] = [
-  // { src: "/advertisements/ohisama-June.jpg", alt: "おひさま将棋教室 広告" },
+  { src: "/advertisements/ohisama-August.jpg", alt: "おひさま将棋教室 広告" },
+  { src: "/advertisements/ohisama-September.jpg", alt: "おひさま将棋教室 広告" },
+  { src: "/advertisements/tournament0923.jpg", alt: "秋桜将棋団体戦 広告" },
+  { src: "/advertisements/tournament0923-description.jpg", alt: "秋桜将棋団体戦 広告" },
 ]
 
 function getEarliestDate(dates?: string[]): Date {
@@ -128,7 +131,7 @@ export default function EventsPage() {
           title="将棋教室"
           events={filterUpcomingEvents(schoolEvents).sort(sortEventsByDate)}
           icon={<Users className="w-6 h-6" />}
-          applyLink="https://docs.google.com/forms/d/e/1FAIpQLScfpTCScIXmti4ek-uIDCX1dCOtAoHeChSvyUfJSYI-txmYug/viewform"
+          applyLink="https://docs.google.com/forms/d/1GyIjJar1ovJFrD8Xq_gzmbUh7k5xTU3XQ57ahP_JHK4/viewform"
           applyText="教室に申し込む"
           pastActivitiesLink="/activities?category=school"
         />
