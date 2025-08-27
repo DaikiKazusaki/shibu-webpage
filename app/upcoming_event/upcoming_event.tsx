@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Users, Sparkles, Clock, MapPin } from "lucide-react"
+import { Calendar, Users, Sparkles, Clock, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: "今後のイベント",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 type Event = {
   id?: string
   title: string
-  dates: string[]
+  dates?: string[]
   category: "school" | "tournament" | "other"
   guests?: string[]
   location?: string
@@ -43,27 +43,44 @@ const otherEvents: Event[] = [
     title: "出張おひさま将棋教室 in こまこい",
     dates: ["2025年10月5日"],
     category: "other",
-    guests: ["主催: 摩耶将棋倶楽部"],
     location: "兵庫県神戸市 東灘区文化センター",
     applyLink: "https://docs.google.com/forms/d/e/1FAIpQLSccLWso6ORQR03-i_BydMBh0swZfUjpsxVTKKKKe6zI0n-xDg/viewform",
   },
+  {
+    title: "オンライン将棋教室",
+    dates: [],
+    category: "other",
+    guests: ["おひさま将棋教室"],
+    location: "大阪府吹田市 豊一市民センター",
+    applyLink: "https://docs.google.com/forms/d/e/1FAIpQLScrsUrDI4C3QtA093MawENrBpeCP0t1WuH58u0aB3zN9mpdfg/viewform",
+  }
 ]
 
 const imageAds: { src: string; alt: string }[] = [
   // { src: "/advertisements/ohisama-June.jpg", alt: "おひさま将棋教室 広告" },
 ]
 
-function getEarliestDate(dates: string[]): Date {
+function getEarliestDate(dates?: string[]): Date {
+  if (!dates || dates.length === 0) {
+    return new Date(0) // 最も古い日付を返す（ソート時に最後になる）
+  }
   return new Date(
     Math.min(...dates.map((date) => new Date(date.replace(/年|月/g, "-").replace("日", "")).getTime()))
   )
 }
 
 function sortEventsByDate(a: Event, b: Event) {
+  // 日付がないイベントは最後にソート
+  if (!a.dates || a.dates.length === 0) return 1
+  if (!b.dates || b.dates.length === 0) return -1
+  
   return getEarliestDate(a.dates).getTime() - getEarliestDate(b.dates).getTime()
 }
 
-function formatDates(dates: string[]): string {
+function formatDates(dates?: string[]): string {
+  if (!dates || dates.length === 0) {
+    return "日程未定"
+  }
   return dates.length > 1 ? dates.join(" or ") : dates[0]
 }
 
@@ -79,16 +96,15 @@ function filterUpcomingEvents(events: Event[]): Event[] {
   return events
     .map((event) => ({
       ...event,
-      dates: event.dates.filter(isUpcoming),
+      dates: event.dates ? event.dates.filter(isUpcoming) : undefined,
     }))
-    .filter((event) => event.dates.length > 0)
+    .filter((event) => !event.dates || event.dates.length > 0) // 日程未定のイベントも含める
 }
 
 export default function EventsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-zinc-900 p-8">
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center">今後のイベント</h1>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         <EventCategory
           title="将棋教室"
@@ -111,13 +127,11 @@ export default function EventsPage() {
           icon={<Sparkles className="w-6 h-6" />}
         />
       </div>
-
       <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-200 my-12 text-center">詳細</h1>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
         {imageAds.map((ad, index) => (
           <div key={index} className="w-full flex justify-center">
-            <Image src={ad.src} alt={ad.alt} width={500} height={500} className="rounded-lg shadow-md" />
+            <Image src={ad.src || "/placeholder.svg"} alt={ad.alt} width={500} height={500} className="rounded-lg shadow-md" />
           </div>
         ))}
       </div>
