@@ -22,10 +22,28 @@ type Event = {
 const schoolEvents: Event[] = [
   {
     title: "おひさま将棋教室 8月",
-    dates: ["2025年8月7日"],
+    dates: ["2025年8月31日"],
     category: "school",
     location: "大阪府吹田市 豊一市民センター",
   },
+  {
+    title: "おひさま将棋教室 9月",
+    dates: ["2025年9月7日"],
+    category: "school",
+    location: "大阪府吹田市 豊一市民センター",
+  },
+  {
+    title: "おひさま将棋教室 9月",
+    dates: ["2025年9月14日"],
+    category: "school",
+    location: "大阪府吹田市 豊一市民センター",
+  },
+  {
+    title: "おひさま将棋教室 9月",
+    dates: ["2025年9月21日"],
+    category: "school",
+    location: "大阪府吹田市 豊一市民センター",
+  }
 ]
 
 const tournamentEvents: Event[] = [
