@@ -75,10 +75,10 @@ const otherEvents: Event[] = [
 ]
 
 const imageAds: { src: string; alt: string }[] = [
-  { src: "/advertisements/ohisama-August.jpg", alt: "おひさま将棋教室 広告" },
-  { src: "/advertisements/ohisama-September.jpg", alt: "おひさま将棋教室 広告" },
-  { src: "/advertisements/tournament0923.jpg", alt: "秋桜将棋団体戦 広告" },
-  { src: "/advertisements/tournament0923-description.jpg", alt: "秋桜将棋団体戦 広告" },
+  { src: "/upcoming_event/school/202508.jpg", alt: "おひさま将棋教室 広告" },
+  { src: "/upcoming_event/school/202509.jpg", alt: "おひさま将棋教室 広告" },
+  { src: "/upcoming_event/tournament/20250923.jpg", alt: "秋桜将棋団体戦 広告" },
+  { src: "/upcoming_event/tournament/20250923-description.jpg", alt: "秋桜将棋団体戦 広告" },
 ]
 
 function getEarliestDate(dates?: string[]): Date {
