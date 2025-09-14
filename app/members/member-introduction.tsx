@@ -42,6 +42,7 @@ const members: Member[] = [
     message: "趣味は競艇です。",
     imagePath: "/members/onishi.jpg",
   },
+  /*
   {
     nameJa: "沖津斗夢",
     position: "京都大会運営",
@@ -49,6 +50,7 @@ const members: Member[] = [
     message: "座右の銘「現状維持は即衰退」",
     imagePath: "/members/okitsu.jpg",
   },
+  */
   {
     nameJa: "數﨑大樹",
     position: "webサイト運営",
