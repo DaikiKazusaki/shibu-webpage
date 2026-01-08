@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import UpcomingEvent from "./upcoming_event"
+import Unprepared from "../components/unprepaired-page"
+// import UpcomingEvent from "./upcoming_event"
 
 export const metadata: Metadata = {
   title: "今後のイベント",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function ComingSoon() {
   return (
-    <UpcomingEvent/>
+    // <UpcomingEvent/>
+    <Unprepared/>
   )
 }
 
