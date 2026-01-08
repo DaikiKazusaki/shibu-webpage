@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Unprepared from "../components/unprepaired-page"
+import Unprepared from "../components/unprepared-page"
 // import UpcomingEvent from "./upcoming_event"
 
 export const metadata: Metadata = {
